@@ -1,0 +1,66 @@
+{
+  "name": "tips180",
+  "version": "0.1.0",
+  "proxy": "https://tips180.tips/api",
+  "homepage":"/dashboard",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.19",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "flutterwave-react-v3": "^1.3.0",
+    "lottie-react": "^2.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.13",
+    "react-helmet": "^6.1.0",
+    "react-paystack": "^4.0.2",
+    "react-phone-input-2": "^2.15.1",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.0",
+    "react-select": "^5.7.0",
+    "react-slick": "^0.29.0",
+    "react-slideshow-image": "^4.0.5",
+    "react-spring": "^8.0.27",
+    "react-toastify": "^9.1.1",
+    "react-visibility-sensor": "^5.1.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "optimize-images": "imagemin src/assets/* --out-dir=src/assets"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
+    "imagemin-cli": "^8.0.0",
+    "postcss": "^8.4.18",
+    "react-router-dom": "^6.4.3",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^3.2.1"
+  }
+}

@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Millik";
+  src: local("Millik"), local("Millik"), url("./font/milik/Millik.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Manrope", sans-serif;
+  background-color: white;
+}
+
+.millik {
+  font-family: "Millik";
+}
+
+.greybg {
+  background-color: #f2f2f2;
+}
+
+.greybgh:hover {
+  background-color: #f2f2f2;
+}
+
+.dd {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  outline: none;
+  padding: 7px;
+  color: #222222;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.each-fade {
+  width: 100%;
+  max-width: 100%;
+}
+
+.dropdown {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  outline: none;
+  padding: 7px;
+  color: #222222;
+  margin-top: 10px;
+  height: 40px;
+  padding-right: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('/src/assets/dropdown.svg');
+  background-repeat: no-repeat;
+  background-position: 97%;
+  background-size: 25px auto;
+}
+
+.db-bg {
+  background-color: #f2f2f2;
+}
+
+.trans {
+  transition: 2s ease-in-out;
+}
+
+.input-styles {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  outline: none;
+  padding: 7px;
+  color: #222222;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.regex-input-styles {
+  border-radius: 5px;
+  outline: none;
+  padding: 7px;
+  color: #222222;
+  height: 40px;
+}
+
+.small-input {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  outline: none;
+  padding: 7px;
+  color: #222222;
+  margin-top: 10px;
+}
+
+.textarea {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  outline: none;
+  padding: 7px;
+  color: #222222;
+  margin-top: 10px;
+}
+
+input {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  outline: none;
+  padding: 7px;
+  color: #222222;
+  margin-top: 10px;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="password"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+.labels {
+  margin-top: 10px;
+}
+
+.switch {
+  margin-top: 10px;
+}
+
+.label {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4f4f4f;
+  margin-top: 10px;
+}
+
+.adeye {
+  /* border: 1px solid #bdbdbd; */
+  border-left: 0px;
+  padding: 8.2px;
+  margin-top: 10px;
+  border-radius: 5px 5px 5px 0;
+  margin-left: -6px;
+}
+
+.eye {
+  margin-top: 10px;
+  margin-left: -40px;
+}
+
+.grad {
+  color: linear-gradient(90.12deg, #62c7a1 0.13%, #6d55f1 99.92%);
+}
+
+.gradB {
+  border: 1px solid linear-gradient(90.12deg, #62c7a1 0.13%, #6d55f1 99.92%);
+}
+
+.left-side {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: red;
+  width: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  width: 2px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+td,
+th {
+  margin: 5px 0;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.checkout-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-field label {
+  text-align: left;
+}
+
+.slick-active {
+  padding: 2px !important;
+}
+
+@media (min-width:768px) and (max-width: 1023px){
+  .tab {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #plans-card,
+  #match-card,
+  #smart-card,
+  #writeup,
+  .mobil {
+    width: 94% !important;
+  }
+  .mobil {
+    width: 90% !important;
+  }
+
+  .mobilee {
+    width: 95% !important;
+  }
+
+  .mobilee-card {
+    width: 95% !important;
+    /* height: 100% !important; */
+  }
+
+  .full {
+    width: 100% !important;
+  }
+
+  .db-bg {
+    background-color: #fff;
+  }
+}
+
+/* @media (max-width: 320px) {
+  #plans-card {
+    width: 99.5% !important;
+  }
+} */
