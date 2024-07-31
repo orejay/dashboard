@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { FixedSizeList } from "react-window";
 
 function RecentWinTable({ getWinningTips, results }) {
   useEffect(() => {
@@ -31,6 +32,7 @@ function RecentWinTable({ getWinningTips, results }) {
           {results.length > 0
             ? results.map((each, index) => (
                 <tr
+                  key={index}
                   className={`text-center text-xs md:text-base h-12 ${
                     index === results.length - 1 ? "lg:rounded-b-2xl" : ""
                   }`}
@@ -39,12 +41,11 @@ function RecentWinTable({ getWinningTips, results }) {
                   }}
                 >
                   <td
-                    key={index}
                     className={`${
                       index === results.length - 1 ? "rounded-bl-2xl" : ""
                     }`}
                   >{`${each.date.slice(8)}/${each.date.slice(5, 7)}`}</td>
-                  <td key={index} className="flex justify-center">
+                  <td className="flex justify-center">
                     <p
                       className="rounded p-2 w-fit text-white"
                       style={{
@@ -63,10 +64,8 @@ function RecentWinTable({ getWinningTips, results }) {
                       {each.league}
                     </p>
                   </td>
-                  <td key={index} className="millik mt-1 md:text-lg">
-                    {each.name}
-                  </td>
-                  <td key={index} className="flex justify-center">
+                  <td className="millik mt-1 md:text-lg">{each.name}</td>
+                  <td className="flex justify-center">
                     <p
                       className="rounded md:p-2 p-1 md:min-w-fit w-fit text-white"
                       style={{ backgroundColor: "#6D55F1" }}
@@ -75,7 +74,6 @@ function RecentWinTable({ getWinningTips, results }) {
                     </p>
                   </td>
                   <td
-                    key={index}
                     className={`${
                       index === results.length - 1 ? "rounded-br-2xl" : ""
                     }`}

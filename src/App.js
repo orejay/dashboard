@@ -95,6 +95,7 @@ function App() {
         {/* Payment Routes End */}
 
         {/* User Profile Routes Start */}
+        <Route path="/dashboard" element={<Profile />}></Route>
         <Route path="/dashboard/profile" element={<Profile />}></Route>
         <Route path="/dashboard/50odds" element={<Odds50 />}></Route>
         <Route path="/dashboard/smartbet" element={<SmartBet />}></Route>

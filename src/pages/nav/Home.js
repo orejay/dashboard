@@ -1,12 +1,13 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
 import Main from "../../Main";
+import Hero from "../../components/Hero";
 import FrequentlyAskedCard from "../../components/FrequentlyAskedCard";
 import { Helmet } from "react-helmet";
-import Hero from "../../components/Hero";
-import SmartBetLanding from "../../components/SmartBetLanding";
-import AllFreeExpert from "../../components/AllFreeExpert";
+import { useMediaQuery } from "@mui/material";
 import Writeup from "../../components/Writeup";
 import LandingStore from "../../components/LandingStore";
+const SmartBetLanding = lazy(() => import("../../components/SmartBetLanding"));
+const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
 const SportsNews = lazy(() => import("../../components/SportsNews"));
 const Feedback = lazy(() => import("../../components/Feedback"));
 const LandingLeagues = lazy(() => import("../../components/LandingLeagues"));
@@ -17,6 +18,8 @@ const WinUpcomingCards = lazy(() =>
 
 function Home() {
   const [isValid, setIsValid] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const isMobile = useMediaQuery("(max-width:450px)");
   const token = localStorage.getItem("token");
 
   const IsUserAuthorized = async () => {
@@ -28,7 +31,6 @@ function Home() {
           Authorization: `Bearer ${token}`,
         },
       });
-      const res_json = await res.json();
 
       if (!res.ok) {
         localStorage.removeItem("user");
@@ -43,7 +45,28 @@ function Home() {
 
   useEffect(() => {
     IsUserAuthorized();
-  }, []);
+  });
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  });
+
+  const loader = (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontSize: isMobile ? "24px" : "36px",
+        height: "100vh",
+      }}
+    >
+      <h1>Site Is Loading...</h1>
+    </div>
+  );
 
   const Prop = (
     <div className="bg-white">
@@ -62,8 +85,12 @@ function Home() {
         <meta name="author" content="tips180" />
       </Helmet>
       <Hero />
-      <AllFreeExpert />
-      <SmartBetLanding />
+      <Suspense fallback={<div className="h-screen">Loading...</div>}>
+        <AllFreeExpert />
+      </Suspense>
+      <Suspense fallback={<div className="h-screen">Loading...</div>}>
+        <SmartBetLanding />
+      </Suspense>
       <Suspense fallback={<div className="h-screen">Loading...</div>}>
         <LandingLeagues />
       </Suspense>
@@ -85,7 +112,7 @@ function Home() {
     </div>
   );
 
-  return <Main Prop={Prop} logIn={isValid} />;
+  return <Main Prop={isLoaded ? Prop : loader} logIn={isValid} />;
 }
 
 export default Home;

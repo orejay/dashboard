@@ -46,7 +46,7 @@ function LandingStore() {
             Let our experts guide you to victory with their best football tips
             selection of the day!
           </p>
-          <Link to={!token ? `/auth/login` : `/acca`}>
+          <Link to={!token ? `/auth/login` : `/dashboard/acca`}>
             <div
               className="rounded w-fit p-3 text-sm lg:text-base font-medium text-white bg-gradient-to-r from-teal-500 to-blue-600"
               style={{ fontSize: "16px" }}

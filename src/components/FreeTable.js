@@ -35,20 +35,21 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
           {results.length > 0 ? (
             results.map((each, index) => (
               <tr
+                key={index}
                 className={`text-center text-xs lg:text-base h-12`}
                 style={{
                   backgroundColor: index % 2 === 0 ? "#F7F6FE" : "#fff",
                   height: isMobile ? "130px" : "",
                 }}
               >
-                <td key={index} className="h-full relative">
+                <td className="h-full relative">
                   <div className="absolute inset-0 flex items-start justify-center mt-3">
                     <p className="rounded p-2 px-3 text-center">{`${each.date.slice(
                       8
                     )}/${each.date.slice(5, 7)}`}</p>
                   </div>
                 </td>
-                <td key={index} className="h-full relative">
+                <td className="h-full relative">
                   <div className="absolute inset-0 flex items-start justify-center mt-3">
                     <div
                       className="rounded p-2 px-3 text-white text-center"
@@ -71,7 +72,6 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                   </div>
                 </td>
                 <td
-                  key={index}
                   style={{
                     padding: isMobile ? "0" : "",
                     margin: isMobile ? 0 : "",
@@ -104,6 +104,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                         <a
                           href={data?.link}
                           target="_blank"
+                          rel="noreferrer"
                           className="flex justify-center md:h-9 h-8 w-full lg:w-7/12 md:mb-0"
                         >
                           <div
@@ -185,7 +186,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                     </div>
                   </div>
                 </td>
-                <td key={index} className="h-full relative">
+                <td className="h-full relative">
                   <div className="absolute inset-0 flex items-start mt-3 justify-center">
                     <div
                       className="rounded px-2 text-center md:p-2 p-1 md:min-w-fit w-fit text-white"
@@ -196,9 +197,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                   </div>
                 </td>
 
-                <td key={index} className="h-full">
-                  {each.ftscore}
-                </td>
+                <td className="h-full">{each.ftscore}</td>
               </tr>
             ))
           ) : (

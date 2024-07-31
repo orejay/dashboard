@@ -61,20 +61,20 @@ const UpcomingTable = ({ getUpcoming, results }) => {
           {results.length > 0
             ? results.map((each, index) => (
                 <tr
+                  key={index}
                   className={`text-center text-xs lg:text-base h-12`}
                   style={{
                     backgroundColor: index % 2 === 0 ? "#F7F6FE" : "#fff",
                   }}
                 >
                   <td
-                    key={index}
                     className={`h-full ${
                       index === results.length - 1 ? "rounded-bl-2xl" : ""
                     }`}
                   >
                     <p>{`${each.date.slice(8)}/${each.date.slice(5, 7)}`}</p>
                   </td>
-                  <td key={index} className="h-full relative">
+                  <td className="h-full relative">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div
                         className="rounded p-2 px-3 text-white text-center"
@@ -96,7 +96,7 @@ const UpcomingTable = ({ getUpcoming, results }) => {
                       </div>
                     </div>
                   </td>
-                  <td key={index}>
+                  <td>
                     <div className="flex flex-col items-center millik mt-1 md:text-lg">
                       <p>{each.name}</p>
                       <div className="flex flex-col md:flex md:flex-row items-center justify-center lg:text-sm md:text-xs w-full">
@@ -189,7 +189,6 @@ const UpcomingTable = ({ getUpcoming, results }) => {
                     </div>
                   </td>
                   <td
-                    key={index}
                     className={`h-full relative ${
                       index === results.length - 1 ? "rounded-br-2xl" : ""
                     }`}

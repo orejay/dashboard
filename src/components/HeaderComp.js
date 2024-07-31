@@ -40,7 +40,7 @@ const HeaderComp = ({ logIn, nav }) => {
           <img
             src={require("../assets/tip-logo.png")}
             alt="logo"
-            className="w-32 aspect-auto"
+            style={{ height: "32px", width: "128px" }}
           />
         </Link>
       </div>
@@ -210,7 +210,7 @@ const HeaderComp = ({ logIn, nav }) => {
               )}
             </div>
             <p
-              style={{ color: "white", cursor: "pointer",fontSize: "16px" }}
+              style={{ color: "white", cursor: "pointer", fontSize: "16px" }}
               className="rounded-md text-center lg:hidden py-1 px-2 bg-gradient-to-r from-red-500 to-red-600"
               onClick={() => LogOut()}
             >

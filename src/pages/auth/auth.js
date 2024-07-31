@@ -1,7 +1,6 @@
 import React from "react";
 
 import Main from "../../Main";
-import ResetNotice from "../../components/ResetNotice";
 
 const Auth = ({ App, image }) => {
   const Prop = (

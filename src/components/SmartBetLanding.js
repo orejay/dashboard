@@ -45,7 +45,7 @@ function SmartBetLanding() {
               Unveil smart betting tips! Bet smart, win consistently!
             </p>
             <button className="bg-gradient-to-r from-teal-500 to-blue-600 w-fit text-white text-md font-medium rounded p-2 mb-3">
-              <Link to="/smartbet">Try This Out</Link>
+              <Link to="/dashboard/smartbet">Try This Out</Link>
             </button>
             <p className="font-bold mb-3 z-50">
               Smart Bet Odds: {each.smartbetodds}
@@ -85,7 +85,7 @@ function SmartBetLanding() {
               from Europe’s top ten leagues.
             </p>
             <button className="bg-gradient-to-r from-teal-500 to-blue-600 w-fit text-white text-md font-medium rounded p-2 mb-3">
-              <Link to="/smartbet">Try This Out</Link>
+              <Link to="/dashboard/smartbet">Try This Out</Link>
             </button>
             <p className="font-bold mb-3 w-2/3 md:w-full">
               Exclusive to Smart Bet Members

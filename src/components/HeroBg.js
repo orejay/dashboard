@@ -1,5 +1,6 @@
 import React from "react";
 import heroBgd from "../assets/hero-bg.webp";
+import heroBgm from "../assets/hero-mb.webp";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
 
@@ -9,8 +10,8 @@ const HeroBg = ({ Slider }) => {
     <div
       className="w-full bg-black flex justify-center items-center"
       style={{
-        height: isMobile ? "90vh" : "100vh",
-        backgroundImage: `url(${heroBgd})`,
+        height: isMobile ? "800px" : "100vh",
+        backgroundImage: isMobile ? `url(${heroBgm})` : `url(${heroBgd})`,
         backgroundSize: "100% 100%",
       }}
     >
@@ -18,7 +19,7 @@ const HeroBg = ({ Slider }) => {
         <div className="flex flex-col items-center w-full text-center md:text-left md:items-start justify-around my-auto lg:w-3/5 md:2/5 h-3/6">
           <div className={``}>
             <div
-              className="mb-3 font-medium text-3xl md:text-4xl lg:text-6xl leading-102 millik"
+              className="mb-3 font-bold text-3xl md:text-4xl lg:text-6xl leading-102 font-sans"
               style={{ lineHeight: "100%" }}
             >
               Free Football Predictions and Tips

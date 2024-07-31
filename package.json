@@ -2,7 +2,7 @@
   "name": "tips180",
   "version": "0.1.0",
   "proxy": "https://tips180.tips/api",
-  "homepage":"/dashboard",
+  "homepage": "/dashboard",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -57,9 +57,11 @@
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
     "imagemin-cli": "^8.0.0",
     "postcss": "^8.4.18",
     "react-router-dom": "^6.4.3",
+    "react-window": "^1.8.10",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.2.1"
   }

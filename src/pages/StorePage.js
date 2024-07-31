@@ -1,9 +1,9 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-import StoreTable from "../components/StoreTable";
 import Main from "../Main";
+import { useNavigate } from "react-router-dom";
+const StoreTable = lazy(() => import("../components/StoreTable"));
 
 const style = {
   width: "90%",
@@ -93,7 +93,7 @@ const StorePage = () => {
       }
       toast.clearWaitingQueue();
     }
-  }, []);
+  });
 
   const market = (
     <div className="pb-10">
@@ -117,14 +117,16 @@ const StorePage = () => {
           ) : (
             ""
           )}
-          <StoreTable
-            style={style}
-            profile={false}
-            endpoint={each.endpoint}
-            tip={each.tip}
-            index={index}
-            link={link}
-          />
+          <Suspense fallback={<div>Loading...</div>}>
+            <StoreTable
+              style={style}
+              profile={false}
+              endpoint={each.endpoint}
+              tip={each.tip}
+              index={index}
+              link={link}
+            />
+          </Suspense>
         </div>
       ))}
     </div>
