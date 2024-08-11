@@ -231,7 +231,7 @@ const AllFreeExpert = () => {
           <p className="bg-gradient-to-r text-sm lg:text-base from-teal-500 to-blue-600 text-transparent bg-clip-text">
             <Link
               className="w-full h-full"
-              to={!user ? `/auth/login` : `/bankertips`}
+              to={!user ? `/auth/login` : `/dashboard/bankertips`}
             >
               Banker Tips of the Day
             </Link>

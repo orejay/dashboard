@@ -46,27 +46,27 @@ function Home() {
   useEffect(() => {
     IsUserAuthorized();
   });
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 4000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoaded(true);
+  //   }, 4000);
 
-    return () => clearTimeout(timer);
-  });
+  //   return () => clearTimeout(timer);
+  // });
 
-  const loader = (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontSize: isMobile ? "24px" : "36px",
-        height: "100vh",
-      }}
-    >
-      <h1>Site Is Loading...</h1>
-    </div>
-  );
+  // const loader = (
+  //   <div
+  //     style={{
+  //       display: "flex",
+  //       justifyContent: "center",
+  //       alignItems: "center",
+  //       fontSize: isMobile ? "24px" : "36px",
+  //       height: "100vh",
+  //     }}
+  //   >
+  //     <h1>Site Is Loading...</h1>
+  //   </div>
+  // );
 
   const Prop = (
     <div className="bg-white">
@@ -112,7 +112,7 @@ function Home() {
     </div>
   );
 
-  return <Main Prop={isLoaded ? Prop : loader} logIn={isValid} />;
+  return <Main Prop={Prop} logIn={isValid} />;
 }
 
 export default Home;
