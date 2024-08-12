@@ -61,7 +61,7 @@ const League = () => {
       getMatches(id);
     } else {
       toast.info("Subscribe to Premium Plan to View League Predictions!");
-      navigate("/payment");
+      navigate("/dashboard/payment");
     }
   }, []);
 

@@ -952,7 +952,7 @@ const PaymentTypes = ({ country }) => {
               message to
               <span className="font-semibold">+254 796 118 357</span>
               <ol className="pl-2">
-                <li>1. YOUR MTN MOBILE MONEY NAME</li>
+                <li>1. YOUR MPESA NAME</li>
                 <li>2. DATE OF PAYMENT</li>
                 <li>3. AMOUNT PAID</li>
                 <li>4. REGISTERED EMAIL ADDRESS OR USER ID ON THE WEBSITE</li>
@@ -1162,7 +1162,7 @@ const PaymentTypes = ({ country }) => {
               message to
               <span className="font-semibold">+254 796 118 357</span>
               <ol className="pl-2">
-                <li>1. YOUR MTN MOBILE MONEY NAME</li>
+                <li>1. YOUR MPESA NAME</li>
                 <li>2. DATE OF PAYMENT</li>
                 <li>3. AMOUNT PAID</li>
                 <li>4. REGISTERED EMAIL ADDRESS OR USER ID ON THE WEBSITE</li>

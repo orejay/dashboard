@@ -31,9 +31,9 @@ const FlutterwaveCheckout = lazy(() =>
 const GhanaPayment = lazy(() => import("./components/GhanaPayment"));
 const KenyaPayment = lazy(() => import("./components/KenyaPayment"));
 const TandC = lazy(() => import("./pages/TandC"));
-const League = lazy(() => import("./pages/nav/Leagues"));
+const Leagues = lazy(() => import("./pages/nav/Leagues"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
-const Leagues = lazy(() => import("./pages/League"));
+const League = lazy(() => import("./pages/League"));
 const OurPlans = lazy(() => import("./pages/nav/OurPlans"));
 const TipStore = lazy(() => import("./pages/nav/TipStore"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
@@ -85,7 +85,7 @@ function App() {
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className="h-screen w-screen"></div>}>
         <Routes>
           <Route
             path="/"
