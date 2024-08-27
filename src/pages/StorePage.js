@@ -85,7 +85,7 @@ const StorePage = () => {
       ].includes(link) &&
         !["Premium"].includes(user?.accoutplan))
     ) {
-      navigate("/payment");
+      navigate("/dashboard/payment");
       if (["weekendtip", "singlecombo", "bts", "over2"].includes(link)) {
         toast.info("Kindly Upgrade to Key or Premium Plan to View This Store!");
       } else {

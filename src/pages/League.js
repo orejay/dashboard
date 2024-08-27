@@ -67,7 +67,7 @@ const League = () => {
 
   const league = (
     <div className="w-full md:py-5 lg:py-10 " style={{ background: "#F2F2F2" }}>
-      <div className="py-5 lg:py-10  px-5 lg:px-14  mx-auto h-screen rounded-lg bg-white w-full lg:w-5/6">
+      <div className="py-5 lg:py-10  px-5 lg:px-14  mx-auto h-screen overflow-y-scroll rounded-lg bg-white w-full lg:w-5/6">
         <h2 className="millik" style={{ fontSize: "24px" }}>
           League’s Prediction {`(${data[0]?.league})`}
         </h2>
