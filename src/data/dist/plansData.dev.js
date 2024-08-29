@@ -77,8 +77,8 @@ var plansData = [{
     title: "₦2,500",
     value: 2500
   }, {
-    title: "₦5,000",
-    value: 5000
+    title: "₦5,200",
+    value: 5200
   }],
   details: ["Access to Winning Tactics", "Access to 50 odds twice a Week", "Access to 2 different sets of 50 odds on weekends", "Access to over 2500 odds of accumulated tips on weekends", "75% Accuracy Rate"],
   durations: ["1 week", "1 month"]

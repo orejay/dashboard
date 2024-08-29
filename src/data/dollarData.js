@@ -38,9 +38,9 @@ export const dollarData = [
     name: "Smart Bet/Smart Bet Plus",
     title: "smartbet",
     prices: [
+      { title: "$11.00", value: 11 },
+      { title: "$18.00", value: 18 },
       { title: "$25.00", value: 25 },
-      { title: "$40.00", value: 40 },
-      { title: "$60.00", value: 60 },
     ],
     details: [
       "Access to Smart Betting Strategy",
@@ -54,7 +54,7 @@ export const dollarData = [
   {
     name: "Rollover",
     title: "rollover",
-    prices: [{ title: "$27.00", value: 27 }],
+    prices: [{ title: "$13.00", value: 13 }],
     details: [
       "Rollover Betting Strategy",
       "Access to 1.3 odds Daily",
@@ -66,8 +66,8 @@ export const dollarData = [
     name: "50 0dds",
     title: "odds50",
     prices: [
-      { title: "$21.00", value: 21 },
-      { title: "$40.00", value: 40 },
+      { title: "$10.00", value: 10 },
+      { title: "$22.00", value: 22 },
     ],
     details: [
       "Access to Winning Tactics",
@@ -81,7 +81,7 @@ export const dollarData = [
   {
     name: "Weekend 10 odds",
     title: "weekend10",
-    prices: [{ title: "$18", value: 18 }],
+    prices: [{ title: "$14", value: 14 }],
     details: [
       "Access to Best Accumulated Tips",
       "Access to 10 odds twice a week",

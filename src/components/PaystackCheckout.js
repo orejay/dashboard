@@ -226,6 +226,9 @@ const PaystackCheckout = () => {
               <h3 className="font-semibold mt-5 text-sm md:text-base">
                 TIPS 180 CONCEPTS <br /> 1021742465 <br /> UBA.
               </h3>
+              <h3 className="font-semibold mt-5 text-sm md:text-base">
+                TIPS 180 CONCEPTS <br /> 1313138723 <br /> ZENITH BANK.
+              </h3>
               <p className="mt-2 text-sm md:text-base">
                 After making deposits, send the name of the account you made the
                 payment from, amount paid and email address (registered on
@@ -270,6 +273,16 @@ const PaystackCheckout = () => {
               </div>
             </div>
             <div className={!openOpay ? `hidden` : `mt-10`}>
+              <p className="text-sm md:text-base">
+                You can make payments for your Tips180 account
+                activation/upgrade ONLY to the account info below
+              </p>
+              <h3 className="font-semibold mt-5 text-sm md:text-base">
+                TIPS 180 CONCEPTS <br /> 1021742465 <br /> UBA.
+              </h3>
+              <h3 className="font-semibold mt-5 text-sm md:text-base">
+                TIPS 180 CONCEPTS <br /> 1313138723 <br /> ZENITH BANK.
+              </h3>
               <p className="mt-2 text-sm md:text-base">
                 After making deposits, send the agent’s name, amount paid and
                 email address (registered on TIPS180) as a text message to{" "}

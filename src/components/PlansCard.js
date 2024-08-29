@@ -127,6 +127,7 @@ function PlansCard({ bg, styl, data, country }) {
                       "Cote D'Ivoire".toLowerCase(),
                       "Guinea-Bissau".toLowerCase(),
                       "niger",
+                      "Sierra Leone".toLowerCase(),
                     ].includes(country.toLowerCase())
                   ? `/payment/wa-payment`
                   : ["benin"].includes(country.toLowerCase())

@@ -69,7 +69,7 @@ export const plansData = [
     title: "odds50",
     prices: [
       { title: "₦2,500", value: 2500 },
-      { title: "₦5,000", value: 5000 },
+      { title: "₦5,200", value: 5200 },
     ],
     details: [
       "Access to Winning Tactics",
