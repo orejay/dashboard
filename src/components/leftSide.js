@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Tab from "./Tab";
 
-const LeftSide = ({ active }) => {
+const LeftSide = ({ active, msgs }) => {
   const [tabNo, setTabNo] = useState(0);
+
   const data = [
     {
       name: "My Profile",
@@ -13,6 +14,11 @@ const LeftSide = ({ active }) => {
       name: "My Store",
       link: "/dashboard/store",
     },
+    {
+      name: `Messages (${msgs})`,
+      link: "/dashboard/messages",
+    },
+    // { name: "Predict & Win History", link: "/dashboard/pw" },
     {
       name: "How to Subscribe",
       link: "/dashboard/subscribe",

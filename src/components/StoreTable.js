@@ -53,12 +53,17 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
 
   const getBookings = async (category) => {
     try {
-      const res = await fetch(`${api}/getendpoints/bookings/${category}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `${api}/getendpoints/bookings/${
+          link === "accumulator" ? "acca" : category
+        }`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const res_json = await res.json();
       if (!res.ok) {
       } else {
@@ -111,8 +116,6 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
               onClick={() => {
                 setActive(i);
                 setResults(matches.filter((m) => m.date === dates[i]));
-                console.log("results", results);
-                console.log("matches", matches);
               }}
             >
               <p className="text-xs md:text-base">{i !== 2 ? each : "Today"}</p>
@@ -129,7 +132,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
             <th>League</th>
             <th>Match</th>
             <th>Tip</th>
-            {tip === "singlebettip" ? <th>Odds</th> : ""}
+            {["singlebettip"].includes(tip) ? <th>Odds</th> : ""}
             {["halftimetip", "htfttip"].includes(tip) ? <th>HT Scores</th> : ""}
             <th>FT Result</th>
           </tr>
@@ -288,6 +291,118 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
                           ? results[0]?.sure31stsetodds
                           : results[0]?.sure32ndsetodds
                         : ""}
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+      )}
+      {results.length > 0 && (
+        <div>
+          {link === "accumulator" ? (
+            <div className="mt-7 mx-auto" style={{}}>
+              {data?.accumulator ? (
+                <div className="md:flex justify-around w-11/12 mx-auto">
+                  <div
+                    className={`md:w-5/12 ${
+                      profile === false ? "lg:w-3/12" : "lg:w-5/12"
+                    } flex justify-between`}
+                  >
+                    <div className="w-7/12 text-sm md:text-base">
+                      <p>Booking Code</p>
+                      <p className="text-sm">
+                        {
+                          data[link].filter((b) => b.date === dates[active])[0]
+                            ?.bookie
+                        }
+                        {` - `}{" "}
+                        {
+                          data[link].filter((b) => b.date === dates[active])[0]
+                            ?.code
+                        }
+                      </p>
+                    </div>
+                    <a
+                      href={
+                        data[link].filter((b) => b.date === dates[active])[0]
+                          ?.link
+                      }
+                      target="_blank"
+                      className={`${
+                        data[link]
+                          .filter((b) => b.date === dates[active])[0]
+                          ?.bookie.toUpperCase() === "BET9JA"
+                          ? "bg-green-900"
+                          : data[link]
+                              .filter((b) => b.date === dates[active])[0]
+                              ?.bookie.toUpperCase() === "MSPORT"
+                          ? "bg-gray-900"
+                          : data[link]
+                              .filter((b) => b.date === dates[active])[0]
+                              ?.bookie.toUpperCase() === "STARBET"
+                          ? "bg-gray-900"
+                          : data[link]
+                              .filter((b) => b.date === dates[active])[0]
+                              ?.bookie.toUpperCase() === "22BET"
+                          ? "bg-gray-900"
+                          : data[link]
+                              .filter((b) => b.date === dates[active])[0]
+                              ?.bookie.toUpperCase() === "SPORTYBET"
+                          ? "bg-red-600"
+                          : data[link]
+                              .filter((b) => b.date === dates[active])[0]
+                              ?.bookie.toUpperCase() === "1XBET" || "PARIBET"
+                          ? "bg-white"
+                          : ""
+                      } flex justify-center w-4/12 h-10 items-center p-2 rounded-r-lg`}
+                    >
+                      <img
+                        src={
+                          data[link]
+                            .filter((b) => b.date === dates[active])[0]
+                            ?.bookie.toUpperCase() === "BET9JA"
+                            ? b9ja
+                            : data[link]
+                                .filter((b) => b.date === dates[active])[0]
+                                ?.bookie.toUpperCase() === "SPORTYBET"
+                            ? sporty
+                            : data[link]
+                                .filter((b) => b.date === dates[active])[0]
+                                ?.bookie.toUpperCase() === "22BET"
+                            ? bet22
+                            : data[link]
+                                .filter((b) => b.date === dates[active])[0]
+                                ?.bookie.toUpperCase() === "MSPORT"
+                            ? msport
+                            : data[link]
+                                .filter((b) => b.date === dates[active])[0]
+                                ?.bookie.toUpperCase() === "STARBET"
+                            ? starbet
+                            : data[link]
+                                .filter((b) => b.date === dates[active])[0]
+                                ?.bookie.toUpperCase() === "1XBET"
+                            ? onexbet
+                            : data[link]
+                                .filter((b) => b.date === dates[active])[0]
+                                ?.bookie.toUpperCase() === "PARIBET"
+                            ? paribet
+                            : onexbet
+                        }
+                        alt="bet-logo"
+                        className=""
+                      />
+                    </a>
+                  </div>
+                  <div className="mt-5 md:mt-0 text-sm md:text-base">
+                    <p>Total Odds:</p>
+                    <p className="text-sm">
+                      {link === "accumulator" ? data?.accumulator_odds : ""}
                     </p>
                   </div>
                 </div>

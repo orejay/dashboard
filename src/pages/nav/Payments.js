@@ -1,14 +1,47 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PaymentTypes from "../../components/PaymentTypes";
 import Select from "react-select";
 import Main from "../../Main";
 import { Helmet } from "react-helmet";
+import Loader from "../../components/Loader";
 
 export default function Payments() {
   const [selectedOption, setSelectedOption] = useState(null);
-  const [country, setCountry] = useState("df");
+  const [country, setCountry] = useState(null);
+  const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
+  const geoKey = process.env.REACT_APP_GEOAPIKEY1;
+  const geoKey2 = process.env.REACT_APP_GEOAPIKEY2;
+  const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
+  const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
+  const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
+  const geoKeys = [geoKey, geoKey2, geoKey3, geoKey4, geoKey5];
+
+  const getLocation = async (num) => {
+    try {
+      const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
+      const res_txt = await res.text();
+      if (res.ok) {
+        setCountry(res_txt.toLowerCase().trim());
+        handleLocation(res_txt.toLowerCase());
+      } else if (res.status === 429) {
+        if (num < 4) {
+          console.log("api number >>>>>>>>>>>>>>>>", num);
+          getLocation(num + 1);
+        } else {
+          setCountry("ot");
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    getLocation(0);
+  }, []);
+
   const availableList = [
     "ng",
     "be",
@@ -31,7 +64,13 @@ export default function Payments() {
     }
   };
 
-  // { value: "ot", label: "Others" },
+  const handleLocation = (code) => {
+    if (availableList.includes(String(code).trim())) {
+      setCountry(String(code).trim());
+    } else {
+      setCountry("ot");
+    }
+  };
 
   const CountryList = [
     { value: "ng", label: "Nigeria" },
@@ -275,40 +314,31 @@ export default function Payments() {
         <h1 className="lg:text-4xl text-xl millik mx-auto">How to Pay</h1>
         <p className="text-xs lg:text-base"></p>
       </div>
-      <div className="lg:w-3/5 mx-auto py-10 ">
-        <div className="border p-10 rounded-lg bg-white">
-          <div className="mb-10 flex flex-col justify-center items-center">
-            <h1>Please select your country</h1>
-            {/* <select
-              className="w-full lg:w-3/6 input-styles cursor-pointer"
-              onChange={(e) => setCountry(e.target.value)}
-            >
-              {CountryList.map((coun, index) => (
-                <option
-                  key={index}
-                  value={coun.value}
-                  selected={coun.value === country ? "selected" : ""}
-                >
-                  {coun.label}
-                </option>
-              ))}
-            </select> */}
-            <Select
-              options={CountryList}
-              value={selectedOption}
-              onChange={handleChange}
-              isSearchable={true}
-              menuPortalTarget={document.body}
-              className="md:w-4/12 w-7/12 lg:w-4/12 mb-4 mx-auto cursor-pointer"
-              styles={{ menuPortal: (base) => ({ ...base }) }}
-              placeholder="Select a Country"
-            />
+      {country ? (
+        <div className="lg:w-3/5 mx-auto py-10 ">
+          <div className="border p-10 rounded-lg bg-white">
+            <div className="mb-10 flex flex-col justify-center items-center">
+              <h1>Please select your country</h1>
+              <Select
+                options={CountryList}
+                value={selectedOption}
+                onChange={handleChange}
+                isSearchable={true}
+                menuPortalTarget={document.body}
+                className="md:w-4/12 w-7/12 lg:w-4/12 mb-4 mx-auto cursor-pointer"
+                styles={{ menuPortal: (base) => ({ ...base }) }}
+                placeholder="Select a Country"
+              />
+            </div>
+            <PaymentTypes country={country} />
           </div>
-          <PaymentTypes country={country} />
         </div>
-      </div>
+      ) : (
+        <Loader />
+      )}
     </div>
   );
+
   return (
     <div>
       <Helmet>

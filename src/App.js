@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@mui/material";
+import Messages from "./pages/Messages";
 const Home = lazy(() => import("./pages/nav/Home"));
 const SlPayment = lazy(() => import("./components/SlPayment"));
 const Odds50 = lazy(() => import("./components/Odds50"));
@@ -152,6 +153,7 @@ function App() {
           <Route path="/dashboard/acca" element={<ACCA />}></Route>
           <Route path="/dashboard/store" element={<Store />}></Route>
           <Route path="/dashboard/glossary" element={<Glossary />}></Route>
+          <Route path="/dashboard/messages" element={<Messages />}></Route>
           <Route path="/dashboard/hiring" element={<Hiring />}></Route>
           <Route
             path="/dashboard/puntersguide"

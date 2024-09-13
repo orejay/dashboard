@@ -82,7 +82,7 @@ const ACCA = () => {
   }, []);
 
   const Top = (
-    <div className="w-full">
+    <div className="w-full mb-6">
       <h1
         style={{ color: "#22222" }}
         className="font-bold millik md:text-2xl text-xl"
@@ -130,7 +130,7 @@ const ACCA = () => {
       <Helmet>
         <title>Experts ACCA - Tips180</title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={10} />
+      <Dashboard Top={Top} Content={Content} active={11} />
     </div>
   );
 };

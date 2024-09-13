@@ -6,271 +6,16 @@ import { dollarData } from "../../data/dollarData";
 import { kenyaData } from "../../data/kenyaData";
 import { ghanaData } from "../../data/ghanaData";
 import Select from "react-select";
-import { tanzaniaData } from "../../data/TanzaniaData";
 import { ugandaData } from "../../data/UgandaData";
 import { camBenData } from "../../data/camBenData";
 import { sierraLData } from "../../data/sierraLData";
 import { southAData } from "../../data/southAData";
 import { Helmet } from "react-helmet";
+import Loader from "../../components/Loader";
+import { tanzaniaData } from "../../data/TanzaniaData";
 
 const sty = {
   width: "32%",
-};
-
-const CountryList = {
-  af: "Afganistán",
-  al: "Albania",
-  de: "Alemania",
-  ad: "Andorra",
-  ao: "Angola",
-  ai: "Anguila",
-  aq: "Antártida",
-  ag: "Antigua y Barbuda",
-  sa: "Arabia Saudí",
-  dz: "Argelia",
-  ar: "Argentina",
-  am: "Armenia",
-  aw: "Aruba",
-  au: "Australia",
-  at: "Austria",
-  az: "Azerbaiyán",
-  bs: "Bahamas",
-  bd: "Bangladés",
-  bb: "Barbados",
-  bh: "Baréin",
-  be: "Bélgica",
-  bz: "Belice",
-  bj: "Benín",
-  bm: "Bermudas",
-  by: "Bielorrusia",
-  bo: "Bolivia",
-  ba: "Bosnia y Herzegovina",
-  bw: "Botsuana",
-  br: "Brasil",
-  bn: "Brunéi",
-  bg: "Bulgaria",
-  bf: "Burkina Faso",
-  bi: "Burundi",
-  bt: "Bután",
-  cv: "Cabo Verde",
-  kh: "Camboya",
-  cm: "Camerún",
-  ca: "Canadá",
-  ic: "Canarias",
-  bq: "Caribe neerlandés",
-  qa: "Catar",
-  ea: "Ceuta y Melilla",
-  td: "Chad",
-  cz: "Chequia",
-  cl: "Chile",
-  cn: "China",
-  cy: "Chipre",
-  va: "Ciudad del Vaticano",
-  co: "Colombia",
-  km: "Comoras",
-  cg: "Congo",
-  kp: "Corea del Norte",
-  kr: "Corea del Sur",
-  cr: "Costa Rica",
-  ci: "Côte d’Ivoire",
-  hr: "Croacia",
-  cu: "Cuba",
-  cw: "Curazao",
-  dg: "Diego García",
-  dk: "Dinamarca",
-  dm: "Dominica",
-  ec: "Ecuador",
-  eg: "Egipto",
-  sv: "El Salvador",
-  ae: "Emiratos Árabes Unidos",
-  er: "Eritrea",
-  sk: "Eslovaquia",
-  si: "Eslovenia",
-  es: "España",
-  us: "Estados Unidos",
-  ee: "Estonia",
-  sz: "Esuatini",
-  et: "Etiopía",
-  ph: "Filipinas",
-  fi: "Finlandia",
-  fj: "Fiyi",
-  fr: "Francia",
-  ga: "Gabón",
-  gm: "Gambia",
-  ge: "Georgia",
-  gh: "Ghana",
-  gi: "Gibraltar",
-  gd: "Granada",
-  gr: "Grecia",
-  gl: "Groenlandia",
-  gp: "Guadalupe",
-  gu: "Guam",
-  gt: "Guatemala",
-  gf: "Guayana Francesa",
-  gg: "Guernsey",
-  gn: "Guinea",
-  gq: "Guinea Ecuatorial",
-  gw: "Guinea-Bisáu",
-  gy: "Guyana",
-  ht: "Haití",
-  hn: "Honduras",
-  hu: "Hungría",
-  in: "India",
-  id: "Indonesia",
-  iq: "Irak",
-  ir: "Irán",
-  ie: "Irlanda",
-  ac: "Isla de la Ascensión",
-  im: "Isla de Man",
-  cx: "Isla de Navidad",
-  nf: "Isla Norfolk",
-  is: "Islandia",
-  ax: "Islas Åland",
-  ky: "Islas Caimán",
-  cc: "Islas Cocos",
-  ck: "Islas Cook",
-  fo: "Islas Feroe",
-  gs: "Islas Georgia del Sur y Sandwich del Sur",
-  fk: "Islas Malvinas",
-  mp: "Islas Marianas del Norte",
-  mh: "Islas Marshall",
-  um: "Islas menores alejadas de EE. UU.",
-  pn: "Islas Pitcairn",
-  sb: "Islas Salomón",
-  tc: "Islas Turcas y Caicos",
-  vg: "Islas Vírgenes Británicas",
-  vi: "Islas Vírgenes de EE. UU.",
-  il: "Israel",
-  it: "Italia",
-  jm: "Jamaica",
-  jp: "Japón",
-  je: "Jersey",
-  jo: "Jordania",
-  kz: "Kazajistán",
-  ke: "Kenia",
-  kg: "Kirguistán",
-  ki: "Kiribati",
-  xk: "Kosovo",
-  kw: "Kuwait",
-  la: "Laos",
-  ls: "Lesoto",
-  lv: "Letonia",
-  lb: "Líbano",
-  lr: "Liberia",
-  ly: "Libia",
-  li: "Liechtenstein",
-  lt: "Lituania",
-  lu: "Luxemburgo",
-  mk: "Macedonia",
-  mg: "Madagascar",
-  my: "Malasia",
-  mw: "Malaui",
-  mv: "Maldivas",
-  ml: "Mali",
-  mt: "Malta",
-  ma: "Marruecos",
-  mq: "Martinica",
-  mu: "Mauricio",
-  mr: "Mauritania",
-  yt: "Mayotte",
-  mx: "México",
-  fm: "Micronesia",
-  md: "Moldavia",
-  mc: "Mónaco",
-  mn: "Mongolia",
-  me: "Montenegro",
-  ms: "Montserrat",
-  mz: "Mozambique",
-  mm: "Myanmar",
-  na: "Namibia",
-  nr: "Nauru",
-  np: "Nepal",
-  ni: "Nicaragua",
-  ne: "Níger",
-  ng: "Nigeria",
-  nu: "Niue",
-  no: "Noruega",
-  nc: "Nueva Caledonia",
-  nz: "Nueva Zelanda",
-  om: "Omán",
-  nl: "Países Bajos",
-  pk: "Pakistán",
-  pw: "Palaos",
-  pa: "Panamá",
-  pg: "Papúa Nueva Guinea",
-  py: "Paraguay",
-  pe: "Perú",
-  pf: "Polinesia Francesa",
-  pl: "Polonia",
-  pt: "Portugal",
-  pr: "Puerto Rico",
-  hk: "RAE de Hong Kong",
-  mo: "RAE de Macao",
-  gb: "Reino Unido",
-  cf: "República Centroafricana",
-  cd: "República Democrática del Congo",
-  do: "República Dominicana",
-  re: "Reunión",
-  rw: "Ruanda",
-  ro: "Rumanía",
-  ru: "Rusia",
-  eh: "Sáhara Occidental",
-  ws: "Samoa",
-  as: "Samoa Americana",
-  bl: "San Bartolomé",
-  kn: "San Cristóbal y Nieves",
-  sm: "San Marino",
-  mf: "San Martín",
-  pm: "San Pedro y Miquelón",
-  vc: "San Vicente y las Granadinas",
-  sh: "Santa Elena",
-  lc: "Santa Lucía",
-  st: "Santo Tomé y Príncipe",
-  sn: "Senegal",
-  rs: "Serbia",
-  sc: "Seychelles",
-  sl: "Sierra Leona",
-  sg: "Singapur",
-  sx: "Sint Maarten",
-  sy: "Siria",
-  so: "Somalia",
-  lk: "Sri Lanka",
-  za: "Sudáfrica",
-  sd: "Sudán",
-  ss: "Sudán del Sur",
-  se: "Suecia",
-  ch: "Suiza",
-  sr: "Surinam",
-  sj: "Svalbard y Jan Mayen",
-  th: "Tailandia",
-  tw: "Taiwán",
-  tz: "Tanzania",
-  tj: "Tayikistán",
-  io: "Territorio Británico del Océano Índico",
-  tf: "Territorios Australes Franceses",
-  ps: "Territorios Palestinos",
-  tl: "Timor-Leste",
-  tg: "Togo",
-  tk: "Tokelau",
-  to: "Tonga",
-  tt: "Trinidad y Tobago",
-  ta: "Tristán de Acuña",
-  tn: "Túnez",
-  tm: "Turkmenistán",
-  tr: "Turquía",
-  tv: "Tuvalu",
-  ua: "Ucrania",
-  ug: "Uganda",
-  uy: "Uruguay",
-  uz: "Uzbekistán",
-  vu: "Vanuatu",
-  ve: "Venezuela",
-  vn: "Vietnam",
-  wf: "Wallis y Futuna",
-  ye: "Yemen",
-  dj: "Yibuti",
-  zm: "Zambia",
-  zw: "Zimbabue",
 };
 
 const countries = [
@@ -510,21 +255,29 @@ const countries = [
 ];
 
 const OurPlans = () => {
-  const [data, setData] = useState(plansData);
+  const [data, setData] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [country, setCountry] = useState("Nigeria");
+  const [country, setCountry] = useState(null);
   const token = localStorage.getItem("token");
+  const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
+  const geoKey = process.env.REACT_APP_GEOAPIKEY1;
+  const geoKey2 = process.env.REACT_APP_GEOAPIKEY2;
+  const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
+  const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
+  const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
+  const geoKeys = [geoKey, geoKey2, geoKey3, geoKey4, geoKey5];
+  const api = process.env.REACT_APP_BASE_API;
+  const [userCountryCode, setUserCountryCode] = useState(null);
 
   const IsUserAuthorized = async () => {
     try {
-      const res = await fetch("https://www.tips180.lol/getendpoints/auth", {
+      const res = await fetch(`${api}/getendpoints/auth`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
       });
-      const res_json = await res.json();
 
       if (!res.ok) {
         localStorage.removeItem("user");
@@ -566,6 +319,61 @@ const OurPlans = () => {
     setCountry(countries.label);
   };
 
+  const handleLocation = (code) => {
+    code === "NG"
+      ? setData(plansData)
+      : code === "GH"
+      ? setData(ghanaData)
+      : code === "KE" || code === "ET" || code === "RW"
+      ? setData(kenyaData)
+      : code === "TZ"
+      ? setData(kenyaData)
+      : code === "UG"
+      ? setData(ugandaData)
+      : code === "SL"
+      ? setData(sierraLData)
+      : code === "ZA"
+      ? setData(southAData)
+      : code === "BJ" ||
+        code === "CM" ||
+        code === "CI" ||
+        code === "ML" ||
+        code === "GW" ||
+        code === "NE" ||
+        code === "BF" ||
+        code === "SN"
+      ? setData(camBenData)
+      : setData(dollarData);
+    setCountry(countries.filter((c) => c.value === code)[0].label);
+  };
+
+  const getLocation = async (num) => {
+    try {
+      const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
+      const res_txt = await res.text();
+      if (res.ok) {
+        setUserCountryCode(String(res_txt).trim());
+        setCountry(String(res_txt).trim());
+        handleLocation(String(res_txt).trim());
+      } else if (res.status === 429) {
+        if (num < 4) {
+          console.log("api number >>>>>>>>>>>>>>>>", num);
+          getLocation(num + 1);
+        } else {
+          setUserCountryCode("US");
+          setCountry("US");
+          handleLocation("US");
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    getLocation(0);
+  }, []);
+
   useEffect(() => {
     IsUserAuthorized();
   }, []);
@@ -578,41 +386,32 @@ const OurPlans = () => {
           There’s a plan tailored for everyone!
         </p>
       </div>
-      <div className="w-full mt-12 flex flex-col items-center">
-        <Select
-          options={countries}
-          value={selectedOption}
-          onChange={handleChange}
-          isSearchable={true}
-          placeholder="Select a Country"
-          className="md:w-4/12 w-7/12 lg:w-3/12 mb-4 mx-auto cursor-pointer"
-        />
-        {/* <select
-          className="dropdown md:w-4/12 w-7/12 lg:w-3/12 mb-4 mx-auto cursor-pointer"
-          label="country"
-          id="plans-country"
-          defaultValue="Nigeria"
-          onChange={(e) => {
-            e.target.value === "Nigeria"
-              ? setData(plansData)
-              : e.target.value === "Ghana"
-              ? setData(ghanaData)
-              : e.target.value === "Kenya"
-              ? setData(kenyaData)
-              : setData(dollarData);
-            setCountry(e.target.value);
-          }}
-        >
-          {Object.values(CountryList).map((each, index) => (
-            <option value={each} key={index}>
-              {each}
-            </option>
-          ))}
-        </select> */}
-      </div>
-      <div className="w-11/12 px-6 pt-6 pb-16 rounded-xl mt-10 mb-36 mx-auto bg-gray-100 md:shadow shadow-slate-300">
-        <PlansCard bg={"gray-100"} styl={sty} data={data} country={country} />
-      </div>
+      {country ? (
+        <div>
+          <div className="w-full mt-12 flex flex-col items-center">
+            <Select
+              options={countries}
+              value={selectedOption}
+              onChange={handleChange}
+              isSearchable={true}
+              placeholder="Select a Country"
+              className="md:w-4/12 w-7/12 lg:w-3/12 mb-4 mx-auto cursor-pointer"
+            />
+          </div>
+          <div className="w-11/12 px-6 pt-6 pb-16 rounded-xl mt-10 mb-36 mx-auto bg-gray-100 md:shadow shadow-slate-300">
+            <PlansCard
+              bg={"gray-100"}
+              styl={sty}
+              data={data}
+              country={country}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="h-screen">
+          <Loader />
+        </div>
+      )}
     </div>
   );
 

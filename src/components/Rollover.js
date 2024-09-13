@@ -60,7 +60,7 @@ const Rollover = () => {
     }
   };
   const Top = (
-    <div className=" flex  w-full">
+    <div className=" flex  w-full mb-6">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
         className="font-bold millik "
@@ -92,7 +92,7 @@ const Rollover = () => {
       <Helmet>
         <title>Rollover Bet- Tips180</title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={8} />
+      <Dashboard Top={Top} Content={Content} active={9} />
     </div>
   );
 };

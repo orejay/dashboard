@@ -18,6 +18,28 @@ const Dashboard = ({ Content, Top, active }) => {
     closed: { color: "red" },
   };
 
+  const [messages, setMessages] = useState(0);
+
+  const getMessages = async () => {
+    try {
+      const res = await fetch(`${api}/getendpoints/messages`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const res_json = await res.json();
+      if (res.ok) setMessages(res_json.unread.length);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    getMessages();
+  }, []);
+
   const App = () => {
     const IsUserAuthorized = async () => {
       try {
@@ -84,7 +106,7 @@ const Dashboard = ({ Content, Top, active }) => {
                   zIndex: 200,
                 }}
               >
-                <LeftSide active={active} />
+                <LeftSide active={active} msgs={messages} />
               </div>
               <div className="w-3/4">
                 <div
@@ -93,19 +115,19 @@ const Dashboard = ({ Content, Top, active }) => {
                 >
                   {Top}
                 </div>
-                {(active === 6 &&
+                {(active === 7 &&
                   (user?.odds50status?.toLowerCase() === "inactive" ||
                     user?.odds50status === null)) ||
-                (active === 7 &&
+                (active === 8 &&
                   (user?.isubscriptstatus?.toLowerCase() === "inactive" ||
                     user?.isubscriptstatus === null)) ||
-                (active === 8 &&
+                (active === 9 &&
                   (user?.rollsubscriptstatus?.toLowerCase() === "inactive" ||
                     user?.rollsubscriptstatus === null)) ||
-                (active === 9 &&
+                (active === 10 &&
                   (user?.w10subscriptstatus?.toLowerCase() === "inactive" ||
                     user?.w10subscriptstatus === null)) ||
-                (active === 10 &&
+                (active === 11 &&
                   (user?.rsubscriptstatus?.toLowerCase() === "inactive" ||
                     user?.rsubscriptstatus === null ||
                     user?.accoutplan === "Free")) ? (
@@ -142,20 +164,20 @@ const Dashboard = ({ Content, Top, active }) => {
               <h1 className={!mobile ? "ml-1 millik" : "hidden"}>Menu</h1>
               {/* </div> */}
             </div>
-            {mobile === true && <MobileMenu active={active} />}
-            {(active === 6 &&
+            {mobile === true && <MobileMenu active={active} msgs={messages} />}
+            {(active === 7 &&
               (user?.odds50status?.toLowerCase() === "inactive" ||
                 user?.odds50status === null)) ||
-            (active === 7 &&
+            (active === 8 &&
               (user?.isubscriptstatus?.toLowerCase() === "inactive" ||
                 user?.isubscriptstatus === null)) ||
-            (active === 8 &&
+            (active === 9 &&
               (user?.rollsubscriptstatus?.toLowerCase() === "inactive" ||
                 user?.rollsubscriptstatus === null)) ||
-            (active === 9 &&
+            (active === 10 &&
               (user?.w10subscriptstatus?.toLowerCase() === "inactive" ||
                 user?.w10subscriptstatus === null)) ||
-            (active === 10 &&
+            (active === 11 &&
               (user?.rsubscriptstatus?.toLowerCase() === "inactive" ||
                 user?.rsubscriptstatus === null)) ? (
               RedirectToPayments(active)

@@ -2,6 +2,12 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import {
+  AccountCircleRounded,
+  LogoutRounded,
+  MessageRounded,
+  NotificationsRounded,
+} from "@mui/icons-material";
 
 const styles = {
   opened: { color: "green" },
@@ -12,7 +18,30 @@ const HeaderComp = ({ logIn, nav }) => {
   const [open, setOpen] = useState(true);
   const [tab, setTab] = useState(nav);
   const [showMenu, setShowMenu] = useState(false);
+  const api = process.env.REACT_APP_BASE_API;
+  const token = localStorage.getItem("token");
+  const [messages, setMessages] = useState(null);
   const [loggedIn, setloggedIn] = useState(true);
+
+  const getMessages = async () => {
+    try {
+      const res = await fetch(`${api}/getendpoints/messages`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const res_json = await res.json();
+      if (res.ok) setMessages(res_json.unread.length);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    getMessages();
+  }, []);
 
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
@@ -40,7 +69,7 @@ const HeaderComp = ({ logIn, nav }) => {
           <img
             src={require("../assets/tip-logo.png")}
             alt="logo"
-            style={{ height: "32px", width: "128px" }}
+            className="w-32 aspect-auto"
           />
         </Link>
       </div>
@@ -171,17 +200,55 @@ const HeaderComp = ({ logIn, nav }) => {
             >
               <p className="text-lg font-thin cursor-pointer mr-5 underline  text-teal-400 lg:mb-0 mb-2 text-center millik">
                 <span
-                  className="hidden lg:block bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
+                  className="hidden lg:flex justify-center items-center bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
                   style={{ fontSize: "16px" }}
                 >
+                  <AccountCircleRounded sx={{ color: "#2563EB", mr: "4px" }} />
                   {user?.name}
+                  {messages && messages !== 0 ? (
+                    <div
+                      className="flex items-center justify-center text-center text-xs"
+                      style={{
+                        borderRadius: "50%",
+                        width: "25px",
+                        height: "25px",
+                      }}
+                    >
+                      <p className="text-center w-full">({messages})</p>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </span>
                 <Link
-                  className="lg:hidden bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
+                  className="lg:hidden flex justify-center items-center bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
                   to="/dashboard/profile"
                   style={{ fontSize: "16px" }}
                 >
+                  <AccountCircleRounded sx={{ color: "#2563EB", mr: "2px" }} />
                   {user?.name}
+                </Link>
+                <Link
+                  className="lg:hidden flex justify-center items-center bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
+                  to="/dashboard/messages"
+                  style={{ fontSize: "16px" }}
+                >
+                  <NotificationsRounded sx={{ color: "#2563EB", mr: "2px" }} />
+                  Messages
+                  {messages && messages !== 0 ? (
+                    <div
+                      className=" flex items-center justify-center text-center text-xs"
+                      style={{
+                        borderRadius: "50%",
+                        width: "25px",
+                        height: "25px",
+                      }}
+                    >
+                      <p className="text-center w-full">({messages})</p>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </Link>
               </p>
               {showMenu && (
@@ -193,10 +260,42 @@ const HeaderComp = ({ logIn, nav }) => {
                   <div className="p-3 hover:bg-gradient-to-r hover:text-white rounded-tr-md from-teal-600 to-blue-600">
                     <Link
                       to="/dashboard/profile"
-                      className="w-full"
+                      className="w-full flex items-center"
                       style={{ fontSize: "16px" }}
                     >
+                      <AccountCircleRounded
+                        sx={{ color: "#2563EB", mr: "2px" }}
+                      />
                       My Profile
+                    </Link>
+                  </div>
+                  <div className="p-3 hover:bg-gradient-to-r hover:text-white rounded-tr-md from-teal-600 to-blue-600">
+                    <Link
+                      to="/dashboard/messages"
+                      className="w-full flex items-center"
+                      style={{ fontSize: "16px" }}
+                    >
+                      <NotificationsRounded
+                        sx={{
+                          color: "#2563EB",
+                          mr: "2px",
+                        }}
+                      />
+                      Messages{" "}
+                      {messages && messages !== 0 ? (
+                        <div
+                          className=" flex items-center justify-center ml-1 text-center bg-blue-600 text-white text-sm"
+                          style={{
+                            borderRadius: "50%",
+                            width: "25px",
+                            height: "25px",
+                          }}
+                        >
+                          <p className="text-center w-full">{messages}</p>
+                        </div>
+                      ) : (
+                        ""
+                      )}
                     </Link>
                   </div>
                   <div
@@ -204,6 +303,11 @@ const HeaderComp = ({ logIn, nav }) => {
                     className="w-full rounded-b-md hover:bg-red-600 p-3 text-red-600 hover:text-white"
                     style={{ fontSize: "16px" }}
                   >
+                    <LogoutRounded
+                      sx={{
+                        mr: "2px",
+                      }}
+                    />
                     Log Out
                   </div>
                 </div>
@@ -214,6 +318,11 @@ const HeaderComp = ({ logIn, nav }) => {
               className="rounded-md text-center lg:hidden py-1 px-2 bg-gradient-to-r from-red-500 to-red-600"
               onClick={() => LogOut()}
             >
+              <LogoutRounded
+                sx={{
+                  mr: "2px",
+                }}
+              />
               Log Out
             </p>
           </div>

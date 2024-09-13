@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PlansCard from "./PlansCard";
 import { plansData } from "../data/plansData";
 import { dollarData } from "../data/dollarData";
@@ -11,6 +11,7 @@ import { ugandaData } from "../data/UgandaData";
 import { sierraLData } from "../data/sierraLData";
 import { southAData } from "../data/southAData";
 import { camBenData } from "../data/camBenData";
+import Loader from "./Loader";
 
 const sty = {
   width: "32%",
@@ -255,7 +256,42 @@ const countries = [
 const LandingPlans = () => {
   const [data, setData] = useState(plansData);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [country, setCountry] = useState("Nigeria");
+  const [country, setCountry] = useState(null);
+  const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
+  const geoKey = process.env.REACT_APP_GEOAPIKEY1;
+  const geoKey2 = process.env.REACT_APP_GEOAPIKEY2;
+  const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
+  const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
+  const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
+  const geoKeys = [geoKey, geoKey2, geoKey3, geoKey4, geoKey5];
+  const [userCountryCode, setUserCountryCode] = useState(null);
+
+  const getLocation = async (num) => {
+    try {
+      const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
+      const res_txt = await res.text();
+      if (res.ok) {
+        setUserCountryCode(res_txt);
+        setCountry(res_txt);
+        handleLocation(String(res_txt).trim());
+      } else if (res.status === 429) {
+        if (num < 4) {
+          console.log("api number >>>>>>>>>>>>>>>>", num);
+          getLocation(num + 1);
+        } else {
+          setUserCountryCode("US");
+          setCountry("US");
+          handleLocation("US");
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    getLocation(0);
+  }, []);
 
   const handleChange = (countries) => {
     setSelectedOption(countries);
@@ -268,40 +304,80 @@ const LandingPlans = () => {
         countries.value === "RW"
       ? setData(kenyaData)
       : countries.value === "TZ"
-      ? setData(tanzaniaData)
+      ? setData(kenyaData)
       : countries.value === "UG"
       ? setData(ugandaData)
       : countries.value === "SL"
       ? setData(sierraLData)
       : countries.value === "ZA"
       ? setData(southAData)
-      : countries.value === "BJ" || countries.value === "CM"
+      : countries.value === "BJ" ||
+        countries.value === "CM" ||
+        countries.value === "CI" ||
+        countries.value === "ML" ||
+        countries.value === "GW" ||
+        countries.value === "NE" ||
+        countries.value === "BF" ||
+        countries.value === "SN"
       ? setData(camBenData)
       : setData(dollarData);
     setCountry(countries.label);
   };
 
+  const handleLocation = (code) => {
+    code === "NG"
+      ? setData(plansData)
+      : code === "GH"
+      ? setData(ghanaData)
+      : code === "KE" || code === "ET" || code === "RW"
+      ? setData(kenyaData)
+      : code === "TZ"
+      ? setData(kenyaData)
+      : code === "UG"
+      ? setData(ugandaData)
+      : code === "SL"
+      ? setData(sierraLData)
+      : code === "ZA"
+      ? setData(southAData)
+      : code === "BJ" ||
+        code === "CM" ||
+        code === "CI" ||
+        code === "ML" ||
+        code === "GW" ||
+        code === "NE" ||
+        code === "BF" ||
+        code === "SN"
+      ? setData(camBenData)
+      : setData(dollarData);
+  };
+
   return (
-    <div
-      style={{ backgroundColor: "#E6F5F1" }}
-      className="py-9 flex flex-col items-center h-screen overflow-y-scroll"
-    >
-      <h2 className="text-2xl md:text-3xl lg:text-4xl md:mb-1 font-extrabold bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text millik">
-        Our Plans
-      </h2>
-      <div className="w-9/12 flex">
-        <Select
-          options={countries}
-          value={selectedOption}
-          onChange={handleChange}
-          isSearchable={true}
-          placeholder="Select a Country"
-          className="md:w-4/12 w-10/12 lg:w-3/12 mb-4 mx-auto cursor-pointer"
-        />
-      </div>
-      <div className="lg:w-10/12 flex flex-wrap justify-between mx-auto">
-        <PlansCard styl={sty} data={data} country={country} />
-      </div>
+    <div>
+      {userCountryCode ? (
+        <div
+          style={{ backgroundColor: "#E6F5F1" }}
+          className="py-9 flex flex-col items-center h-screen overflow-y-scroll"
+        >
+          <h2 className="text-2xl md:text-3xl lg:text-4xl md:mb-1 font-extrabold bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text millik">
+            Our Plans
+          </h2>
+          <div className="w-9/12 flex">
+            <Select
+              options={countries}
+              value={selectedOption}
+              onChange={handleChange}
+              isSearchable={true}
+              placeholder="Select a Country"
+              className="md:w-4/12 w-10/12 lg:w-3/12 mb-4 mx-auto cursor-pointer"
+            />
+          </div>
+          <div className="lg:w-10/12 flex flex-wrap justify-between mx-auto">
+            <PlansCard styl={sty} data={data} country={country} />
+          </div>
+        </div>
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };

@@ -137,7 +137,7 @@ const Weekend10 = () => {
       <Helmet>
         <title>Buy Weekend 10 Odds! - Tips180</title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={9} />
+      <Dashboard Top={Top} Content={Content} active={10} />
     </div>
   );
 };

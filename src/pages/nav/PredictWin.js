@@ -8,7 +8,7 @@ const PredictWin = () => {
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="-mb-96 flex flex-col z-50 items-center mt-32 h-80">
         <h1 className="text-2xl md:text-4xl lg:text-5xl millik">
-          Coming Soon!!!
+          Starting September 30!
         </h1>
         <p className="text-base mt-2">Please check back later</p>
         <Link

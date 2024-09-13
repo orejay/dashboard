@@ -60,6 +60,6 @@ const Hiring = () => {
     </div>
   );
 
-  return <Dashboard Top={Top} Content={Content} active={14} />;
+  return <Dashboard Top={Top} Content={Content} active={15} />;
 };
 export default Hiring;

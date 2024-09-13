@@ -61,6 +61,10 @@ const storeCardData = [
     name: "Draw",
     link: "/tip-store/draw",
   },
+  {
+    name: "Accumulator",
+    link: "/tip-store/accumulator",
+  },
 ];
 
 const plansCardData = [

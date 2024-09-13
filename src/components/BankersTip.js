@@ -104,7 +104,7 @@ const BankersTip = () => {
       <Helmet>
         <title>Banker Betting Tip of the Day - Tips180</title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={11} />
+      <Dashboard Top={Top} Content={Content} active={12} />
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import React from "react";
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect } from "react";
 import { toast } from "react-toastify";
-import Main from "../Main";
 import { useNavigate } from "react-router-dom";
-const StoreTable = lazy(() => import("../components/StoreTable"));
+import StoreTable from "../components/StoreTable";
+import Main from "../Main";
 
 const style = {
   width: "90%",
@@ -62,6 +62,9 @@ const endpoints = {
     },
   ],
   draw: [{ endpoint: "draw", tip: "draw", title: "Full Time Draw Tips" }],
+  accumulator: [
+    { endpoint: "acca", tip: "accatip", title: "Accumulator Tips" },
+  ],
 };
 
 const StorePage = () => {
@@ -82,6 +85,7 @@ const StorePage = () => {
         "over1",
         "pr",
         "correctscore",
+        "accumulator",
       ].includes(link) &&
         !["Premium"].includes(user?.accoutplan))
     ) {
@@ -93,7 +97,7 @@ const StorePage = () => {
       }
       toast.clearWaitingQueue();
     }
-  });
+  }, []);
 
   const market = (
     <div className="pb-10">
@@ -117,16 +121,14 @@ const StorePage = () => {
           ) : (
             ""
           )}
-          <Suspense fallback={<div>Loading...</div>}>
-            <StoreTable
-              style={style}
-              profile={false}
-              endpoint={each.endpoint}
-              tip={each.tip}
-              index={index}
-              link={link}
-            />
-          </Suspense>
+          <StoreTable
+            style={style}
+            profile={false}
+            endpoint={each.endpoint}
+            tip={each.tip}
+            index={index}
+            link={link}
+          />
         </div>
       ))}
     </div>

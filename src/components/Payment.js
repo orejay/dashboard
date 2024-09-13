@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Dashboard from "./Dashboard";
 import PlansCard from "./PlansCard";
 import { plansData } from "../data/plansData";
@@ -11,6 +11,7 @@ import { sierraLData } from "../data/sierraLData";
 import { southAData } from "../data/southAData";
 import { tanzaniaData } from "../data/TanzaniaData";
 import { ugandaData } from "../data/UgandaData";
+import Loader from "./Loader";
 import { Helmet } from "react-helmet";
 
 const sty = {
@@ -254,9 +255,45 @@ const countries = [
 ];
 
 const Payment = () => {
-  const [data, setData] = useState(plansData);
+  const [data, setData] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [country, setCountry] = useState("Nigeria");
+  const [country, setCountry] = useState(null);
+  const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
+  const geoKey = process.env.REACT_APP_GEOAPIKEY1;
+  const geoKey2 = process.env.REACT_APP_GEOAPIKEY2;
+  const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
+  const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
+  const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
+  const geoKeys = [geoKey, geoKey2, geoKey3, geoKey4, geoKey5];
+  const [userCountryCode, setUserCountryCode] = useState(null);
+
+  const getLocation = async (num) => {
+    try {
+      const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
+      const res_txt = await res.text();
+      console.log(res);
+      console.log(res_txt);
+      if (res.ok) {
+        setUserCountryCode(String(res_txt).trim());
+        handleLocation(String(res_txt).trim());
+      } else if (res.status === 429) {
+        if (num < 4) {
+          console.log("api number >>>>>>>>>>>>>>>>", num);
+          getLocation(num + 1);
+        } else {
+          setUserCountryCode("US");
+          setCountry("US");
+          handleLocation("US");
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    getLocation(0);
+  }, []);
 
   const handleChange = (countries) => {
     setSelectedOption(countries);
@@ -282,8 +319,29 @@ const Payment = () => {
     setCountry(countries.label);
   };
 
+  const handleLocation = (code) => {
+    code === "NG"
+      ? setData(plansData)
+      : code === "GH"
+      ? setData(ghanaData)
+      : code === "KE" || code === "ET" || code === "RW"
+      ? setData(kenyaData)
+      : code === "TZ"
+      ? setData(kenyaData)
+      : code === "UG"
+      ? setData(ugandaData)
+      : code === "SL"
+      ? setData(sierraLData)
+      : code === "ZA"
+      ? setData(southAData)
+      : code === "BJ" || code === "CM"
+      ? setData(camBenData)
+      : setData(dollarData);
+    setCountry(countries.filter((c) => c.value === code)[0].label);
+  };
+
   const Top = (
-    <div className="flex w-full">
+    <div className="flex w-full mb-4">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
         className="font-bold millik"
@@ -318,7 +376,11 @@ const Payment = () => {
         />
       </div>
 
-      <PlansCard styl={sty} data={data} country={country} />
+      {country ? (
+        <PlansCard styl={sty} data={data} country={country} />
+      ) : (
+        <Loader />
+      )}
     </div>
   );
   return (
@@ -326,7 +388,7 @@ const Payment = () => {
       <Helmet>
         <title></title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={3} />
+      <Dashboard Top={Top} Content={Content} active={4} />
     </div>
   );
 };

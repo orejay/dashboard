@@ -6,9 +6,8 @@ import {
   FlutterWaveButton,
   closePaymentModal,
 } from "flutterwave-react-v3";
-import flutter from "../assets/flutter.png";
-import mtn from "../assets/mtn.png";
-import mpesa from "../assets/mpesa.png";
+import crypto from "../assets/crypto.jpeg";
+import paypal from "../assets/paypal.png";
 import Main from "../Main";
 
 const fwPublicKey = process.env.REACT_APP_FLUTTERWAVE_PUBLIC_KEY;
@@ -17,8 +16,8 @@ const FlutterwaveCheckout = () => {
   const api = process.env.REACT_APP_BASE_API;
   const authHeader = localStorage.getItem("token");
   const navigate = useNavigate();
-  const [openMtn, setOpenMtn] = useState(false);
-  const [openMpesa, setOpenMpesa] = useState(false);
+  const [openCrypto, setOpenCrypto] = useState(false);
+  const [openPaypal, setOpenPaypal] = useState(false);
   const user = JSON.parse(localStorage.getItem("user"));
   const email = user.email;
   const name = user.name;
@@ -177,14 +176,15 @@ const FlutterwaveCheckout = () => {
             <div className="md:flex md:w-10/12">
               <div className="md:w-2/12 mr-7">
                 <img
-                  src={mtn}
-                  alt="paystack-image"
+                  src={crypto}
+                  alt="crypto-image"
                   className="w-24 md:w-32 shadow rounded"
+                  style={{ height: "120px" }}
                 />
               </div>
               <div className="md:w-8/12">
                 <h2 className="font-bold mb-2 mt-2 md:mt-0">
-                  Payment by MTN Mobile Money
+                  Payment with Crypto
                 </h2>
                 <p className="text-sm md:text-base">
                   Your Tips180 account will be upgraded once payment has been
@@ -195,28 +195,33 @@ const FlutterwaveCheckout = () => {
             <div className="mt-2 md:w-2/12 md:mt-0 flex justify-end">
               <div
                 className="greybgh flex items-center text-sm font-semibold justify-center rounded w-2/5 md:w-full p-0 h-fit cursor-pointer border-2"
-                onClick={() => setOpenMtn(!openMtn)}
+                onClick={() => setOpenCrypto(!openCrypto)}
               >
                 <p className="p-2 text-sm md:text-base">
-                  {!openMtn ? "View" : "Hide"} Details
+                  {!openCrypto ? "View" : "Hide"} Details
                 </p>
               </div>
             </div>
           </div>
-          <div className={!openMtn ? `hidden` : `mt-10`}>
+          <div className={!openCrypto ? `hidden` : `mt-10`}>
+            <p className="text-sm md:text-base">
+              Kindly contact us via Whatsapp on{" "}
+              <span className="font-semibold">+234 814 600 0171</span> or send a
+              mail to <span className="font-semibold">crypto@tips180.com</span>{" "}
+              for details on how to make payment via CRYPTO
+            </p>
+            <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
+              <a
+                href="https://wa.link/j1td8w"
+                target="_blank"
+                className="w-full h-full text-center flex justify-center items-center"
+              >
+                <p>WHATSAPP</p>
+              </a>
+            </button>
             <p className="mt-2 text-sm md:text-base">
-              All payments should be made only to{" "}
-              <span className="font-semibold">+233 249 447 682</span>
-              <br /> After making payment, please send the details below as a
-              Whatsapp message to{" "}
-              <span className="font-semibold">+234 814 600 0171</span>. <br />
-              <ol className="pl-2">
-                <li>1. YOUR MTN MOBILE MONEY NAME</li>
-                <li>2. DATE OF PAYMENT</li>
-                <li>3. AMOUNT PAID</li>
-                <li>4. REGISTERED EMAIL ADDRESS OR USER ID ON THE WEBSITE</li>
-              </ol>
-              Your Tips180 account would be upgraded before the end of the day.
+              Your Tips180 account will be upgraded before the close of business
+              day.
             </p>
           </div>
         </div>
@@ -225,14 +230,14 @@ const FlutterwaveCheckout = () => {
             <div className="md:flex md:w-10/12">
               <div className="md:w-2/12 mr-7">
                 <img
-                  src={mpesa}
+                  src={paypal}
                   alt="paystack-image"
                   className="w-24 md:w-32 shadow rounded"
                 />
               </div>
               <div className="md:w-8/12">
                 <h2 className="font-bold mb-2 mt-2 md:mt-0">
-                  Payment by MPESA (SAFARICOM MOBILE MONEY)
+                  Payment via Paypal
                 </h2>
                 <p className="text-sm md:text-base">
                   Your Tips180 account will be upgraded once payment has been
@@ -243,28 +248,36 @@ const FlutterwaveCheckout = () => {
             <div className="mt-2 md:w-2/12 md:mt-0 flex justify-end">
               <div
                 className="greybgh flex items-center text-sm font-semibold justify-center rounded w-2/5 md:w-full p-0 h-fit cursor-pointer border-2"
-                onClick={() => setOpenMpesa(!openMpesa)}
+                onClick={() => setOpenPaypal(!openPaypal)}
               >
                 <p className="p-2 text-sm md:text-base">
-                  {!openMpesa ? "View" : "Hide"} Details
+                  {!openPaypal ? "View" : "Hide"} Details
                 </p>
               </div>
             </div>
           </div>
-          <div className={!openMpesa ? `hidden` : `mt-10`}>
+          <div className={!openPaypal ? `hidden` : `mt-10`}>
+            <p className="text-sm md:text-base">
+              Kindly click on the PAYPAL button below to view the PayPaldetails.
+            </p>
+            <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
+              <a
+                href="https://www.paypal.me/ojett904?locale.x=en_CA"
+                target="_blank"
+                className="w-full h-full text-center flex justify-center items-center"
+              >
+                <p>PAYPAL</p>
+              </a>
+            </button>
             <p className="mt-2 text-sm md:text-base">
-              All payments should be made ONLY to{" "}
-              <span className="font-semibold">+254 796 118 357</span> <br />
-              After making payment, please send the details below as a Whatsapp
-              message to
-              <span className="font-semibold">+254 796 118 357</span>
-              <ol className="pl-2">
-                <li>1. YOUR MTN MOBILE MONEY NAME</li>
-                <li>2. DATE OF PAYMENT</li>
-                <li>3. AMOUNT PAID</li>
-                <li>4. REGISTERED EMAIL ADDRESS OR USER ID ON THE WEBSITE</li>
-              </ol>
-              Your Tips180 account would be upgraded before the end of the day.
+              After making payment, it is important to share your payment proof
+              as a Whatsapp message to{" "}
+              <span className="font-semibold">+234 814 600 0171</span> or to our
+              mailbox at{" "}
+              <span className="font-semibold">paypal@tips180.com</span> <br />
+              <p className="mt-2">
+                Your Tips180 account would be upgraded within 24 hours.
+              </p>
             </p>
           </div>
         </div>

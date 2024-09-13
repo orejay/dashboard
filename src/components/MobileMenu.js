@@ -4,7 +4,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import { Spring } from "react-spring/renderprops";
 import Tab from "./Tab";
 
-const MobileMenu = ({ active }) => {
+const MobileMenu = ({ active, msgs }) => {
   const [tabNo, setTabNo] = useState(0);
   const navigate = useNavigate();
   const data = [
@@ -16,6 +16,11 @@ const MobileMenu = ({ active }) => {
       name: "My Store",
       link: "/dashboard/store",
     },
+    {
+      name: `Messages (${msgs})`,
+      link: "/dashboard/messages",
+    },
+    // { name: "Predict & Win History", link: "/dashboard/pw" },
     {
       name: "How to Subscribe",
       link: "/dashboard/subscribe",
