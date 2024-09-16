@@ -21,25 +21,25 @@ function Writeup() {
           mention a few winning betting tips, Tips180 will aid you predict a
           football match correctly. If you are looking for sites that predict
           football matches correctly, Tips180 is the best football prediction
-          site. At Tips180, we offer football predictions/soccer tips and
-          in-depth analysis for over 50 leagues (both major leagues - English
-          Premier League Predictions, Serie A Predictions, La Liga Predictions,
-          Bundesliga Predictions, French Ligue 1 Predictions etc... minor
-          leagues- English Championship, Serie B, Segunda League and many
-          others.) playing across the globe. Our unique system of categorizing
-          football predictions and tips in different betting market (such as
-          BTTS, OVER 2.5, UNDER 2.5, SINGLE BET, ACCUMULATORS, DOUBLE CHANCE,
-          SURE 2 ODDS, SURE 3 ODDS and many others) makes it swift for tpunters
-          with a specific/favorite betting tips in mind have an easy surfing
-          experience and gives them the flexibility they deserve. Our analysis
-          can delve even further and reveal the likelihood of specific outcomes,
-          such as the probability of each teams actual score outcome (CORRECT
-          SCORE tips/predictions).
+          site for today prediction. At Tips180, we offer football
+          predictions/soccer tips and in-depth analysis for over 50 leagues
+          (both major leagues - English Premier League Predictions, Serie A
+          Predictions, La Liga Predictions, Bundesliga Predictions, French Ligue
+          1 Predictions etc... minor leagues- English Championship, Serie B,
+          Segunda League and many others.) playing across the globe. Our unique
+          system of categorizing football predictions and tips in different
+          betting market (such as BTTS, OVER 2.5, UNDER 2.5, SINGLE BET,
+          ACCUMULATORS, DOUBLE CHANCE, SURE 2 ODDS, SURE 3 ODDS and many others)
+          makes it swift for tpunters with a specific/favorite betting tips in
+          mind have an easy surfing experience and gives them the flexibility
+          they deserve. Our analysis can delve even further and reveal the
+          likelihood of specific outcomes, such as the probability of each teams
+          actual score outcome (CORRECT SCORE tips/predictions).
         </p>
       </div>
       <div className="mb-5">
         <h2 className="text-md lg:text-2xl font-medium millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
-          Free Football Prediction Site – Sure Odds for Today
+          Free Football Prediction Site – Sure Odds for Today Prediction
         </h2>
         <p className="text-xs lg:text-base md:text-justify">
           At Tips180, we are passionate with making football punters across the
@@ -61,35 +61,36 @@ function Writeup() {
           Real Football Betting Prediction Site
         </h2>
         <p className="text-xs lg:text-base md:text-justify">
-          Tips180.com is the best football prediction site.At tips180, we offer
-          the best betting tips and guide on how to make money steadily from
-          football betting. Example of scheme offered is football investment
-          scheme where we unveil the world of football investment and guide you
-          on how to increase your profits immediately! Our investment tracker
-          shows our recent performance as we encourage transparency in football
-          investments and also Rollover Bet which serves as a cash builder. This
-          differs them from us all other forecasting platform across the world.
-          Our platform also gives punters the heads up by predicting sure
-          football predictions for tomorrow with our Upcoming Tips. We also have
-          a store where punters can use in making selections for football
-          predictions/tips for the weekend. We understand fully well that some
-          factors like injuries, weather condition, suspensions, past
-          performance, current form, historical meetings, nature of competition,
-          early bookings, psychology of both the players and team playing and
-          some other secondary factors might determine the outcome of a fixture
-          that is why we have a team a dedicated, unbiased and well informed
-          expert analysts/tipsters that use algorithms and well calculated
-          research to do all the rigorous work in order to produce quality
-          football tips that you can rely on. It is our passion to see you WIN!
-          The system is automated, functioning entirely without human
-          interference or crucially human emotions. It is founded on complex
-          methodological models such as a modified Dixon and Coles model, and
-          even takes the methods of its opponents into consideration. The user
-          experience on Tips180 is incomparable to any other website that claims
-          to give good predictive info on soccer tips as we are very thorough in
-          the tips we provide because all we ever want to do is to ensure our
-          users find us reliable and profitable even when using our free
-          football predictions and free betting football tips.
+          Tips180.com is the best football prediction site for today
+          prediction.At tips180, we offer the best betting tips and guide on how
+          to make money steadily from football betting. Example of scheme
+          offered is football investment scheme where we unveil the world of
+          football investment and guide you on how to increase your profits
+          immediately! Our investment tracker shows our recent performance as we
+          encourage transparency in football investments and also Rollover Bet
+          which serves as a cash builder. This differs them from us all other
+          forecasting platform across the world. Our platform also gives punters
+          the heads up by predicting sure football predictions for tomorrow with
+          our Upcoming Tips. We also have a store where punters can use in
+          making selections for football predictions/tips for the weekend. We
+          understand fully well that some factors like injuries, weather
+          condition, suspensions, past performance, current form, historical
+          meetings, nature of competition, early bookings, psychology of both
+          the players and team playing and some other secondary factors might
+          determine the outcome of a fixture that is why we have a team a
+          dedicated, unbiased and well informed expert analysts/tipsters that
+          use algorithms and well calculated research to do all the rigorous
+          work in order to produce quality football tips that you can rely on.
+          It is our passion to see you WIN! The system is automated, functioning
+          entirely without human interference or crucially human emotions. It is
+          founded on complex methodological models such as a modified Dixon and
+          Coles model, and even takes the methods of its opponents into
+          consideration. The user experience on Tips180 is incomparable to any
+          other website that claims to give good predictive info on soccer tips
+          as we are very thorough in the tips we provide because all we ever
+          want to do is to ensure our users find us reliable and profitable even
+          when using our free football predictions and free betting football
+          tips.
         </p>
       </div>
       <div className="mb-5">

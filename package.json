@@ -64,9 +64,10 @@
     "cross-env": "^7.0.3",
     "imagemin-cli": "^8.0.0",
     "postcss": "^8.4.18",
-    "react-window": "^1.8.10",
+    "react-countdown": "^2.3.6",
     "react-flagkit": "^2.0.4",
     "react-router-dom": "^6.4.3",
+    "react-window": "^1.8.10",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.2.1"
   }

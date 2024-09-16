@@ -115,19 +115,19 @@ const Dashboard = ({ Content, Top, active }) => {
                 >
                   {Top}
                 </div>
-                {(active === 7 &&
+                {(active === 9 &&
                   (user?.odds50status?.toLowerCase() === "inactive" ||
                     user?.odds50status === null)) ||
-                (active === 8 &&
+                (active === 10 &&
                   (user?.isubscriptstatus?.toLowerCase() === "inactive" ||
                     user?.isubscriptstatus === null)) ||
-                (active === 9 &&
+                (active === 11 &&
                   (user?.rollsubscriptstatus?.toLowerCase() === "inactive" ||
                     user?.rollsubscriptstatus === null)) ||
-                (active === 10 &&
+                (active === 12 &&
                   (user?.w10subscriptstatus?.toLowerCase() === "inactive" ||
                     user?.w10subscriptstatus === null)) ||
-                (active === 11 &&
+                (active === 13 &&
                   (user?.rsubscriptstatus?.toLowerCase() === "inactive" ||
                     user?.rsubscriptstatus === null ||
                     user?.accoutplan === "Free")) ? (
@@ -165,19 +165,19 @@ const Dashboard = ({ Content, Top, active }) => {
               {/* </div> */}
             </div>
             {mobile === true && <MobileMenu active={active} msgs={messages} />}
-            {(active === 7 &&
+            {(active === 8 &&
               (user?.odds50status?.toLowerCase() === "inactive" ||
                 user?.odds50status === null)) ||
-            (active === 8 &&
+            (active === 9 &&
               (user?.isubscriptstatus?.toLowerCase() === "inactive" ||
                 user?.isubscriptstatus === null)) ||
-            (active === 9 &&
+            (active === 10 &&
               (user?.rollsubscriptstatus?.toLowerCase() === "inactive" ||
                 user?.rollsubscriptstatus === null)) ||
-            (active === 10 &&
+            (active === 11 &&
               (user?.w10subscriptstatus?.toLowerCase() === "inactive" ||
                 user?.w10subscriptstatus === null)) ||
-            (active === 11 &&
+            (active === 12 &&
               (user?.rsubscriptstatus?.toLowerCase() === "inactive" ||
                 user?.rsubscriptstatus === null)) ? (
               RedirectToPayments(active)

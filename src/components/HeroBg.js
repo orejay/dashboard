@@ -28,8 +28,8 @@ const HeroBg = ({ Slider }) => {
               className="mb-3 mx-auto md:mx-0 text-xs md:text-base lg:text-xl"
               style={{ maxWidth: "90%" }}
             >
-              Get the best free football predictions and tips. It is our passion
-              to help punters around the world win!
+              Get Today's Prediction and the best free football tips to help you
+              win your bets!
             </p>
           </div>
           <div className="flex text-base">

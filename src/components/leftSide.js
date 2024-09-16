@@ -18,7 +18,8 @@ const LeftSide = ({ active, msgs }) => {
       name: `Messages (${msgs})`,
       link: "/dashboard/messages",
     },
-    // { name: "Predict & Win History", link: "/dashboard/pw" },
+    { name: "Predict & Win", link: "/dashboard/pw" },
+    { name: "Predict & Win History", link: "/dashboard/pw-history" },
     {
       name: "How to Subscribe",
       link: "/dashboard/subscribe",

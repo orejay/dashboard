@@ -5,6 +5,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@mui/material";
 import Messages from "./pages/Messages";
+import PredictAndWin from "./pages/PredictAndWin";
+import PwTandC from "./pages/PwTandC";
+import PandW from "./pages/PandW";
 const Home = lazy(() => import("./pages/nav/Home"));
 const SlPayment = lazy(() => import("./components/SlPayment"));
 const Odds50 = lazy(() => import("./components/Odds50"));
@@ -86,7 +89,13 @@ function App() {
 
   return (
     <div>
-      <Suspense fallback={<div className="h-screen w-screen"></div>}>
+      <Suspense
+        fallback={
+          <div className="h-screen w-screen flex justify-center items-center">
+            <p>Loading...</p>
+          </div>
+        }
+      >
         <Routes>
           <Route
             path="/"
@@ -153,6 +162,9 @@ function App() {
           <Route path="/dashboard/acca" element={<ACCA />}></Route>
           <Route path="/dashboard/store" element={<Store />}></Route>
           <Route path="/dashboard/glossary" element={<Glossary />}></Route>
+          <Route path="/pw-terms" element={<PwTandC />} />
+          <Route path="/dashboard/pw-history" element={<PandW />}></Route>
+          <Route path="/dashboard/pw" element={<PredictAndWin />}></Route>
           <Route path="/dashboard/messages" element={<Messages />}></Route>
           <Route path="/dashboard/hiring" element={<Hiring />}></Route>
           <Route
