@@ -333,7 +333,11 @@ const PredWin = ({
       <h4
         className="text-blue-500 underline font-semibold mt-4 cursor-pointer"
         onClick={() => {
-          isDashboard ? setIsRuleVisible(!isRuleVisible) : setIsRuleModal(true);
+          if (isDashboard === true) {
+            setIsRuleVisible(!isRuleVisible);
+          } else if (isDashboard === false) {
+            setIsRuleModal(true);
+          }
         }}
       >
         Predict & Win Game Rules
@@ -469,7 +473,10 @@ const PredWin = ({
         ""
       )}
       {isRuleModal && (
-        <div className="bg-white rounded fixed z-50 inset-0 flex-column justify-between items-center p-4 w-9/12 md:w-5/12 md:h-96 h-169 shadow-inner top-40 md:top-40 md:left-37 left-12">
+        <div
+          className="bg-white rounded fixed inset-0 flex-column justify-between items-center p-4 w-9/12 md:w-5/12 md:h-96 h-169 shadow-inner top-40 md:top-40 md:left-37 left-12"
+          style={{ zIndex: 301 }}
+        >
           <div className="border-b-2 mb-2">
             <button
               onClick={() => setIsRuleModal(false)}
@@ -539,8 +546,11 @@ const PredWin = ({
         </div>
       )}
       {isModal && (
-        <div className="bg-white rounded fixed z-50 inset-0 flex-column justify-between items-center p-4 w-9/12 md:w-5/12 md:h-52 h-3/6 shadow-md top-37 md:top-48 md:left-37 left-12">
-          <div className="border-b-2 mb-2">
+        <div
+          className="bg-white rounded fixed inset-0 flex-column justify-between items-center p-4 w-9/12 md:w-5/12 md:h-52 h-3/6 shadow-md top-37 md:top-48 md:left-37 left-12"
+          style={{ zIndex: 301 }}
+        >
+          <div className="border-b-2 mb-2" style={{ zIndex: 301 }}>
             <button
               onClick={() => setIsModal(false)}
               className=" text-red-600 font-bold"

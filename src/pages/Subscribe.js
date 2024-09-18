@@ -127,7 +127,7 @@ const Subscribe = ({ type }) => {
       <Helmet>
         <title>How to Subscribe - Tips180</title>
       </Helmet>
-      <Dashboard Top={Top} Content={country ? Content : loader} active={4} />
+      <Dashboard Top={Top} Content={country ? Content : loader} active={5} />
     </div>
   );
 };

@@ -69,17 +69,17 @@ const Dashboard = ({ Content, Top, active }) => {
     const RedirectToPayments = (props) => {
       navigate("/dashboard/payment");
       {
-        props === 6
+        props === 9
           ? toast.info("Please Subscribe to 50 Odds Plan to view 50 Odds Plan")
-          : props === 7
+          : props === 10
           ? toast.info(
               "Please Subscribe to Smart Bet Plan to view Smart Bet Plan"
             )
-          : props === 8
+          : props === 11
           ? toast.info(
               "Please Subscribe to Rollover plan to view Rollover plan"
             )
-          : props === 9
+          : props === 12
           ? toast.info(
               "Please Subscribe to Weekend 10 Plan view Weeekend 10 plan"
             )
@@ -165,19 +165,19 @@ const Dashboard = ({ Content, Top, active }) => {
               {/* </div> */}
             </div>
             {mobile === true && <MobileMenu active={active} msgs={messages} />}
-            {(active === 8 &&
+            {(active === 9 &&
               (user?.odds50status?.toLowerCase() === "inactive" ||
                 user?.odds50status === null)) ||
-            (active === 9 &&
+            (active === 10 &&
               (user?.isubscriptstatus?.toLowerCase() === "inactive" ||
                 user?.isubscriptstatus === null)) ||
-            (active === 10 &&
+            (active === 11 &&
               (user?.rollsubscriptstatus?.toLowerCase() === "inactive" ||
                 user?.rollsubscriptstatus === null)) ||
-            (active === 11 &&
+            (active === 12 &&
               (user?.w10subscriptstatus?.toLowerCase() === "inactive" ||
                 user?.w10subscriptstatus === null)) ||
-            (active === 12 &&
+            (active === 13 &&
               (user?.rsubscriptstatus?.toLowerCase() === "inactive" ||
                 user?.rsubscriptstatus === null)) ? (
               RedirectToPayments(active)

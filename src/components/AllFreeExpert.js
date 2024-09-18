@@ -42,7 +42,7 @@ const AllFreeExpert = () => {
     today: today,
     tomorrow: tomorrowDate,
   };
-  const isSmall = useMediaQuery("(max-width:375px)");
+  const isSmall = useMediaQuery("(max-width:450px)");
 
   const getFreeExpert = (date) => {
     fetch(`${api}/getendpoints/free-experts/${date}`)
@@ -83,8 +83,8 @@ const AllFreeExpert = () => {
     <div className="mb-10 bg-white">
       <div className="md:w-11/12 flex md:items-center items-start justify-between mx-auto mt-7 md:my-8 mobil">
         <h1 className="md:text-2xl lg:text-3xl font-medium millik flex-wrap">
-          Today's Prediction: Free Football Prediction and Betting Tips{" "}
-          {selectedOption.label}
+          {selectedOption.label}'s Prediction: Free Football Prediction and
+          Betting Tips {selectedOption.label}
           <span className="flex">({dateList[selectedOption.value]})</span>
         </h1>
         <Select

@@ -90,7 +90,7 @@ const ProfileSure3 = () => {
       <Helmet>
         <title>3 Odds- Tips180</title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={6} />
+      <Dashboard Top={Top} Content={Content} active={8} />
     </div>
   );
 };

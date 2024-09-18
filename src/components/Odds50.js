@@ -251,7 +251,7 @@ const Odds50 = () => {
       <Helmet>
         <title>Buy 50 Odds! - Tips180</title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={7} />
+      <Dashboard Top={Top} Content={Content} active={9} />
     </div>
   );
 };

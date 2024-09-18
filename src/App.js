@@ -1,6 +1,8 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import pwad from "./assets/pwad.png";
+import pwadmobile from "./assets/pwadmobile.png";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@mui/material";
@@ -54,6 +56,7 @@ const PredictWin = lazy(() => import("./pages/nav/PredictWin"));
 const StorePage = lazy(() => import("./pages/StorePage"));
 const PageNotFound = lazy(() => import("./pages/Error/PageNotFound"));
 const Hiring = lazy(() => import("./components/Hiring"));
+// const logo = lazy(() => import("./assets/tip-logo.png"));
 
 function App() {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -96,6 +99,18 @@ function App() {
           </div>
         }
       >
+        <div
+          className="fixed flex justify-center items-center bottom-0 left-0 w-full cursor-pointer"
+          style={{ zIndex: 300 }}
+        >
+          <Link to="/predict-win">
+            <img
+              src={isMobile ? pwadmobile : pwad}
+              alt="tips-logo"
+              className="w-full"
+            />
+          </Link>
+        </div>
         <Routes>
           <Route
             path="/"

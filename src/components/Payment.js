@@ -388,7 +388,7 @@ const Payment = () => {
       <Helmet>
         <title></title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={4} />
+      <Dashboard Top={Top} Content={Content} active={6} />
     </div>
   );
 };

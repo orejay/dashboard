@@ -57,7 +57,7 @@ const PuntersGuide = () => {
       <Helmet>
         <title>Punters Guide - Tips180</title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={13} />
+      <Dashboard Top={Top} Content={Content} active={15} />
     </div>
   );
 };

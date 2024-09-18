@@ -269,15 +269,11 @@ const PredictAndWinComp = ({ isFaq, redirectUrl, isDashboard }) => {
     try {
       const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
       const res_txt = await res.text();
-      console.log("api number >>>>>>>>>>>>>>>>", num);
-      console.log(res);
-      console.log(res.text);
       if (res.ok) {
         handleLocation(String(res_txt).trim());
         setIsLocation(true);
       } else if (res.status === 429) {
         if (num < 4) {
-          console.log("api number >>>>>>>>>>>>>>>>", num);
           getLocation(num + 1);
         } else {
           setManualLocation(true);
@@ -439,53 +435,55 @@ const PredictAndWinComp = ({ isFaq, redirectUrl, isDashboard }) => {
 
   const predict = (
     <div className="min-h-screen flex flex-col items-center">
-      <div
-        alt="banner"
-        style={{
-          backgroundImage: `url(${winBg})`,
-          backgroundSize: "100% 100%",
-        }}
-        className="lg:mb-8 w-full h-60 flex justify-center"
-      >
-        <div className="text-white py-4">
-          <h2 className=" text-center text-xl md:text-2xl font-semibold">
-            FIGHT FOR A <br />
-            CHANCE TO WIN
-          </h2>
-          <p
-            className="text-center big-shoulder font-bold"
-            style={{ fontSize: "75px" }}
-          >
-            {country === "Nigeria"
-              ? "₦"
-              : country === "Ghana"
-              ? "GHC"
-              : country === "Kenya" || country === "Tanzania"
-              ? "KSH"
-              : country === "Cameroon"
-              ? "CFA"
-              : country === "Uganda"
-              ? "UGX"
-              : "KSH"}
-            {Number(prize).toLocaleString()}
-          </p>
-          <p className="text-center">
-            <Link
-              className="underline font-semibold text-lg"
-              target="_blank"
-              rel="noopener noreferrer"
-              to="/pw-terms"
+      {isLocationValid && (
+        <div
+          alt="banner"
+          style={{
+            backgroundImage: `url(${winBg})`,
+            backgroundSize: "100% 100%",
+          }}
+          className="lg:mb-8 w-full h-60 flex justify-center"
+        >
+          <div className="text-white py-4">
+            <h2 className=" text-center text-xl md:text-2xl font-semibold">
+              FIGHT FOR A <br />
+              CHANCE TO WIN
+            </h2>
+            <p
+              className="text-center big-shoulder font-bold"
+              style={{ fontSize: "75px" }}
             >
-              T&C APPLY
-            </Link>
-          </p>
+              {country === "Nigeria"
+                ? "₦"
+                : country === "Ghana"
+                ? "GHC"
+                : country === "Kenya" || country === "Tanzania"
+                ? "KSH"
+                : country === "Cameroon"
+                ? "CFA"
+                : country === "Uganda"
+                ? "UGX"
+                : "KSH"}
+              {Number(prize).toLocaleString()}
+            </p>
+            <p className="text-center">
+              <Link
+                className="underline font-semibold text-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+                to="/pw-terms"
+              >
+                T&C APPLY
+              </Link>
+            </p>
+          </div>
         </div>
-      </div>
+      )}
       {manualLocation && (
         <select
           name="manual-location"
           id="manual-location"
-          className="dd mb-5 w-1/6"
+          className="dd mb-5 w-1/3 md:w-1/6"
           onChange={(e) => handleLocation(e.target.value)}
         >
           <option value="NG">Nigeria</option>

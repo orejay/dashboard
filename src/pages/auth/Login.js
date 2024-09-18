@@ -15,6 +15,7 @@ const App = () => {
     email: "",
     password: "",
   });
+  const prevUrl = localStorage.getItem("prevurl");
   const [loginText, setLoginText] = useState("Sign In");
 
   const navigate = useNavigate();
@@ -47,7 +48,8 @@ const App = () => {
       toast.success("Welcome back!");
       localStorage.setItem("user", JSON.stringify(res_json));
       localStorage.setItem("token", res_json.refresh_token);
-      navigate("/dashboard/profile");
+      prevUrl ? navigate(prevUrl) : navigate("/dashboard/profile");
+      localStorage.removeItem("prevurl");
     } catch (error) {
       toast.error("Check your network");
       setLoginText("Sign In");
@@ -106,7 +108,6 @@ const App = () => {
       </form>
 
       <div className="w-full lg:w-5/6  flex justify-between my-5">
-  
         <p className="text-blue-400 underline">
           <Link to="/auth/password">Forgot Password?</Link>
         </p>

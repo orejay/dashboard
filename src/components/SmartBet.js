@@ -187,7 +187,7 @@ const SmartBet = () => {
             : "Football Smart Bet Plus - Tips180 - It is our passion to see millions of people win!"}
         </title>
       </Helmet>
-      <Dashboard Top={Top} Content={Content} active={8} />
+      <Dashboard Top={Top} Content={Content} active={10} />
     </div>
   );
 };
