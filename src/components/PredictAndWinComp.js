@@ -277,7 +277,7 @@ const PredictAndWinComp = ({ isFaq, redirectUrl, isDashboard }) => {
           getLocation(num + 1);
         } else {
           setManualLocation(true);
-          handleLocation("US");
+          handleLocation("NG");
           setIsLocation(true);
         }
       }
