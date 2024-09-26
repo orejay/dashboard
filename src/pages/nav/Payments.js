@@ -38,8 +38,7 @@ export default function Payments() {
         setCountry(res_txt.toLowerCase().trim());
         handleLocation(res_txt.toLowerCase());
       } else if (res.status === 429) {
-        if (num < 4) {
-          console.log("api number >>>>>>>>>>>>>>>>", num);
+        if (num < 7) {
           getLocation(num + 1);
         } else {
           setCountry("ot");

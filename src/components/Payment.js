@@ -289,8 +289,7 @@ const Payment = () => {
         setUserCountryCode(String(res_txt).trim());
         handleLocation(String(res_txt).trim());
       } else if (res.status === 429) {
-        if (num < 4) {
-          console.log("api number >>>>>>>>>>>>>>>>", num);
+        if (num < 7) {
           getLocation(num + 1);
         } else {
           setUserCountryCode("US");

@@ -368,7 +368,7 @@ const OurPlans = () => {
         setCountry(String(res_txt).trim());
         handleLocation(String(res_txt).trim());
       } else if (res.status === 429) {
-        if (num < 4) {
+        if (num < 7) {
           console.log("api number >>>>>>>>>>>>>>>>", num);
           getLocation(num + 1);
         } else {

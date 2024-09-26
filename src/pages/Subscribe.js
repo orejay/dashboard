@@ -40,7 +40,7 @@ const Subscribe = ({ type }) => {
         setCountry(String(res_txt).trim().toLowerCase());
         handleLocation(String(res_txt).trim().toLowerCase());
       } else if (res.status === 429) {
-        if (num < 4) {
+        if (num < 7) {
           getLocation(num + 1);
         } else {
           setCountry("ot");

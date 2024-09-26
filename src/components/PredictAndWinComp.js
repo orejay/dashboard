@@ -285,7 +285,7 @@ const PredictAndWinComp = ({ isFaq, redirectUrl, isDashboard }) => {
         handleLocation(String(res_txt).trim());
         setIsLocation(true);
       } else if (res.status === 429) {
-        if (num < 4) {
+        if (num < 7) {
           getLocation(num + 1);
         } else {
           setManualLocation(true);
