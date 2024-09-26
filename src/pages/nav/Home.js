@@ -1,4 +1,5 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import Main from "../../Main";
 import Hero from "../../components/Hero";
 import FrequentlyAskedCard from "../../components/FrequentlyAskedCard";
@@ -6,6 +7,8 @@ import { Helmet } from "react-helmet";
 import { useMediaQuery } from "@mui/material";
 import Writeup from "../../components/Writeup";
 import LandingStore from "../../components/LandingStore";
+import predImg from "../../assets/prrediict.png";
+import predImgMob from "../../assets/prrediictm.png";
 const SmartBetLanding = lazy(() => import("../../components/SmartBetLanding"));
 const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
 const SportsNews = lazy(() => import("../../components/SportsNews"));
@@ -87,6 +90,17 @@ function Home() {
       <Hero />
       <Suspense fallback={<div className="h-screen">Loading...</div>}>
         <AllFreeExpert />
+      </Suspense>
+      <Suspense fallback={<div className="h-screen">Loading...</div>}>
+        <div className="flex mx-auto w-11/12 px-4 mb-8 rounded">
+          <Link to="/predict-win">
+            <img
+              src={isMobile ? predImgMob : predImg}
+              alt="pred-win-ad"
+              className="rounded-md"
+            />
+          </Link>
+        </div>
       </Suspense>
       <Suspense fallback={<div className="h-screen">Loading...</div>}>
         <SmartBetLanding />

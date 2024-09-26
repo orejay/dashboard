@@ -16,7 +16,19 @@ export default function Payments() {
   const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
   const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
   const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
-  const geoKeys = [geoKey, geoKey2, geoKey3, geoKey4, geoKey5];
+  const geoKey6 = process.env.REACT_APP_GEOAPIKEY6;
+  const geoKey7 = process.env.REACT_APP_GEOAPIKEY7;
+  const geoKey8 = process.env.REACT_APP_GEOAPIKEY8;
+  const geoKeys = [
+    geoKey,
+    geoKey2,
+    geoKey3,
+    geoKey4,
+    geoKey5,
+    geoKey6,
+    geoKey7,
+    geoKey8,
+  ];
 
   const getLocation = async (num) => {
     try {
