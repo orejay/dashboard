@@ -49,7 +49,7 @@ export const plansData = [
       "Access to 1.6 - 2.05 odds Daily",
       "Access to Best Ten Tips for the Weekend",
       "A More Steady Winning Strategy",
-      "80% Accuracy Rate",
+      "78% Accuracy Rate",
     ],
     durations: ["5 days", "10 days", "15 days"],
   },

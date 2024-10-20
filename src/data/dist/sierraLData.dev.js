@@ -23,7 +23,7 @@ var sierraLData = [{
     title: "LE1,400",
     value: 1400
   }],
-  details: ["Access to one set of Experts ACCA", "Access to 8 Tips Stores", "80% Accuracy Rate"],
+  details: ["Access to one set of Experts ACCA", "Access to 8 Tips Stores", "70% Accuracy Rate"],
   durations: ["1 week", "1 month", "3 months", "6 months", "12 months"]
 }, {
   name: "Premium",
@@ -44,7 +44,7 @@ var sierraLData = [{
     title: "LE3,000",
     value: 3000
   }],
-  details: ["Access to over 40 Leagues Tips", "Access to 2 sets of Experts ACCA", "Access to 20 Tips Stores", "Access to Risk Management Theory", "85% Accuracy Rate"],
+  details: ["Access to over 40 Leagues Tips", "Access to 2 sets of Experts ACCA", "Access to 20 Tips Stores", "Access to Risk Management Theory", "75% Accuracy Rate"],
   durations: ["1 week", "1 month", "3 months", "6 months", "12 months"]
 }, {
   name: "Smart Bet/Smart Bet Plus",
@@ -59,7 +59,7 @@ var sierraLData = [{
     title: "LE900.00",
     value: 900
   }],
-  details: ["Access to Smart Betting Strategy", "Access to 1.6 - 2.05 odds Daily", "Access to Best Ten Tips for the Weekend", "A Steady Winning rate", "90% Accuracy Rate"],
+  details: ["Access to Smart Betting Strategy", "Access to 1.6 - 2.05 odds Daily", "Access to Best Ten Tips for the Weekend", "A Steady Winning rate", "78% Accuracy Rate"],
   durations: ["5 days", "10 days", "15 days"]
 }, {
   name: "Rollover",
@@ -80,7 +80,7 @@ var sierraLData = [{
     title: "LE550.00",
     value: 550
   }],
-  details: ["Access to Winning Tactics", "Access to 50 odds twice a Week", "Access to 2 different sets of 50 odds on weekends", "Access to over 2500 odds of accumulated tips on weekends", "80% Accuracy Rate"],
+  details: ["Access to Winning Tactics", "Access to 50 odds twice a Week", "Access to 2 different sets of 50 odds on weekends", "Access to over 2500 odds of accumulated tips on weekends", "75% Accuracy Rate"],
   durations: ["1 week", "1 month"]
 }, {
   name: "Weekend 10 odds",

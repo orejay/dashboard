@@ -9,49 +9,7 @@ import Loader from "../../components/Loader";
 
 export default function Payments() {
   const [selectedOption, setSelectedOption] = useState(null);
-  const [country, setCountry] = useState(null);
-  const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
-  const geoKey = process.env.REACT_APP_GEOAPIKEY1;
-  const geoKey2 = process.env.REACT_APP_GEOAPIKEY2;
-  const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
-  const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
-  const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
-  const geoKey6 = process.env.REACT_APP_GEOAPIKEY6;
-  const geoKey7 = process.env.REACT_APP_GEOAPIKEY7;
-  const geoKey8 = process.env.REACT_APP_GEOAPIKEY8;
-  const geoKeys = [
-    geoKey,
-    geoKey2,
-    geoKey3,
-    geoKey4,
-    geoKey5,
-    geoKey6,
-    geoKey7,
-    geoKey8,
-  ];
-
-  const getLocation = async (num) => {
-    try {
-      const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
-      const res_txt = await res.text();
-      if (res.ok) {
-        setCountry(res_txt.toLowerCase().trim());
-        handleLocation(res_txt.toLowerCase());
-      } else if (res.status === 429) {
-        if (num < 7) {
-          getLocation(num + 1);
-        } else {
-          setCountry("ot");
-        }
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  useEffect(() => {
-    getLocation(0);
-  }, []);
+  const [country, setCountry] = useState("df");
 
   const availableList = [
     "ng",
@@ -71,15 +29,7 @@ export default function Payments() {
     if (availableList.includes(countries.value)) {
       setCountry(countries.value);
     } else {
-      setCountry("ot");
-    }
-  };
-
-  const handleLocation = (code) => {
-    if (availableList.includes(String(code).trim())) {
-      setCountry(String(code).trim());
-    } else {
-      setCountry("ot");
+      setCountry("df");
     }
   };
 

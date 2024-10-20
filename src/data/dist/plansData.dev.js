@@ -59,7 +59,7 @@ var plansData = [{
     title: "₦6,500",
     value: 6500
   }],
-  details: ["Access to Smart Betting Strategy", "Access to 1.6 - 2.05 odds Daily", "Access to Best Ten Tips for the Weekend", "A More Steady Winning Strategy", "80% Accuracy Rate"],
+  details: ["Access to Smart Betting Strategy", "Access to 1.6 - 2.05 odds Daily", "Access to Best Ten Tips for the Weekend", "A More Steady Winning Strategy", "78% Accuracy Rate"],
   durations: ["5 days", "10 days", "15 days"]
 }, {
   name: "Rollover",

@@ -32,6 +32,7 @@ const App = () => {
   const [signupData, setSignupData] = useState({
     fname: "",
     email: "",
+    ref_code: "",
     phone: "",
     country: "",
     password: "",

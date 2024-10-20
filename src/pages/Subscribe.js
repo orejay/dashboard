@@ -6,54 +6,8 @@ import { Helmet } from "react-helmet";
 import Loader from "../components/Loader";
 
 const Subscribe = ({ type }) => {
-  const [country, setCountry] = useState(null);
+  const [country, setCountry] = useState("df");
   const [selectedOption, setSelectedOption] = useState(null);
-  const [userCountryCode, setUserCountryCode] = useState(null);
-  const [location, setLocation] = useState(null);
-  const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
-  const geoKey = process.env.REACT_APP_GEOAPIKEY1;
-  const geoKey2 = process.env.REACT_APP_GEOAPIKEY2;
-  const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
-  const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
-  const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
-  const geoKey6 = process.env.REACT_APP_GEOAPIKEY6;
-  const geoKey7 = process.env.REACT_APP_GEOAPIKEY7;
-  const geoKey8 = process.env.REACT_APP_GEOAPIKEY8;
-  const geoKeys = [
-    geoKey,
-    geoKey2,
-    geoKey3,
-    geoKey4,
-    geoKey5,
-    geoKey6,
-    geoKey7,
-    geoKey8,
-  ];
-
-  const getLocation = async (num) => {
-    try {
-      const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
-      const res_txt = await res.text();
-
-      if (res.ok) {
-        setUserCountryCode(String(res_txt).trim().toLowerCase());
-        setCountry(String(res_txt).trim().toLowerCase());
-        handleLocation(String(res_txt).trim().toLowerCase());
-      } else if (res.status === 429) {
-        if (num < 7) {
-          getLocation(num + 1);
-        } else {
-          setCountry("ot");
-        }
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  useEffect(() => {
-    getLocation(0);
-  }, []);
 
   const availableList = [
     "ng",
@@ -74,15 +28,7 @@ const Subscribe = ({ type }) => {
     if (availableList.includes(countries.value)) {
       setCountry(countries.value);
     } else {
-      setCountry("ot");
-    }
-  };
-
-  const handleLocation = (code) => {
-    if (availableList.includes(code)) {
-      setCountry(code);
-    } else {
-      setCountry("ot");
+      setCountry("df");
     }
   };
 
