@@ -41,6 +41,7 @@ function WinUpcomingCards() {
       .then((response) => response.json())
       .then((result) => {
         setWinResults(result);
+        console.log("winning", result);
       });
   };
 
