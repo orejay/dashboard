@@ -361,6 +361,8 @@ const OurPlans = () => {
 
   const getLocation = async (num) => {
     const userCountry = localStorage.getItem("userCountry");
+    console.log("coutry >>>>>>>>>>>>", country);
+    console.log("user coutry >>>>>>>>>>>>", country);
 
     if (!userCountry) {
       try {
