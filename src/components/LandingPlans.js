@@ -279,24 +279,32 @@ const LandingPlans = () => {
   const [userCountryCode, setUserCountryCode] = useState(null);
 
   const getLocation = async (num) => {
-    try {
-      const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
-      const res_txt = await res.text();
-      if (res.ok) {
-        setUserCountryCode(res_txt);
-        setCountry(res_txt);
-        handleLocation(String(res_txt).trim());
-      } else if (res.status === 429) {
-        if (num < 7) {
-          getLocation(num + 1);
-        } else {
-          setUserCountryCode("US");
-          setCountry("US");
-          handleLocation("US");
+    const userCountry = localStorage.getItem("userCountry");
+    if (!userCountry) {
+      try {
+        const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
+        const res_txt = await res.text();
+        if (res.ok) {
+          setUserCountryCode(res_txt);
+          setCountry(res_txt);
+          handleLocation(String(res_txt).trim());
+          localStorage.setItem("userCountry", String(res_txt).trim());
+        } else if (res.status === 429) {
+          if (num < 7) {
+            getLocation(num + 1);
+          } else {
+            setUserCountryCode("US");
+            setCountry("US");
+            handleLocation("US");
+          }
         }
+      } catch (e) {
+        console.error(e);
       }
-    } catch (e) {
-      console.error(e);
+    } else if (userCountry) {
+      setUserCountryCode(userCountry);
+      setCountry(userCountry);
+      handleLocation(userCountry);
     }
   };
 
