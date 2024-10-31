@@ -361,8 +361,6 @@ const OurPlans = () => {
 
   const getLocation = async (num) => {
     const userCountry = localStorage.getItem("userCountry");
-    console.log("coutry >>>>>>>>>>>>", country);
-    console.log("user coutry >>>>>>>>>>>>", country);
 
     if (!userCountry) {
       try {
@@ -375,7 +373,6 @@ const OurPlans = () => {
           localStorage.setItem("userCountry", String(res_txt).trim());
         } else if (res.status === 429) {
           if (num < 7) {
-            console.log("api number >>>>>>>>>>>>>>>>", num);
             getLocation(num + 1);
           } else {
             setUserCountryCode("US");

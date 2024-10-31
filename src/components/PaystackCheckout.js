@@ -9,7 +9,7 @@ import bank from "../assets/bank.png";
 import opay from "../assets/opay.png";
 
 const PaystackCheckout = () => {
-  const publicKey = process.env.REACT_APP_PAYSTACK_PUBLIC_KEY;
+  const publicKey = process.env.REACT_APP_PAYSTACK_TEST_KEY;
   const user = JSON.parse(localStorage.getItem("user"));
   const amount = sessionStorage.getItem("amount") * 100;
   const email = user.email;
@@ -45,7 +45,7 @@ const PaystackCheckout = () => {
 
   const verifyPaystack = async () => {
     try {
-      const res = await fetch(`${api}/postendpoints/verify-paystack`, {
+      const res = await fetch(`${api}/postendpoints/verify-pay-test`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,6 +108,7 @@ const PaystackCheckout = () => {
       sessionStorage.removeItem("duration");
       sessionStorage.removeItem("amount");
       sessionStorage.removeItem("planName");
+      navigate("/dashboard/profile");
     } catch (error) {
       toast.info("Check your network!");
     }

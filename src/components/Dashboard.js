@@ -60,6 +60,7 @@ const Dashboard = ({ Content, Top, active }) => {
         } else {
           setIsValid(true);
           localStorage.setItem("token", res_json.new_token);
+          localStorage.setItem("user", JSON.stringify(res_json.user_data));
         }
       } catch (error) {
         console.log("Check your network");

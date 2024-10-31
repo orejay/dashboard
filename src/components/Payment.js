@@ -285,8 +285,6 @@ const Payment = () => {
       try {
         const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
         const res_txt = await res.text();
-        console.log(res);
-        console.log(res_txt);
         if (res.ok) {
           setUserCountryCode(String(res_txt).trim());
           handleLocation(String(res_txt).trim());

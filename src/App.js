@@ -129,7 +129,11 @@ function App() {
             />
           </Link>
         </div> */}
-        <div id="zone_2005518892"></div>
+        <div
+          id="zone_2005518892"
+          className="fixed flex justify-center items-center -bottom-3 left-0 w-full cursor-pointer"
+          style={{ zIndex: 300 }}
+        ></div>
 
         <Routes>
           <Route
