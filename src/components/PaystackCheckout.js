@@ -9,7 +9,7 @@ import bank from "../assets/bank.png";
 import opay from "../assets/opay.png";
 
 const PaystackCheckout = () => {
-  const publicKey = process.env.REACT_APP_PAYSTACK_TEST_KEY;
+  const publicKey = process.env.REACT_APP_PAYSTACK_PUBLIC_KEY;
   const user = JSON.parse(localStorage.getItem("user"));
   const amount = sessionStorage.getItem("amount") * 100;
   const email = user.email;
