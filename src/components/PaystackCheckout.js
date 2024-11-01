@@ -45,7 +45,7 @@ const PaystackCheckout = () => {
 
   const verifyPaystack = async () => {
     try {
-      const res = await fetch(`${api}/postendpoints/verify-pay-test`, {
+      const res = await fetch(`${api}/postendpoints/verify-paystack`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
