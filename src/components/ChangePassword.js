@@ -3,9 +3,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { ContentCopyRounded, CopyAllRounded } from "@mui/icons-material";
 
 export default function ChangePassword({ user, tab, api, token }) {
   const currRef = useRef(null);
+  const refCodeRef = useRef(null);
   const newPassRef = useRef(null);
   const confPassRef = useRef(null);
   const [loadText, setloadText] = useState("Update Password");
@@ -16,6 +18,19 @@ export default function ChangePassword({ user, tab, api, token }) {
     phone: "",
   });
   const [loadEditText, setLoadEditText] = useState("Save Changes");
+
+  const handleCopy = () => {
+    const content = refCodeRef.current.innerText;
+
+    navigator.clipboard
+      .writeText(content)
+      .then(() => {
+        toast.info("Copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("failed to copy: ", err);
+      });
+  };
 
   const [selectedCountry, setSelectedCountry] = useState(
     JSON.stringify({ value: "ng", label: "Nigeria" })
@@ -127,6 +142,46 @@ export default function ChangePassword({ user, tab, api, token }) {
             </div>
           </div>
           <div className="lg:flex items-center my-5">
+            <h1 className="lg:w-1/4">Wallet Balance:</h1>
+            <div className="lg:w-2/3">
+              <div type="text" className="input-styles w-full">
+                {user?.balance}
+              </div>
+            </div>
+          </div>
+          <div className="lg:flex items-center my-5">
+            <h1 className="lg:w-1/4">Referral Code:</h1>
+            <div className="lg:w-2/3">
+              <div
+                type="text"
+                className="input-styles flex items-center cursor-pointer justify-between w-full"
+                onClick={handleCopy}
+              >
+                <p ref={refCodeRef}>{user?.ref_code}</p>
+                <div className="">
+                  <span className="text-xs italic mr-1">copy to clipboard</span>
+                  <CopyAllRounded sx={{ color: "black" }} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="lg:flex items-center my-5">
+            <h1 className="lg:w-1/4">Total Ref Points:</h1>
+            <div className="lg:w-2/3">
+              <div type="text" className="input-styles w-full">
+                {user?.ref_points}
+              </div>
+            </div>
+          </div>
+          <div className="lg:flex items-center my-5">
+            <h1 className="lg:w-1/4">Total Loyalty Points:</h1>
+            <div className="lg:w-2/3">
+              <div type="text" className="input-styles w-full">
+                {user?.loyalty_points}
+              </div>
+            </div>
+          </div>
+          <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Phone:</h1>
             <div className="lg:w-2/3">
               <div type="text" className="input-styles w-full">
@@ -143,13 +198,23 @@ export default function ChangePassword({ user, tab, api, token }) {
             </div>
           </div>
           <div className="lg:flex items-center my-5">
-            <h1 className="lg:w-1/4">Account Plan:</h1>
+            <h1 className="lg:w-1/4">Key/Premium:</h1>
             <div className="lg:w-2/3">
               <p type="text" className="input-styles w-full">
                 {user?.accoutplan}
               </p>
             </div>
           </div>
+          {user?.acc_plan_exp && (
+            <div className="lg:flex items-center my-5">
+              <h1 className="lg:w-1/4">Key/Premium Expiry:</h1>
+              <div className="lg:w-2/3">
+                <p type="text" className="input-styles w-full">
+                  {user?.acc_plan_exp}
+                </p>
+              </div>
+            </div>
+          )}
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Smart Bet:</h1>
             <div className="lg:w-2/3">
@@ -158,6 +223,16 @@ export default function ChangePassword({ user, tab, api, token }) {
               </p>
             </div>
           </div>
+          {user?.smart_exp && (
+            <div className="lg:flex items-center my-5">
+              <h1 className="lg:w-1/4">Smart Bet Expiry:</h1>
+              <div className="lg:w-2/3">
+                <p type="text" className="input-styles w-full">
+                  {user?.smart_exp}
+                </p>
+              </div>
+            </div>
+          )}
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Rollover Bet:</h1>
             <div className="lg:w-2/3">
@@ -168,6 +243,16 @@ export default function ChangePassword({ user, tab, api, token }) {
               </p>
             </div>
           </div>
+          {user?.roll_exp && (
+            <div className="lg:flex items-center my-5">
+              <h1 className="lg:w-1/4">Rollover Expiry:</h1>
+              <div className="lg:w-2/3">
+                <p type="text" className="input-styles w-full">
+                  {user?.roll_exp}
+                </p>
+              </div>
+            </div>
+          )}
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">50 Odds:</h1>
             <div className="lg:w-2/3">
@@ -176,6 +261,16 @@ export default function ChangePassword({ user, tab, api, token }) {
               </p>
             </div>
           </div>
+          {user?.odds50_exp && (
+            <div className="lg:flex items-center my-5">
+              <h1 className="lg:w-1/4">50 Odds Expiry:</h1>
+              <div className="lg:w-2/3">
+                <p type="text" className="input-styles w-full">
+                  {user?.odds50_exp}
+                </p>
+              </div>
+            </div>
+          )}
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Weekend 10:</h1>
             <div className="lg:w-2/3">
@@ -184,6 +279,16 @@ export default function ChangePassword({ user, tab, api, token }) {
               </p>
             </div>
           </div>
+          {user?.w10_exp && (
+            <div className="lg:flex items-center my-5">
+              <h1 className="lg:w-1/4">Weekend 10 Expiry:</h1>
+              <div className="lg:w-2/3">
+                <p type="text" className="input-styles w-full">
+                  {user?.w10_exp}
+                </p>
+              </div>
+            </div>
+          )}
           <div
             className="flex w-full justify-center"
             onClick={() => setEditInfo(true)}
@@ -199,7 +304,7 @@ export default function ChangePassword({ user, tab, api, token }) {
             <h1 className="lg:w-1/4">Current Password:</h1>
             <div className="lg:w-2/3">
               <input
-                type="password"
+                type="text"
                 className="input-styles w-full"
                 ref={currRef}
               />
@@ -212,7 +317,7 @@ export default function ChangePassword({ user, tab, api, token }) {
                 ref={newPassRef}
                 id="mes"
                 name="mes"
-                type="password"
+                type="text"
                 className="input-styles w-full"
               />
             </div>
@@ -222,7 +327,7 @@ export default function ChangePassword({ user, tab, api, token }) {
             <div className="lg:w-2/3">
               <input
                 ref={confPassRef}
-                type="password"
+                type="text"
                 id="message"
                 name="message"
                 className="input-styles w-full"

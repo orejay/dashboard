@@ -5,6 +5,7 @@ import { plansData } from "../data/plansData";
 import { dollarData } from "../data/dollarData";
 import { kenyaData } from "../data/kenyaData";
 import { ghanaData } from "../data/ghanaData";
+import { pointsData } from "../data/pointsPaymentsData";
 import Select from "react-select";
 import { camBenData } from "../data/camBenData";
 import { sierraLData } from "../data/sierraLData";
@@ -12,7 +13,9 @@ import { southAData } from "../data/southAData";
 import { tanzaniaData } from "../data/TanzaniaData";
 import { ugandaData } from "../data/UgandaData";
 import Loader from "./Loader";
+import topBg from "../assets/leagueBg.PNG";
 import { Helmet } from "react-helmet";
+import PointsCard from "./PointsCard";
 
 const sty = {
   width: "48%",
@@ -256,6 +259,7 @@ const countries = [
 
 const Payment = () => {
   const [data, setData] = useState(null);
+  const [points, setPoints] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [country, setCountry] = useState(null);
   const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
@@ -264,47 +268,30 @@ const Payment = () => {
   const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
   const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
   const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
-  const geoKey6 = process.env.REACT_APP_GEOAPIKEY6;
-  const geoKey7 = process.env.REACT_APP_GEOAPIKEY7;
-  const geoKey8 = process.env.REACT_APP_GEOAPIKEY8;
-  const geoKeys = [
-    geoKey,
-    geoKey2,
-    geoKey3,
-    geoKey4,
-    geoKey5,
-    geoKey6,
-    geoKey7,
-    geoKey8,
-  ];
+  const geoKeys = [geoKey, geoKey2, geoKey3, geoKey4, geoKey5];
   const [userCountryCode, setUserCountryCode] = useState(null);
 
   const getLocation = async (num) => {
-    const userCountry = localStorage.getItem("userCountry");
-    if (!userCountry) {
-      try {
-        const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
-        const res_txt = await res.text();
-        if (res.ok) {
-          setUserCountryCode(String(res_txt).trim());
-          handleLocation(String(res_txt).trim());
-          localStorage.setItem("userCountry", String(res_txt).trim());
-        } else if (res.status === 429) {
-          if (num < 7) {
-            getLocation(num + 1);
-          } else {
-            setUserCountryCode("US");
-            setCountry("US");
-            handleLocation("US");
-          }
+    try {
+      const res = await fetch(`${geoURL}/country?token=${geoKeys[num]}`);
+      const res_txt = await res.text();
+      console.log(res);
+      console.log(res_txt);
+      if (res.ok) {
+        setUserCountryCode(String(res_txt).trim());
+        handleLocation(String(res_txt).trim());
+      } else if (res.status === 429) {
+        if (num < 4) {
+          console.log("api number >>>>>>>>>>>>>>>>", num);
+          getLocation(num + 1);
+        } else {
+          setUserCountryCode("US");
+          setCountry("US");
+          handleLocation("US");
         }
-      } catch (e) {
-        console.error(e);
       }
-    } else if (userCountry) {
-      setUserCountryCode(userCountry);
-      setCountry(userCountry);
-      handleLocation(userCountry);
+    } catch (e) {
+      console.error(e);
     }
   };
 
@@ -323,14 +310,21 @@ const Payment = () => {
         countries.value === "RW"
       ? setData(kenyaData)
       : countries.value === "TZ"
-      ? setData(tanzaniaData)
+      ? setData(kenyaData)
       : countries.value === "UG"
       ? setData(ugandaData)
       : countries.value === "SL"
       ? setData(sierraLData)
       : countries.value === "ZA"
       ? setData(southAData)
-      : countries.value === "BJ" || countries.value === "CM"
+      : countries.value === "BJ" ||
+        countries.value === "CM" ||
+        countries.value === "CI" ||
+        countries.value === "ML" ||
+        countries.value === "GW" ||
+        countries.value === "NE" ||
+        countries.value === "BF" ||
+        countries.value === "SN"
       ? setData(camBenData)
       : setData(dollarData);
     setCountry(countries.label);
@@ -351,7 +345,14 @@ const Payment = () => {
       ? setData(sierraLData)
       : code === "ZA"
       ? setData(southAData)
-      : code === "BJ" || code === "CM"
+      : code === "BJ" ||
+        code === "CM" ||
+        code === "CI" ||
+        code === "ML" ||
+        code === "GW" ||
+        code === "NE" ||
+        code === "BF" ||
+        code === "SN"
       ? setData(camBenData)
       : setData(dollarData);
     setCountry(countries.filter((c) => c.value === code)[0].label);
@@ -368,6 +369,12 @@ const Payment = () => {
     </div>
   );
 
+  const card = points ? (
+    <PointsCard styl={sty} data={pointsData} country={country} />
+  ) : (
+    <PlansCard styl={sty} data={data} country={country} />
+  );
+
   const Content = (
     <div
       className=" "
@@ -376,28 +383,48 @@ const Payment = () => {
       }}
     >
       <div
-        className="w-full flex "
+        className="w-full flex flex-col"
         style={{
           zIndex: -1,
         }}
       >
-        <Select
-          options={countries}
-          value={selectedOption}
-          onChange={handleChange}
-          isSearchable={true}
-          menuPortalTarget={document.body}
-          className="md:w-4/12 w-7/12 lg:w-4/12 mb-4 mx-auto cursor-pointer"
-          styles={{ menuPortal: (base) => ({ ...base }) }}
-          placeholder="Select a Country"
-        />
+        <div
+          className="w-full h-fit p-4 flex mb-4 justify-center items-center"
+          style={{
+            backgroundImage: `url(${topBg})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "200% 200%",
+          }}
+        >
+          <h4 className="pr-4 big-shoulder font-bold">
+            {points
+              ? "Return to payment methods"
+              : "Make payments using your earned points!"}
+          </h4>
+          <button
+            className="italic bg-blue-500 shadow hover:shadow-md cursor-pointer text-white p-2 rounded font-bold"
+            onClick={() => {
+              setPoints(!points);
+            }}
+          >
+            Click here
+          </button>
+        </div>
+        {!points && (
+          <Select
+            options={countries}
+            value={selectedOption}
+            onChange={handleChange}
+            isSearchable={true}
+            menuPortalTarget={document.body}
+            className="md:w-4/12 w-7/12 lg:w-4/12 mb-4 mx-auto cursor-pointer"
+            styles={{ menuPortal: (base) => ({ ...base }) }}
+            placeholder="Select a Country"
+          />
+        )}
       </div>
 
-      {country ? (
-        <PlansCard styl={sty} data={data} country={country} />
-      ) : (
-        <Loader />
-      )}
+      {country ? card : <Loader />}
     </div>
   );
   return (

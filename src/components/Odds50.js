@@ -8,6 +8,8 @@ import { Helmet } from "react-helmet";
 
 const Odds50 = () => {
   const [data, setData] = useState(null);
+  const [matchData, setMatchData] = useState(null);
+  const [dataSet, setDataSet] = useState(1);
   const [presentFaq, setPresentFAQ] = useState(null);
   const [closed, setClosed] = useState(true);
   const [cardNo, setCardNo] = useState(0);
@@ -54,16 +56,17 @@ const Odds50 = () => {
         localStorage.removeItem("user");
         localStorage.removeItem("token");
       } else {
-        setData(res_json.matches);
+        setData(res_json.matches.filter((m) => m.sure50_1st === true));
+        setMatchData(res_json.matches);
       }
     } catch (error) {
       console.log("Check your network");
     }
   };
 
-  const GetBookingCode = async () => {
+  const GetBookingCode = async (set) => {
     try {
-      const res = await fetch(`${api}/getendpoints/bookings/odds50`, {
+      const res = await fetch(`${api}/getendpoints/bookings/odds50${set}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +79,7 @@ const Odds50 = () => {
         // localStorage.removeItem("token");
       } else {
         setBCode(res_json);
-        console.log(res_json);
+        console.log("booking >>>>>>>>>>>>>>>>>", res_json);
         // setData(res_json.matches);
       }
     } catch (error) {
@@ -123,6 +126,22 @@ const Odds50 = () => {
         <Loader />
       ) : (
         <>
+          <div className="flex justify-end items-center py-2">
+            <div
+              className="cursor-pointer bg-gradient-to-r from-teal-500 to-blue-600 rounded p-2 text-white font-semibold"
+              onClick={() => {
+                setData(
+                  dataSet === 2
+                    ? matchData.filter((m) => m.sure50_1st === true)
+                    : matchData.filter((m) => m.sure50_2nd === true)
+                );
+                setDataSet(dataSet === 1 ? 2 : 1);
+                GetBookingCode(dataSet === 1 ? 2 : 1);
+              }}
+            >
+              {dataSet === 1 ? "View Second Set" : "View First Set"}
+            </div>
+          </div>
           <div
             style={{
               width: "100%",
@@ -149,9 +168,15 @@ const Odds50 = () => {
                   <td>{dat?.time}</td>
                   <td>{dat?.league}</td>
                   <td>{dat?.name}</td>
-                  <td>{dat?.sure50tip}</td>
+                  <td>
+                    {dataSet === 1 ? dat?.sure50_1st_tip : dat?.sure50_2nd_tip}
+                  </td>
                   <td>{dat?.confidence}</td>
-                  <td>{dat?.sure50odds}</td>
+                  <td>
+                    {dataSet === 1
+                      ? dat?.sure50_1st_odds
+                      : dat?.sure50_2nd_odds}
+                  </td>
                   <td>{dat?.ftscore}</td>
                 </tr>
               ))}
@@ -244,7 +269,7 @@ const Odds50 = () => {
 
   useEffect(() => {
     Get50Odds();
-    GetBookingCode();
+    GetBookingCode(dataSet);
   }, []);
   return (
     <div>

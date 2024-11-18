@@ -19,7 +19,7 @@ const HeroBg = ({ Slider }) => {
         <div className="flex flex-col items-center w-full text-center md:text-left md:items-start justify-around my-auto lg:w-3/5 md:2/5 h-3/6">
           <div className={``}>
             <div
-              className="mb-3 font-bold text-3xl md:text-4xl lg:text-6xl leading-102 font-sans"
+              className="mb-3 text-3xl md:text-4xl lg:text-6xl leading-102 millik"
               style={{ lineHeight: "100%" }}
             >
               Free Football Predictions and Tips

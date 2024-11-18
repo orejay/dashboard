@@ -10,6 +10,8 @@ const Weekend10 = () => {
   const token = localStorage.getItem("token");
 
   const [data, setData] = useState(null);
+  const [matchData, setMatchData] = useState(null);
+  const [dataSet, setDataSet] = useState(1);
   const [bcode, setBCode] = useState({});
   const [loader, setLoader] = useState(true);
 
@@ -23,21 +25,23 @@ const Weekend10 = () => {
         },
       });
       const res_json = await res.json();
+      console.log(res_json);
       setLoader(false);
       if (!res.ok) {
         localStorage.removeItem("user");
         localStorage.removeItem("token");
       } else {
-        setData(res_json.matches);
+        setMatchData(res_json.matches);
+        setData(res_json.matches.filter((m) => m.weekend10_1st === true));
       }
     } catch (error) {
       console.log("Check your network");
     }
   };
 
-  const GetBookingCode = async () => {
+  const GetBookingCode = async (set) => {
     try {
-      const res = await fetch(`${api}/getendpoints/bookings/w10`, {
+      const res = await fetch(`${api}/getendpoints/bookings/w10${set}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -50,6 +54,7 @@ const Weekend10 = () => {
         // localStorage.removeItem("token");
       } else {
         setBCode(res_json);
+        console.log(res_json);
       }
     } catch (error) {
       console.log("Check your network");
@@ -73,6 +78,22 @@ const Weekend10 = () => {
         <Loader />
       ) : (
         <>
+          <div className="flex justify-end items-center py-2">
+            <div
+              className="cursor-pointer bg-gradient-to-r from-teal-500 to-blue-600 rounded p-2 text-white font-semibold"
+              onClick={() => {
+                setData(
+                  dataSet === 2
+                    ? matchData.filter((m) => m.weekend10_1st === true)
+                    : matchData.filter((m) => m.weekend10_2nd === true)
+                );
+                setDataSet(dataSet === 1 ? 2 : 1);
+                GetBookingCode(dataSet === 1 ? 2 : 1);
+              }}
+            >
+              {dataSet === 1 ? "View Second Set" : "View First Set"}
+            </div>
+          </div>
           <div
             style={{
               width: "100%",
@@ -99,9 +120,17 @@ const Weekend10 = () => {
                     <td>{dat?.time}</td>
                     <td>{dat?.league}</td>
                     <td>{dat?.name}</td>
-                    <td>{dat?.weekend10tip}</td>
+                    <td>
+                      {dataSet === 1
+                        ? dat?.weekend10_1st_tip
+                        : dat?.weekend10_2nd_tip}
+                    </td>
                     <td>{dat?.confidence}</td>
-                    <td>{dat?.weekend10odds}</td>
+                    <td>
+                      {dataSet === 1
+                        ? dat?.weekend10_1st_odds
+                        : dat?.weekend10_2nd_odds}
+                    </td>
                     <td>{dat?.ftscore}</td>
                   </tr>
                 ))}
@@ -130,7 +159,7 @@ const Weekend10 = () => {
 
   useEffect(() => {
     GetWeekend10();
-    GetBookingCode();
+    GetBookingCode(dataSet);
   }, []);
   return (
     <div>

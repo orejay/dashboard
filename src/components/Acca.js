@@ -118,7 +118,7 @@ const ACCA = () => {
             localStorage.setItem("currentDayis", "today");
           }}
         >
-          {ea == 1 ? "View second set" : "View first set"}
+          {ea == 1 ? "View Second Set" : "View First Set"}
         </button>
       </div>
     </>

@@ -319,6 +319,8 @@ const App = () => {
         toast.error("Email is already registered!");
         setLoadText("Sign Up");
       } else {
+        console.log("res >>>>>>>>>>>>>>>>", res);
+        console.log("res json >>>>>>>>>>>>>>>>", res_json);
         toast.success(`Welcome ${signupData.fname.split(" ")[0]}...`);
         navigate("/auth/login");
       }
@@ -341,7 +343,9 @@ const App = () => {
       <form onSubmit={signUp}>
         <div className="flex justify-between w-full lg:w-full">
           <div className="w-full lg:w-5/6">
-            <label className="label">Full Name</label>
+            <label className="label">
+              Full Name <span className="text-red-500">*</span>
+            </label>
             <br />
             {!validData.fname && (
               <p className="text-red-600 italic text-xs md:text-sm -mb-2">
@@ -368,7 +372,9 @@ const App = () => {
           </div>
         </div>
         <div className="my-4">
-          <label className="label">Email Address</label>
+          <label className="label">
+            Email Address <span className="text-red-500">*</span>
+          </label>
           <br />
 
           <input
@@ -381,7 +387,23 @@ const App = () => {
           />
         </div>
         <div className="my-4">
-          <label className="label">Password</label>
+          <label className="label">Referral Code</label>
+          <br />
+
+          <input
+            type="text"
+            className="w-full lg:w-5/6 regex-input-styles"
+            placeholder="Optional"
+            style={styles.goodStyle}
+            onChange={(e) => {
+              setSignupData({ ...signupData, ref_code: e.target.value });
+            }}
+          />
+        </div>
+        <div className="my-4">
+          <label className="label">
+            Password <span className="text-red-500">*</span>
+          </label>
           <br />
           <div className="flex items-center w-full lg:w-5/6">
             <input
@@ -418,7 +440,9 @@ const App = () => {
           </div>
         </div>
         <div className="my-4">
-          <label className="label">Confirm Password</label>
+          <label className="label">
+            Confirm Password <span className="text-red-500">*</span>
+          </label>
           <br />
           <div className="flex items-center w-full lg:w-5/6">
             <input
@@ -457,7 +481,9 @@ const App = () => {
         </div>
 
         <div className="my-4">
-          <label className="label">Country</label>
+          <label className="label">
+            Country <span className="text-red-500">*</span>
+          </label>
           <br />
           <Select
             options={countries}
@@ -482,7 +508,9 @@ const App = () => {
         </select> */}
         </div>
         <div className="my-4">
-          <label className="label ">Phone Number</label>
+          <label className="label ">
+            Phone Number <span className="text-red-500">*</span>
+          </label>
           <br />
           {/* <input
           type="phone"

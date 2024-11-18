@@ -7,8 +7,8 @@ import { Helmet } from "react-helmet";
 import { useMediaQuery } from "@mui/material";
 import Writeup from "../../components/Writeup";
 import LandingStore from "../../components/LandingStore";
-import predImg from "../../assets/prrediict.png";
-import predImgMob from "../../assets/prrediictm.png";
+import loyaltyMob from "../../assets/loyalty-mobile.png";
+import loyaltyPc from "../../assets/loyalty-pc.png";
 const SmartBetLanding = lazy(() => import("../../components/SmartBetLanding"));
 const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
 const SportsNews = lazy(() => import("../../components/SportsNews"));
@@ -93,9 +93,9 @@ function Home() {
       </Suspense>
       <Suspense fallback={<div className="h-screen">Loading...</div>}>
         <div className="flex mx-auto w-11/12 px-4 mb-8 rounded">
-          <Link to="/predict-win">
+          <Link to="/our-plans">
             <img
-              src={isMobile ? predImgMob : predImg}
+              src={isMobile ? loyaltyMob : loyaltyPc}
               alt="pred-win-ad"
               className="rounded-md"
             />
