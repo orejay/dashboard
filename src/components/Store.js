@@ -14,7 +14,9 @@ const Store = () => {
     </div>
   );
 
-  const Content = <StoreCards style={`lg:m-4 m-2`} bStyle={`lg:m-4 m-2`} />;
+  const Content = (
+    <StoreCards dashboard={true} style={`lg:m-4 m-2`} bStyle={`lg:m-4 m-2`} />
+  );
   return <Dashboard Top={Top} Content={Content} active={1} />;
 };
 export default Store;

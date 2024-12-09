@@ -9,6 +9,7 @@ function SportsNews() {
       .then((response) => response.json())
       .then((result) => {
         setResults(result);
+        console.log("news >>>", result);
       });
   }, []);
   const isMobile = useMediaQuery("(max-width:450px)");
@@ -29,9 +30,10 @@ function SportsNews() {
           }}
           className="rounded-md mb-2"
         ></div>
-        <p className="font-medium w-10/12 text-sm lg:text-base mb-2">
+        <p className="font-medium w-10/12 text-sm lg:text-base mb-1">
           {item.caption.slice(0, 50)}...
         </p>
+        <p className="italic text-xs mb-2">{item.date}</p>
         <a
           href={item.news_link}
           className="flex items-center justify-center border-2 font-medium text-xs lg:text-sm w-2/5 p-2 rounded bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"

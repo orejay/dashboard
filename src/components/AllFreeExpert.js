@@ -49,7 +49,6 @@ const AllFreeExpert = () => {
       .then((response) => response.json())
       .then((result) => {
         setResults(result);
-        console.log("result >>>>>>>>>>", result);
       });
   };
 

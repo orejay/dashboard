@@ -73,6 +73,10 @@ const plansCardData = [
     link: "/dashboard/acca",
   },
   {
+    name: "Leagues",
+    link: "/leagues",
+  },
+  {
     name: "50 Odds",
     link: "/dashboard/50odds",
   },
@@ -85,12 +89,37 @@ const plansCardData = [
     link: "/dashboard/smartbet",
   },
   {
+    name: "Smartbet Plus",
+    link: "/dashboard/smartbet",
+  },
+  {
     name: "Rollover Bet",
     link: "/dashboard/rollover",
   },
 ];
 
-const StoreCards = ({ style, bStyle }) => {
+const odds50 = ["50 Odds"];
+const weekend10 = ["Weekend 10"];
+const smartbet = ["Smartbet Plan", "Smartbet Plus"];
+const rollover = ["Rollover Bet"];
+
+const Free = ["Correct Score", "Potential Risk", "Over 1.5", "Double Chance"];
+
+const Key = [
+  "Correct Score",
+  "Potential Risk",
+  "Over 1.5",
+  "Double Chance",
+  "Experts Acca",
+  "Weekend Tips",
+  "Single Combo",
+  "Over/Under 2.5",
+  "BTS",
+];
+
+const Premium = ["Leagues", "Experts Acca"];
+
+const StoreCards = ({ style, bStyle, dashboard }) => {
   const user = JSON.parse(localStorage.getItem("user"));
 
   return (
@@ -100,30 +129,146 @@ const StoreCards = ({ style, bStyle }) => {
           bStyle === "hidden" ? "mb-0" : ""
         }`}
       >
-        {storeCardData.map((card, index) => {
-          return (
-            <Link
-              key={index}
-              to={!user ? "/auth/login" : card.link}
-              className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-black md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${style} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
-            >
-              <div key={index}>{card.name}</div>
-            </Link>
-          );
-        })}
+        {!dashboard || user?.accoutplan === "Premium"
+          ? storeCardData.map((card, index) => {
+              return (
+                <Link
+                  key={index}
+                  to={!user ? "/auth/login" : card.link}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-black md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${style} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              );
+            })
+          : user?.accoutplan === "Free"
+          ? storeCardData
+              .filter((p) => Free.includes(p.name))
+              .map((card, index) => (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-black md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              ))
+          : user?.accoutplan === "Key"
+          ? storeCardData
+              .filter((p) => Key.includes(p.name))
+              .map((card, index) => (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-black md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              ))
+          : ""}
       </div>
       <div className="flex flex-wrap md:w-full m-2">
-        {plansCardData.map((card, index) => {
-          return (
-            <Link
-              key={index}
-              to={user ? card.link : "/auth/login"}
-              className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-gray-700 md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
-            >
-              <div key={index}>{card.name}</div>
-            </Link>
-          );
-        })}
+        {!dashboard
+          ? plansCardData.map((card, index) => {
+              return (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-gray-700 md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              );
+            })
+          : user?.accoutplan === "Free"
+          ? plansCardData
+              .filter((p) => Free.includes(p.name))
+              .map((card, index) => (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-gray-700 md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              ))
+          : user?.accoutplan === "Key"
+          ? plansCardData
+              .filter((p) => Key.includes(p.name))
+              .map((card, index) => (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-gray-700 md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              ))
+          : user?.accoutplan === "Premium"
+          ? plansCardData
+              .filter((p) => Premium.includes(p.name))
+              .map((card, index) => (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-gray-700 md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              ))
+          : ""}
+        {user?.odds50status === "Active"
+          ? plansCardData
+              .filter((p) => odds50.includes(p.name))
+              .map((card, index) => (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-gray-700 md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              ))
+          : ""}
+        {user?.w10subscriptstatus === "Active"
+          ? plansCardData
+              .filter((p) => weekend10.includes(p.name))
+              .map((card, index) => (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-gray-700 md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              ))
+          : ""}
+        {user?.rollsubscriptstatus === "Active"
+          ? plansCardData
+              .filter((p) => rollover.includes(p.name))
+              .map((card, index) => (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-gray-700 md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              ))
+          : ""}
+        {user?.isubscriptstatus === "Active"
+          ? plansCardData
+              .filter((p) => smartbet.includes(p.name))
+              .map((card, index) => (
+                <Link
+                  key={index}
+                  to={user ? card.link : "/auth/login"}
+                  className={`flex items-center justify-center h-11 text-center text-xs md:text-sm bg-gray-700 md:h-14 p-2 text-white w-2/5 md:w-1/5 rounded ${bStyle} cursor-pointer hover:shadow-md hover:shadow-gray-500 transition-all duration-300 ease-in`}
+                >
+                  <div key={index}>{card.name}</div>
+                </Link>
+              ))
+          : ""}
       </div>
       <Link
         to={`/tipsstore`}
