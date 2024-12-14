@@ -102,7 +102,7 @@ const UpcomingCards = ({ getUpcoming, results }) => {
                       ? paribet
                       : onexbet
                   }
-                  alt="b9ja-logo"
+                  alt="tips180-b9ja-logo"
                 />
               </div>
               <div className="flex w-1/2 justify-center items-center p-2 text-white font-bold bg-gradient-to-r from-teal-500 to-blue-600 rounded-r-lg">

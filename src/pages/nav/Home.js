@@ -1,4 +1,4 @@
-import React, { useEffect, useState, lazy, Suspense } from "react";
+import React, { useEffect, useState, lazy, Suspense, useRef } from "react";
 import { Link } from "react-router-dom";
 import Main from "../../Main";
 import Hero from "../../components/Hero";
@@ -22,8 +22,22 @@ const WinUpcomingCards = lazy(() =>
 function Home() {
   const [isValid, setIsValid] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [visibleComponents, setVisibleComponents] = useState({});
   const isMobile = useMediaQuery("(max-width:450px)");
   const token = localStorage.getItem("token");
+  const refs = [
+    useRef(),
+    useRef(),
+    useRef(),
+    useRef(),
+    useRef(),
+    useRef(),
+    useRef(),
+    useRef(),
+    useRef(),
+    useRef(),
+    useRef(),
+  ];
 
   const IsUserAuthorized = async () => {
     try {
@@ -38,44 +52,57 @@ function Home() {
       if (!res.ok) {
         localStorage.removeItem("user");
         localStorage.removeItem("token");
+        setIsValid(false);
       } else {
         setIsValid(true);
       }
     } catch (error) {
+      setIsValid(false);
+
       console.log("Check your network");
     }
   };
 
   useEffect(() => {
-    IsUserAuthorized();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setVisibleComponents((prev) => ({ ...prev, [index]: true }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    refs.forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
   });
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoaded(true);
-  //   }, 4000);
 
-  //   return () => clearTimeout(timer);
-  // });
+  useEffect(() => {
+    if (token) IsUserAuthorized();
+  }, []);
 
-  // const loader = (
-  //   <div
-  //     style={{
-  //       display: "flex",
-  //       justifyContent: "center",
-  //       alignItems: "center",
-  //       fontSize: isMobile ? "24px" : "36px",
-  //       height: "100vh",
-  //     }}
-  //   >
-  //     <h1>Site Is Loading...</h1>
-  //   </div>
-  // );
+  const Loader = () => (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontSize: isMobile ? "24px" : "36px",
+        height: "150px",
+      }}
+    >
+      <div className="w-12 h-12 border-6 border-gray-200 border-t-4 border-t-blue-500 rounded-full animate-spin"></div>
+    </div>
+  );
 
   const Prop = (
     <div className="bg-white">
       <Helmet>
         <title>
-          Best Football Prediction Site & Betting Tips | Win with Sure Odds
+          "Tips180: Best Football Prediction Site | Win with Sure Odds"
         </title>
         <meta
           name="description"
@@ -88,39 +115,103 @@ function Home() {
         <meta name="author" content="tips180" />
       </Helmet>
       <Hero />
-      <Suspense fallback={<div className="h-screen">Loading...</div>}>
-        <AllFreeExpert />
-      </Suspense>
+      <div ref={refs[0]}>
+        {visibleComponents[0] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <AllFreeExpert />
+          </Suspense>
+        )}
+      </div>
       <Suspense fallback={<div className="h-screen">Loading...</div>}>
         <div className="flex mx-auto w-11/12 px-4 mb-8 rounded">
           <Link to="/our-plans">
             <img
               src={isMobile ? loyaltyMob : loyaltyPc}
-              alt="pred-win-ad"
+              alt="tips180-loyalty-ad-img"
               className="rounded-md"
             />
           </Link>
         </div>
       </Suspense>
-      <Suspense fallback={<div className="h-screen">Loading...</div>}>
-        <SmartBetLanding />
-      </Suspense>
-      <Suspense fallback={<div className="h-screen">Loading...</div>}>
-        <LandingLeagues />
-      </Suspense>
-      <Suspense fallback={<div className="h-screen">Loading...</div>}>
-        <WinUpcomingCards />
-      </Suspense>
+      <div ref={refs[1]}>
+        {visibleComponents[1] && (
+          <Suspense fallback={<div className="h-screen">Loading...</div>}>
+            <SmartBetLanding />
+          </Suspense>
+        )}
+      </div>
+      <div ref={refs[2]}>
+        {visibleComponents[2] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <LandingLeagues />
+          </Suspense>
+        )}
+      </div>
+      <div ref={refs[3]}>
+        {visibleComponents[3] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <WinUpcomingCards />
+          </Suspense>
+        )}
+      </div>
       <LandingStore />
-      <Suspense fallback={<div className="h-screen">Loading...</div>}>
-        <LandingPlans />
-      </Suspense>
-      <Suspense fallback={<div className="h-screen">Loading...</div>}>
-        <SportsNews />
-      </Suspense>
-      <Suspense fallback={<div className="h-screen">Loading...</div>}>
-        <Feedback />
-      </Suspense>
+      <div ref={refs[4]}>
+        {visibleComponents[4] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <LandingPlans />
+          </Suspense>
+        )}
+      </div>
+      <div ref={refs[5]}>
+        {visibleComponents[5] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <SportsNews />
+          </Suspense>
+        )}
+      </div>
+      <div ref={refs[6]}>
+        {visibleComponents[6] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <Feedback />
+          </Suspense>
+        )}
+      </div>
       <FrequentlyAskedCard />
       <Writeup />
     </div>

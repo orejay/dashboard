@@ -66,15 +66,15 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  useEffect(() => {
-    if (isInitialLoad) {
-      const timer = setTimeout(() => {
-        setIsInitialLoad(false);
-      }, 4000);
+  // useEffect(() => {
+  //   if (isInitialLoad) {
+  //     const timer = setTimeout(() => {
+  //       setIsInitialLoad(false);
+  //     }, 4000);
 
-      return () => clearTimeout(timer);
-    }
-  }, [isInitialLoad]);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [isInitialLoad]);
 
   // useEffect(() => {
   //   const script = document.createElement("script");
@@ -96,19 +96,33 @@ function App() {
   //   };
   // }, []);
 
-  const Loader = () => (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        fontSize: isMobile ? "24px" : "36px",
-        height: "100vh",
-      }}
-    >
-      <h1>Site Is Loading...</h1>
-    </div>
-  );
+  // const Loader = () => (
+  //   <div
+  //     style={{
+  //       display: "flex",
+  //       justifyContent: "center",
+  //       alignItems: "center",
+  //       fontSize: isMobile ? "24px" : "36px",
+  //       height: "100vh",
+  //     }}
+  //   >
+  //     <h1>Site Is Loading...</h1>
+  //   </div>
+  // );
+
+  // const Loader = () => (
+  //   <div
+  //     style={{
+  //       display: "flex",
+  //       justifyContent: "center",
+  //       alignItems: "center",
+  //       fontSize: isMobile ? "24px" : "36px",
+  //       height: "100vh",
+  //     }}
+  //   >
+  //     <div className="w-12 h-12 border-6 border-gray-200 border-t-4 border-t-blue-500 rounded-full animate-spin"></div>
+  //   </div>
+  // );
 
   return (
     <div>
@@ -136,10 +150,7 @@ function App() {
         ></div>
 
         <Routes>
-          <Route
-            path="/"
-            element={isInitialLoad ? <Loader /> : <Home />}
-          ></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/refund-policy" element={<RefundPolicy />}></Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
           <Route path="/about-us" element={<AboutUs />}></Route>

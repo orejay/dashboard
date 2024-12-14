@@ -177,7 +177,7 @@ const FlutterwaveCheckout = () => {
               <div className="md:w-2/12 mr-7">
                 <img
                   src={crypto}
-                  alt="crypto-image"
+                  alt="tips180-crypto-pay-img"
                   className="w-24 md:w-32 shadow rounded"
                   style={{ height: "120px" }}
                 />
@@ -231,7 +231,7 @@ const FlutterwaveCheckout = () => {
               <div className="md:w-2/12 mr-7">
                 <img
                   src={paypal}
-                  alt="paystack-image"
+                  alt="tips180-paystack-pay-img"
                   className="w-24 md:w-32 shadow rounded"
                 />
               </div>

@@ -20,7 +20,11 @@ const Hero = () => {
           {fadeImages.map((each, index) => {
             return (
               <div className="each-fade h-full" key={index}>
-                <img src={each} alt={`slide${index + 1}`} className="w-full" />
+                <img
+                  src={each}
+                  alt={`tips180-slide${index + 1}`}
+                  className="w-full"
+                />
               </div>
             );
           })}

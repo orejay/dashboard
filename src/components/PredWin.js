@@ -301,7 +301,7 @@ const PredWin = ({
       <h2 className="millik lg:text-xl">How To Play Predict & Win</h2>
       <div className="lg:flex w-full justify-between mt-4">
         <div className="flex justify-start items-center py-4 lg:py-0 border-b lg:border-b-0 lg:w-1/3">
-          <img src={subscribe} alt="subscrice-icon" style={styl} />
+          <img src={subscribe} alt="tips180-subscrice-icon" style={styl} />
           <div className="ml-4">
             <h4 className="lg:text-base text-sm font-semibold">
               Subscribe for P&W
@@ -310,7 +310,7 @@ const PredWin = ({
           </div>
         </div>
         <div className="flex lg:justify-center items-center py-4 lg:py-0 border-b lg:border-b-0 lg:w-1/3">
-          <img src={predict} alt="subscrice-icon" style={styl} />
+          <img src={predict} alt="tips180-subscrice-icon" style={styl} />
           <div className="ml-4">
             <h4 className="lg:text-base text-sm font-semibold">Predict</h4>
             <p className="lg:text-sm text-xs">
@@ -319,7 +319,7 @@ const PredWin = ({
           </div>
         </div>
         <div className="flex lg:justify-end items-center py-4 lg:py-0 lg:w-1/3">
-          <img src={compete} alt="subscrice-icon" style={styl} />
+          <img src={compete} alt="tips180-subscrice-icon" style={styl} />
           <div className="ml-4">
             <h4 className="lg:text-base text-sm font-semibold">
               Compete to Win
@@ -421,7 +421,7 @@ const PredWin = ({
               {!expired && (
                 <img
                   src={clock}
-                  alt="clock-icon"
+                  alt="tips180-clock-icon"
                   className="mr-1"
                   style={{
                     width: isMobile ? "14px" : "18px",

@@ -160,7 +160,7 @@ const PaystackCheckout = () => {
               <div className="md:w-2/12 mr-7">
                 <img
                   src={paystack}
-                  alt="paystack-image"
+                  alt="tips180-paystack-pay-image"
                   className="md:w-32 w-24"
                 />
               </div>
@@ -191,7 +191,7 @@ const PaystackCheckout = () => {
                 <div className="md:w-2/12 mr-7">
                   <img
                     src={bank}
-                    alt="paystack-image"
+                    alt="tips180-paystack-pay-image"
                     className="w-24 md:w-32 shadow rounded"
                   />
                 </div>
@@ -248,7 +248,7 @@ const PaystackCheckout = () => {
                 <div className="md:w-2/12 mr-7">
                   <img
                     src={opay}
-                    alt="paystack-image"
+                    alt="tips180-paystack-pay-image"
                     className="w-24 md:w-32 shadow rounded"
                   />
                 </div>

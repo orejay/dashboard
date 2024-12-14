@@ -17,7 +17,7 @@ const TanzaniaPayment = () => {
               <div className="md:w-2/12 mr-7">
                 <img
                   src={mpesa}
-                  alt="paystack-image"
+                  alt="tips180-paystack-pay-image"
                   className="w-24 md:w-32 shadow rounded"
                 />
               </div>

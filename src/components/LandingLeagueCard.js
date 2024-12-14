@@ -254,9 +254,9 @@ const LandingLeagueCard = ({
   return (
     <div className={card === "" ? `hidden` : ``}>
       <div className="flex my-4">
-        <h1 className="millik text-xl text-center md:text-2xl mx-auto">
+        <h2 className="millik text-xl text-center md:text-2xl mx-auto">
           Betting Tips for {title}
-        </h1>
+        </h2>
       </div>
       <div className="flex flex-wrap justify-center md:justify-around">
         {card}

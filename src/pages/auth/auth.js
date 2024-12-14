@@ -10,7 +10,11 @@ const Auth = ({ App, image }) => {
         style={{ background: "#fff" }}
       >
         <div className="w-full lg:w-1/2 ">{App()}</div>
-        <img src={image} alt="Auth" className="hidden lg:block lg:w-2/5 " />
+        <img
+          src={image}
+          alt="tips180-Auth-img"
+          className="hidden lg:block lg:w-2/5 "
+        />
       </div>
     </div>
   );

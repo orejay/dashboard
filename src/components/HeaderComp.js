@@ -40,7 +40,7 @@ const HeaderComp = ({ logIn, nav }) => {
   };
 
   useEffect(() => {
-    getMessages();
+    if (logIn) getMessages();
   }, []);
 
   const user = JSON.parse(localStorage.getItem("user"));
@@ -68,7 +68,7 @@ const HeaderComp = ({ logIn, nav }) => {
         <Link to="/">
           <img
             src={require("../assets/tip-logo.png")}
-            alt="logo"
+            alt="tips180-logo"
             className="w-32 aspect-auto"
           />
         </Link>

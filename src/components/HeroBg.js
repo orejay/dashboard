@@ -22,14 +22,14 @@ const HeroBg = ({ Slider }) => {
               className="mb-3 text-3xl md:text-4xl lg:text-6xl leading-102 millik"
               style={{ lineHeight: "100%" }}
             >
-              Free Football Predictions and Tips
+              Your #1 Football Prediction Site – Free Predictions with Real Data
             </div>
             <p
               className="mb-3 mx-auto md:mx-0 text-xs md:text-base lg:text-xl"
               style={{ maxWidth: "90%" }}
             >
-              Get Today's Prediction and the best free football tips to help you
-              win your bets!
+              Get Today's Prediction and Free Betting Tips from Tips180 – Your
+              Trusted Football Prediction Site.
             </p>
           </div>
           <div className="flex text-base">

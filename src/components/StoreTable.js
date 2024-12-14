@@ -273,7 +273,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
                             ? paribet
                             : onexbet
                         }
-                        alt="bet-logo"
+                        alt="tips180-bet-logo"
                         className=""
                       />
                     </a>
@@ -394,7 +394,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
                             ? paribet
                             : onexbet
                         }
-                        alt="bet-logo"
+                        alt="tips180-bet-logo"
                         className=""
                       />
                     </a>

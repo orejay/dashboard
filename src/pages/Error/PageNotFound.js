@@ -9,7 +9,7 @@ const PageNotFound = () => {
       <div className="flex flex-col items-center">
         <img
           src={lost}
-          alt="not-found-image"
+          alt="tips180-not-found-image"
           className="md:mt-5 md:w-2/3 lg:w-auto"
         />
         <h1 className="millik text-red-600 md:text-2xl lg:text-4xl mt-4">

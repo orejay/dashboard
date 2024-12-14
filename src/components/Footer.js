@@ -12,19 +12,19 @@ function Footer() {
       <div className="lg:w-11/12 mx-auto lg:flex items-center justify-between hidden">
         {footerLinks[0].footerHead.map((footHead, index) => {
           return (
-            <h2
+            <h3
               key={index}
               className="w-1/3 text-xs md:text-base lg:text-xl mb-2"
             >
               {footHead}
-            </h2>
+            </h3>
           );
         })}
       </div>
       <hr className="mb-2 hidden lg:block" />
       <div className="flex flex-col lg:flex-row lg:w-11/12 mx-auto justify-between">
         <div className="lg:w-1/3">
-          <h2 className="lg:hidden text-base mb-3">Football Predictions</h2>
+          <h3 className="lg:hidden text-base mb-3">Football Predictions</h3>
           <ul className="">
             {footerLinks[1].other.map((otherLink, indx) => {
               return (
@@ -43,7 +43,7 @@ function Footer() {
           </ul>
         </div>
         <div className="lg:w-1/3 mt-7 lg:mt-0">
-          <h2 className="lg:hidden text-base mb-3">Helpful Links</h2>
+          <h3 className="lg:hidden text-base mb-3">Helpful Links</h3>
           <ul className="">
             {footerLinks[2].links.map((link, ind) => {
               return (
@@ -73,7 +73,7 @@ function Footer() {
           </ul>
         </div>
         <div className="lg:w-1/3 mt-7 lg:mt-0">
-          <h2 className="lg:hidden text-base mb-3">Stay Connected</h2>
+          <h3 className="lg:hidden text-base mb-3">Stay Connected</h3>
           <ul>
             {footerLinks[3].stayLinks.map((stay, i) => {
               return (
@@ -84,7 +84,7 @@ function Footer() {
                 >
                   <img
                     src={stay.image}
-                    alt={`${stay.name} icon`}
+                    alt={`tips180-${stay.name}-icon`}
                     width={stay.name !== "X" ? "" : "24px"}
                     height={stay.name !== "X" ? "" : "24px"}
                     className="mr-3"
@@ -103,7 +103,7 @@ function Footer() {
           </ul>
         </div>
         <div className="lg:w-1/3 mt-7 lg:my-0 mb-5">
-          <h2 className="lg:hidden text-base mb-3">Get in Touch</h2>
+          <h3 className="lg:hidden text-base mb-3">Get in Touch</h3>
           <ul>
             {footerLinks[4].touchLinks.map((touch, i) => {
               return (
@@ -115,7 +115,7 @@ function Footer() {
                   {touch.name === "mail" ? (
                     <img
                       src={touch.image}
-                      alt={`${touch.name} icon`}
+                      alt={`tips180-${touch.name}-icon`}
                       style={{ width: "25px" }}
                       loading="lazy"
                     />
@@ -125,7 +125,7 @@ function Footer() {
                         <img
                           key={i}
                           src={each}
-                          alt={`${touch.name} icon`}
+                          alt={`tips180-${touch.name}-icon`}
                           className={i === 0 ? "mr-3" : ""}
                           style={{ width: "25px" }}
                           loading="lazy"
@@ -155,13 +155,13 @@ function Footer() {
         <div className="flex flex-col mt-3 items-center">
           <img
             src={paymentmet}
-            alt="payment"
+            alt="tips180-payment-img"
             className="w-8/12"
             loading="lazy"
           />
           <img
             src={gamerlogos}
-            alt="payment"
+            alt="tips180-payment-img"
             className="mt-7 w-9/12"
             loading="lazy"
           />
@@ -173,7 +173,7 @@ function Footer() {
         <div className="w-full flex items-center justify-start">
           <img
             src={logo}
-            alt="tips logo"
+            alt="tips180-logo"
             className="md:w-107 w-3/12"
             loading="lazy"
           />

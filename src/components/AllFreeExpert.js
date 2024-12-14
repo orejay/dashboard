@@ -82,11 +82,10 @@ const AllFreeExpert = () => {
   return (
     <div className="mb-10 bg-white">
       <div className="md:w-11/12 flex md:items-center items-start justify-between mx-auto mt-7 md:my-8 mobil">
-        <h1 className="md:text-2xl lg:text-3xl font-medium millik flex-wrap">
-          {selectedOption.label}'s Prediction: Free Football Prediction and
-          Betting Tips {selectedOption.label}
+        <h2 className="md:text-2xl lg:text-3xl font-medium millik flex-wrap">
+          Get {selectedOption.label}'s Prediction and Betting Tips
           <span className="flex">({dateList[selectedOption.value]})</span>
-        </h1>
+        </h2>
         <Select
           options={days}
           value={selectedOption}
@@ -226,7 +225,12 @@ const AllFreeExpert = () => {
           className="flex items-center rounded text-sm lg:text-base w-fit h-fit p-2 bg-gradient-to-r from-teal-500 to-blue-600 font-medium text-white md:mr-3 mb-2 md:mb-0"
         >
           Join our Telegram Channel
-          <img src={telegram} alt="telegram" className="ml-1" loading="lazy" />
+          <img
+            src={telegram}
+            alt="tips180-telegram-img"
+            className="ml-1"
+            loading="lazy"
+          />
         </a>
         <div className="rounded w-fit bg-none border-2 p-2 font-medium">
           <p className="bg-gradient-to-r text-sm lg:text-base from-teal-500 to-blue-600 text-transparent bg-clip-text">
