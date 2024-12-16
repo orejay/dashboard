@@ -50,7 +50,7 @@ const ProfileSure3 = () => {
     <div className=" flex  w-full">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
-        className="font-bold millik "
+        className="font-bold big-shoulder "
       >
         3 Odds
       </h1>
@@ -62,11 +62,11 @@ const ProfileSure3 = () => {
       {endpoints[link].map((each, index) => (
         <div className="mt-10" key={index}>
           {link === "odds2" || link === "odds3" ? (
-            <p className="text-2xl millik font-bold mt-1 mb-6 text-center">
+            <p className="text-2xl big-shoulder font-bold mt-1 mb-6 text-center">
               Set {index + 1}
             </p>
           ) : link === "over2" ? (
-            <p className="text-2xl millik font-bold mt-1 mb-6 text-center">
+            <p className="text-2xl big-shoulder font-bold mt-1 mb-6 text-center">
               {index === 0 ? "Over 2.5" : "Under 2.5"}
             </p>
           ) : (

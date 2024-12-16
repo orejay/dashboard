@@ -12,7 +12,7 @@ function LandingStore() {
         className="lg:w-1/2 pt-4  md:p-6"
         style={{ backgroundColor: "#E6F5F1" }}
       >
-        <h2 className="text-xl md:text-2xl font-medium ml-6 millik">
+        <h2 className="text-xl md:text-2xl font-medium ml-6 big-shoulder">
           Tips Store
         </h2>
         <StoreCards style={`lg:m-1 m-2`} bStyle={`hidden`} />
@@ -27,13 +27,13 @@ function LandingStore() {
       >
         <div className="md:w-4/5 pt-4">
           <div
-            className="rounded w-fit millik p-2 text-sm mb-4"
+            className="rounded w-fit big-shoulder p-2 text-sm mb-4"
             style={{ backgroundColor: "#D3D3F8", fontSize: "16px" }}
           >
             Experts ACCA
           </div>
           <h2
-            className="text-xl font-medium mb-4 mt-4 millik"
+            className="text-xl font-medium mb-4 mt-4 big-shoulder"
             style={{ maxWidth: "90%", fontSize: "22px" }}
           >
             Are you confused with making

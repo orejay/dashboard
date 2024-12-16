@@ -198,7 +198,7 @@ const HeaderComp = ({ logIn, nav }) => {
               onMouseEnter={() => setShowMenu(true)}
               onMouseLeave={() => setShowMenu(false)}
             >
-              <p className="text-lg font-thin cursor-pointer mr-5 underline  text-teal-400 lg:mb-0 mb-2 text-center millik">
+              <p className="text-lg font-thin cursor-pointer mr-5 underline  text-teal-400 lg:mb-0 mb-2 text-center big-shoulder">
                 <span
                   className="hidden lg:flex justify-center items-center bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
                   style={{ fontSize: "16px" }}

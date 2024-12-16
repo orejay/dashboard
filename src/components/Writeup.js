@@ -4,7 +4,7 @@ function Writeup() {
   return (
     <div className="md:w-10/12 mx-auto bg-white py-14" id="writeup">
       <div className="mb-5">
-        <h2 className="text-md lg:text-2xl font-medium millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
+        <h2 className="text-md lg:text-2xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
           What is the best way of making money with football betting?
         </h2>
         <p className="text-xs lg:text-base md:text-justify">
@@ -38,7 +38,7 @@ function Writeup() {
         </p>
       </div>
       <div className="mb-5">
-        <h2 className="text-md lg:text-2xl font-medium millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
+        <h2 className="text-md lg:text-2xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
           Free Football Prediction Site – Sure Odds for Today Prediction
         </h2>
         <p className="text-xs lg:text-base md:text-justify">
@@ -57,7 +57,7 @@ function Writeup() {
         </p>
       </div>
       <div className="mb-5">
-        <h2 className="text-md lg:text-2xl font-medium millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
+        <h2 className="text-md lg:text-2xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
           Real Football Betting Prediction Site
         </h2>
         <p className="text-xs lg:text-base md:text-justify">
@@ -94,7 +94,7 @@ function Writeup() {
         </p>
       </div>
       <div className="mb-5">
-        <h2 className="text-md lg:text-2xl font-medium millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
+        <h2 className="text-md lg:text-2xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
           Real Football Prediction
         </h2>
         <p className="md:text-justify text-xs lg:text-base">
@@ -118,7 +118,7 @@ function Writeup() {
         </p>
       </div>
       <div className="mb-5">
-        <h2 className="text-md lg:text-2xl font-medium millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
+        <h2 className="text-md lg:text-2xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
           Guide to Football Betting [2024]
         </h2>
         <p className="md:text-justify text-xs lg:text-base">
@@ -131,7 +131,7 @@ function Writeup() {
         </p>
       </div>
       <div className="mb-5">
-        <h2 className="text-md lg:text-2xl font-medium millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
+        <h2 className="text-md lg:text-2xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
           Why is it Important to Rely on an Accurate Football Prediction Website
         </h2>
         <p className="md:text-justify mb-2 text-xs lg:text-base">

@@ -127,7 +127,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
           className="text-center mx-auto shadow-md shadow-gray-300"
           style={style}
         >
-          <tr className="w-full my-2 bg-white millik text-xs lg:text-xl font-light">
+          <tr className="w-full my-2 bg-white big-shoulder text-xs lg:text-xl font-light">
             <th>Time</th>
             <th>League</th>
             <th>Match</th>
@@ -174,7 +174,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
         </table>
       ) : (
         <div className="w-full flex justify-center py-5">
-          <h1 className="millik text-lg md:text-2xl text-red-500 mx-auto w-9/12 md:w-full text-center">
+          <h1 className="big-shoulder text-lg md:text-2xl text-red-500 mx-auto w-9/12 md:w-full text-center">
             Sorry, tips are not available for now. Please check back later.
           </h1>
         </div>

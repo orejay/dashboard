@@ -82,7 +82,7 @@ const AllFreeExpert = () => {
   return (
     <div className="mb-10 bg-white">
       <div className="md:w-11/12 flex md:items-center items-start justify-between mx-auto mt-7 md:my-8 mobil">
-        <h2 className="md:text-2xl lg:text-3xl font-medium millik flex-wrap">
+        <h2 className="md:text-2xl lg:text-3xl font-medium big-shoulder flex-wrap">
           Get {selectedOption.label}'s Prediction and Betting Tips{" "}
           <span className="flex">({dateList[selectedOption.value]})</span>
         </h2>
@@ -169,7 +169,7 @@ const AllFreeExpert = () => {
             <h3 className="font-bold text-sm">Free Expert Tips</h3>
             <p className="text-sm font-semibold">Booking Code: {data?.code}</p>
             <div className="flex items-center justify-center w-6/12 md:w-9/12 mt-1 md:mt-2 h-9">
-              <div className="text-xs md:text-base font-light millik text-white bg-gradient-to-r from-teal-500 to-blue-600 h-full rounded-l-md flex items-center justify-center w-1/2">
+              <div className="text-xs md:text-base font-light big-shoulder text-white bg-gradient-to-r from-teal-500 to-blue-600 h-full rounded-l-md flex items-center justify-center w-1/2">
                 <p>Bet tips on</p>
               </div>
               <a href={data?.link} target="_blank" className="w-1/2 h-full">

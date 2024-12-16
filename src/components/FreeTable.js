@@ -22,7 +22,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
   return (
     <div className="flex flex-wrap justify-around">
       <table>
-        <thead className="millik" style={{ color: "#4F4F4F" }}>
+        <thead className="big-shoulder" style={{ color: "#4F4F4F" }}>
           <tr className="text-sm md:text-base">
             <th>Date</th>
             <th>League</th>
@@ -79,7 +79,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                   className="h-full relative"
                 >
                   <div
-                    className="flex flex-col items-center justify-evenly h-full millik md:text-lg"
+                    className="flex flex-col items-center justify-evenly h-full big-shoulder md:text-lg"
                     style={{ height: isMobile ? "120px" : "" }}
                   >
                     <p>
@@ -110,7 +110,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                           className="flex justify-center md:h-9 h-8 w-full lg:w-7/12 md:mb-0"
                         >
                           <div
-                            className="flex justify-center w-1/2 millik items-center p-2 text-white bg-gradient-to-r from-teal-500 to-blue-600 rounded-l-md"
+                            className="flex justify-center w-1/2 big-shoulder items-center p-2 text-white bg-gradient-to-r from-teal-500 to-blue-600 rounded-l-md"
                             style={{ fontSize: isMobile ? "10px" : "" }}
                           >
                             Bet tip on
@@ -172,7 +172,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                               color: "#13A0FF",
                             }}
                           >
-                            <p className="millik">Odds</p>
+                            <p className="big-shoulder">Odds</p>
                           </div>
                           <div
                             className="rounded-r-md w-1/2 flex justify-center items-center"
@@ -181,7 +181,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                               color: "#355E3B",
                             }}
                           >
-                            <p className="millik">{each?.ft_odds}</p>
+                            <p className="big-shoulder">{each?.ft_odds}</p>
                           </div>
                         </div>
                       </div>
@@ -205,7 +205,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
           ) : (
             <tr>
               <td colSpan="5">
-                <h2 className="md:text-xl text-center w-full lg:text-3xl text-red-500 millik">
+                <h2 className="md:text-xl text-center w-full lg:text-3xl text-red-500 big-shoulder">
                   Sorry! No Free Expert Tips Available{" "}
                   {selectedOption.value === "today"
                     ? "Today"

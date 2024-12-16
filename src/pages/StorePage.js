@@ -103,7 +103,7 @@ const StorePage = () => {
     <div className="pb-10">
       <div className="flex justify-center">
         <div className="w-full bg-gradient-to-r py-12 lg:py-20 flex flex-col justify-center items-center from-teal-600 to-blue-600">
-          <h2 className="text-2xl lg:text-4xl text-white font-medium millik">
+          <h2 className="text-2xl lg:text-4xl text-white font-medium big-shoulder">
             {endpoints[link][0].title}
           </h2>
         </div>
@@ -111,11 +111,11 @@ const StorePage = () => {
       {endpoints[link].map((each, index) => (
         <div className="mt-10" key={index}>
           {link === "odds2" || link === "odds3" ? (
-            <p className="text-2xl millik font-bold mt-1 mb-6 text-center">
+            <p className="text-2xl big-shoulder font-bold mt-1 mb-6 text-center">
               Set {index + 1}
             </p>
           ) : link === "over2" ? (
-            <p className="text-2xl millik font-bold mt-1 mb-6 text-center">
+            <p className="text-2xl big-shoulder font-bold mt-1 mb-6 text-center">
               {index === 0 ? "Over 2.5" : "Under 2.5"}
             </p>
           ) : (

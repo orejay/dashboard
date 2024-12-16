@@ -2,12 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import Footer from "./components/Footer";
 import HeaderComp from "./components/HeaderComp";
 
-const Main = ({ Prop, logIn, nav }) => {
+const Main = ({ Prop, logIn, nav, isPageLoaded = true }) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.id = "clever-core";
     script.setAttribute("data-cfasync", "false");
     script.type = "text/javascript";
+    script.async = true;
+    script.defer = true;
     script.innerHTML = `
       /* <![CDATA[ */
                                     (function (document, window) {
@@ -54,6 +56,8 @@ const Main = ({ Prop, logIn, nav }) => {
       (window,document,'script','https://www.google-analytics.com/analytics.js','ga');
         ga('create', 'UA-97709798-1', 'auto');
         ga('send', 'pageview');`;
+    script.async = true;
+    script.defer = true;
 
     document.body.appendChild(script);
 

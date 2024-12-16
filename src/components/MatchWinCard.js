@@ -43,7 +43,7 @@ function MatchWinCard({ getWinningTips, results }) {
     });
   } else {
     card = (
-      <h1 className="text-center millik text-red-600 text-xl md:text-3xl mb-7">
+      <h1 className="text-center big-shoulder text-red-600 text-xl md:text-3xl mb-7">
         Please Check Back Later!
       </h1>
     );

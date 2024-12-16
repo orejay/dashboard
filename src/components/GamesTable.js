@@ -162,7 +162,7 @@ const GamesTable = ({ data, dat, type, onClick, rollBook = false }) => {
       {rollBook && Number(rollBook[`${activeState}_odds`]) !== 1 ? (
         <div className="my-5 lg:my-0">
           <p className="text-sm">Total Odds:</p>
-          <p className="text-xl font-bold millik">
+          <p className="text-xl font-bold big-shoulder">
             {rollBook[`${activeState}_odds`]}
           </p>
         </div>

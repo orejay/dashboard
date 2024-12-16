@@ -401,7 +401,7 @@ const OurPlans = () => {
   const ourPlans = (
     <div style={{ background: "#F2F2F2" }}>
       <div className="lg:py-20 py-14 text-white mx-auto text-center bg-gradient-to-r from-teal-500 to-blue-600">
-        <h1 className="lg:text-4xl text-xl millik mx-auto">Our Plans</h1>
+        <h1 className="lg:text-4xl text-xl big-shoulder mx-auto">Our Plans</h1>
         <p className="text-xs lg:text-base">
           There’s a plan tailored for everyone!
         </p>

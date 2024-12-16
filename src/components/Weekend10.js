@@ -64,7 +64,7 @@ const Weekend10 = () => {
     <div className=" flex  w-full">
       <h1
         style={{ color: "#22222" }}
-        className="font-bold millik md:text-2xl text-xl"
+        className="font-bold big-shoulder md:text-2xl text-xl"
       >
         Weekend 10 Odds!
       </h1>
@@ -142,7 +142,7 @@ const Weekend10 = () => {
       )}
       <div className="md:w-5/6 mx-auto">
         <div className="">
-          <h2 className="millik text-md" style={{ color: "#4f4f4f" }}>
+          <h2 className="big-shoulder text-md" style={{ color: "#4f4f4f" }}>
             Notes :
           </h2>
           <p>
@@ -150,7 +150,7 @@ const Weekend10 = () => {
             recommend you stake responsibly!
           </p>
         </div>
-        <h2 className="millik text-md my-8 text-red-600">
+        <h2 className="big-shoulder text-md my-8 text-red-600">
           STAKE WHAT YOU CAN AFFORD TO LOSE!!!
         </h2>
       </div>

@@ -51,8 +51,8 @@ function WinUpcomingCards() {
           onClick={() => setTab(0)}
           className={
             tab === 0
-              ? `md:text-2xl text-lg lg:text-3xl font-medium millik mr-4 cursor-pointer text-transparent bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text`
-              : `text-xs md:text-md lg:text-xl font-medium millik mr-4 cursor-pointer`
+              ? `md:text-2xl text-lg lg:text-3xl font-medium big-shoulder mr-4 cursor-pointer text-transparent bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text`
+              : `text-xs md:text-md lg:text-xl font-medium big-shoulder mr-4 cursor-pointer`
           }
           style={tab === 0 ? activeStyles : inactiveStyles}
         >
@@ -62,8 +62,8 @@ function WinUpcomingCards() {
           onClick={() => setTab(1)}
           className={
             tab === 1
-              ? `text-lg flex items-center md:text-2xl lg:text-3xl font-medium millik cursor-pointer text-transparent bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text`
-              : `text-xs md:text-md flex items-end lg:text-xl font-medium millik cursor-pointer`
+              ? `text-lg flex items-center md:text-2xl lg:text-3xl font-medium big-shoulder cursor-pointer text-transparent bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text`
+              : `text-xs md:text-md flex items-end lg:text-xl font-medium big-shoulder cursor-pointer`
           }
           style={tab === 1 ? activeStyles : inactiveStyles}
         >

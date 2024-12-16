@@ -49,7 +49,7 @@ function SportsNews() {
       style={{ backgroundColor: "#FFF", padding: "80px 0" }}
     >
       <div className="flex w-10/12 mx-auto justify-between lg:mb-8 items-end mb-4">
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-medium millik">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-medium big-shoulder">
           Sport News
         </h2>
         <a

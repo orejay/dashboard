@@ -63,7 +63,7 @@ const Rollover = () => {
     <div className=" flex  w-full mb-6">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
-        className="font-bold millik "
+        className="font-bold big-shoulder "
       >
         Rollover Bet
       </h1>

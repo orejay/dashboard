@@ -7,7 +7,7 @@ const Store = () => {
     <div className="flex w-full">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
-        className="font-bold millik"
+        className="font-bold big-shoulder"
       >
         My Store
       </h1>

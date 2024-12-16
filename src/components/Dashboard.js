@@ -162,7 +162,7 @@ const Dashboard = ({ Content, Top, active }) => {
                 name={!mobile ? "grid" : "close"}
                 style={!mobile ? styles.opened : styles.closed}
               ></ion-icon>
-              <h1 className={!mobile ? "ml-1 millik" : "hidden"}>Menu</h1>
+              <h1 className={!mobile ? "ml-1 big-shoulder" : "hidden"}>Menu</h1>
               {/* </div> */}
             </div>
             {mobile === true && <MobileMenu active={active} msgs={messages} />}

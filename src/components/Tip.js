@@ -14,7 +14,7 @@ const Tip = ({ match, league, tip, odds, analysis, level }) => {
           <p>Match:</p>
           <h3
             style={{ color: "#222222", fontSize: "20px" }}
-            className="font-bold millik"
+            className="font-bold big-shoulder"
           >
             {match}
           </h3>
@@ -29,7 +29,7 @@ const Tip = ({ match, league, tip, odds, analysis, level }) => {
           <p> League:</p>
           <h3
             style={{ color: "#222222", fontSize: "20px" }}
-            className="font-bold millik"
+            className="font-bold big-shoulder"
           >
             {league}
           </h3>
@@ -44,7 +44,7 @@ const Tip = ({ match, league, tip, odds, analysis, level }) => {
           <p>Tip:</p>
           <h3
             style={{ color: "#222222", fontSize: "20px" }}
-            className="font-bold millik"
+            className="font-bold big-shoulder"
           >
             {tip}
           </h3>
@@ -61,7 +61,7 @@ const Tip = ({ match, league, tip, odds, analysis, level }) => {
           <p>Odds:</p>
           <h3
             style={{ color: "#222222", fontSize: "20px" }}
-            className="font-bold millik"
+            className="font-bold big-shoulder"
           >
             {odds}
           </h3>
@@ -91,7 +91,7 @@ const Tip = ({ match, league, tip, odds, analysis, level }) => {
           <p>Confidence Level:</p>
           <h3
             style={{ color: "#222222", fontSize: "20px" }}
-            className="font-bold millik"
+            className="font-bold big-shoulder"
           >
             {level}
           </h3>

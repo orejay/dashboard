@@ -207,7 +207,7 @@ const PredWinResults = () => {
           >
             <ion-icon name="caret-back-outline" size="large"></ion-icon>
           </div>
-          <h1 className="font-light millik">
+          <h1 className="font-light big-shoulder">
             {page}
             {` of `}
             {Math.ceil(users?.length / 20)}
@@ -257,7 +257,9 @@ const PredWinResults = () => {
       )}
       <div className="w-full flex justify-center">
         {users?.length === 0 && (
-          <h4 className="py-2 millik text-red-500 text-center">No Users</h4>
+          <h4 className="py-2 big-shoulder text-red-500 text-center">
+            No Users
+          </h4>
         )}
       </div>
     </div>

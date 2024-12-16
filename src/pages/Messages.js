@@ -65,7 +65,7 @@ const Messages = ({ type }) => {
   const Top = (
     <div>
       <h1
-        className="font-bold flex mb-4 lg:mb-0 iteems-center millik"
+        className="font-bold flex mb-4 lg:mb-0 iteems-center big-shoulder"
         style={{ fontSize: "24px" }}
       >
         Messages
@@ -75,7 +75,7 @@ const Messages = ({ type }) => {
 
   const msgList = messages && (
     <div className="w-full lg:pl-2">
-      <h3 className="millik md:text-xl text-lg p-2">
+      <h3 className="big-shoulder md:text-xl text-lg p-2">
         {active === 0 ? "Unread Messages" : "Read Messages"}
       </h3>
       {messages[active === 0 ? "unread" : "read"]?.length > 0 ? (
@@ -100,7 +100,7 @@ const Messages = ({ type }) => {
 
   const fullMsg = messages && (
     <div className="md:text-xl text-lg p-2">
-      <h3 className="millik mb-6">{activeMsg?.title}</h3>
+      <h3 className="big-shoulder mb-6">{activeMsg?.title}</h3>
       {activeMsg?.image_url && activeMsg?.image_url !== "" ? (
         <div
           className="lg:w-9/12 w-full rounded-lg shadow mb-4"

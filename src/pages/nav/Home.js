@@ -4,13 +4,13 @@ import Main from "../../Main";
 import Hero from "../../components/Hero";
 import { Helmet } from "react-helmet";
 import { useMediaQuery } from "@mui/material";
+import loyaltyMob from "../../assets/loyalty-mobile.png";
+import loyaltyPc from "../../assets/loyalty-pc.png";
 const Writeup = lazy(() => import("../../components/Writeup"));
 const LandingStore = lazy(() => import("../../components/LandingStore"));
-const loyaltyMob = lazy(() => import("../../assets/loyalty-mobile.png"));
 const FrequentlyAskedCard = lazy(() =>
   import("../../components/FrequentlyAskedCard")
 );
-const loyaltyPc = lazy(() => import("../../assets/loyalty-pc.png"));
 const SmartBetLanding = lazy(() => import("../../components/SmartBetLanding"));
 const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
 const SportsNews = lazy(() => import("../../components/SportsNews"));
@@ -42,6 +42,20 @@ function Home() {
     useRef(),
     useRef(),
   ];
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!isPageLoaded) {
+      const timer = setTimeout(
+        () => {
+          setIsPageLoaded(true);
+        },
+        isMobile ? 5500 : 0
+      );
+
+      return () => clearTimeout(timer);
+    }
+  }, [isPageLoaded]);
 
   const IsUserAuthorized = async () => {
     try {
@@ -73,6 +87,7 @@ function Home() {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             setVisibleComponents((prev) => ({ ...prev, [index]: true }));
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -82,6 +97,8 @@ function Home() {
     refs.forEach((ref) => {
       if (ref.current) observer.observe(ref.current);
     });
+
+    return () => observer.disconnect();
   });
 
   useEffect(() => {
@@ -261,7 +278,7 @@ function Home() {
     </div>
   );
 
-  return <Main Prop={Prop} logIn={isValid} />;
+  return <Main Prop={Prop} logIn={isValid} isPageLoaded={isPageLoaded} />;
 }
 
 export default Home;

@@ -65,7 +65,7 @@ const BankersTip = () => {
     <div className="flex w-full">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
-        className="font-bold millik"
+        className="font-bold big-shoulder"
       >
         Banker Tip Of The Day
       </h1>
@@ -75,7 +75,7 @@ const BankersTip = () => {
   const Content = !loader ? (
     <>
       {data?.msg ? (
-        <h1 className="text-xl millik">{data?.msg}</h1>
+        <h1 className="text-xl big-shoulder">{data?.msg}</h1>
       ) : (
         <Tip
           match={data?.name}

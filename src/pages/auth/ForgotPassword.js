@@ -58,7 +58,7 @@ const App = () => {
 
   return (
     <div className="w-full py-36 px-8">
-      <h2 className="font-bold mb-4 millik" style={{ fontSize: "30px" }}>
+      <h2 className="font-bold mb-4 big-shoulder" style={{ fontSize: "30px" }}>
         Forgot Password?
       </h2>
       <p>

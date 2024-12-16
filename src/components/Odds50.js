@@ -100,7 +100,7 @@ const Odds50 = () => {
     <div className="lg:px-5 flex flex-wrap items-center justify-between w-full">
       <h1
         style={{ fontSize: "" }}
-        className="text-md lg:text-3xl font-bold w-1/2 lg:w-2/4 millik"
+        className="text-md lg:text-3xl font-bold w-1/2 lg:w-2/4 big-shoulder"
       >
         Buy 50 Odds!
       </h1>
@@ -188,19 +188,19 @@ const Odds50 = () => {
       <div className="md:w-5/6 mx-auto">
         <div className="mx-auto items-center text-center">
           <p
-            className="md:w-5/6 flex text-sm md:text-base justify-even mx-auto text-left font-bold my-16 millik"
+            className="md:w-5/6 flex text-sm md:text-base justify-even mx-auto text-left font-bold my-16 big-shoulder"
             style={{ color: "#4F4F4F" }}
           >
             NOTE: Although matches were carefully selected by our experts, we
             strongly recommend you stake responsibly!
           </p>
-          <p className="my-20 text-left text-red-600 md:text-base text-sm millik">
+          <p className="my-20 text-left text-red-600 md:text-base text-sm big-shoulder">
             STAKE WHAT YOU CAN AFFORD TO LOSE!!!
           </p>
         </div>
 
         <div>
-          <h1 className="text-xl  millik">The 50 Odds Plan</h1>
+          <h1 className="text-xl  big-shoulder">The 50 Odds Plan</h1>
           <div name="target" className="my-8">
             {faq.map((each, index) => (
               <div key={index}>
@@ -243,7 +243,7 @@ const Odds50 = () => {
             ))}
           </div>
           <div className="my-10">
-            <h2 className="millik text-xl" style={{ color: "#4f4f4f" }}>
+            <h2 className="big-shoulder text-xl" style={{ color: "#4f4f4f" }}>
               50 ODDS WINNING TACTICS
             </h2>
             <p className="my-5 text-sm md:text-base">

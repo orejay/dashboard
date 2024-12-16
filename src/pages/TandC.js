@@ -7,13 +7,13 @@ const TandC = () => {
     <div className="w-full py-5 lg:py-10 " style={{ background: "#F2F2F2" }}>
       <div className="py-5 lg:py-10  px-5 lg:px-14  mx-auto rounded-lg bg-white w-full lg:w-5/6">
         <h2
-          className="millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "24px" }}
         >
           Terms and Conditions
         </h2>
         <h3
-          className="mt-4 millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="mt-4 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "18px" }}
         >
           A. INTRODUCTION
@@ -96,7 +96,7 @@ const TandC = () => {
             policies and regulations in place.
           </p>
           <h3
-            className="mt-4 millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mt-4 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             B. YOUR TIPS180 ACCOUNT
@@ -202,7 +202,7 @@ const TandC = () => {
             </li>
           </ul>
           <h3
-            className="mt-4 millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mt-4 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             C. PREDICTIONS AND PICKS
@@ -235,7 +235,7 @@ const TandC = () => {
             </li>
           </ul>
           <h3
-            className="mt-4 millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mt-4 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             D. OTHER
@@ -286,7 +286,7 @@ const TandC = () => {
             </li>
           </ol>
           <h3
-            className="mt-4 millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mt-4 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             F. OUR INTELLECTUAL PROPERTY RIGHTS
@@ -304,7 +304,7 @@ const TandC = () => {
             </li>
           </ol>
           <h3
-            className="mt-4 millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mt-4 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             G. OTHER PROVISION
@@ -368,7 +368,7 @@ const TandC = () => {
             </li>
           </ol>
           <h3
-            className="mt-4 millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mt-4 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             H. CANCELLATION/REFUND POLICY
@@ -390,7 +390,7 @@ const TandC = () => {
             </li>
           </ol>
           <h3
-            className="mt-4 millik bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mt-4 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             I. PRIVACY POLICY

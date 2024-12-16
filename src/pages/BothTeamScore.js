@@ -9,7 +9,7 @@ function BothTeamScore() {
   return (
     <div className="min-h-screen">
       <div className="flex justify-center">
-        <h2 className="text-2xl lg:text-4xl mt-8 font-bold millik">
+        <h2 className="text-2xl lg:text-4xl mt-8 font-bold big-shoulder">
           Both Teams Score
         </h2>
       </div>

@@ -85,7 +85,7 @@ const ACCA = () => {
     <div className="w-full mb-6">
       <h1
         style={{ color: "#22222" }}
-        className="font-bold millik md:text-2xl text-xl"
+        className="font-bold big-shoulder md:text-2xl text-xl"
       >
         Experts ACCA
       </h1>

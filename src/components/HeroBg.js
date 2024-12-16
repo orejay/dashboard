@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import heroBgd from "../assets/hero-bg.webp";
-import heroBgm from "../assets/hero-mb.webp";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
 import Slider from "./Slider";
@@ -23,17 +21,17 @@ const HeroBg = () => {
     <div
       className="w-full flex justify-center items-center"
       style={{
-        height: isMobile ? "800px" : "100vh",
-        backgroundColor: "#fff",
+        height: isMobile ? "100vh" : "100vh",
+        backgroundColor: "#f4f4f4",
         // backgroundImage: isMobile ? `url(${heroBgm})` : `url(${heroBgd})`,
         // backgroundSize: "100% 100%",
       }}
     >
-      <div className="md:flex pt-5 md:px-0 items-center justify-between md:justify-between text-black w-11/12">
+      <div className="md:flex pt-5 md:px-0 items-center justify-between md:justify-between text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600 w-11/12">
         <div className="flex flex-col items-center w-full text-center md:text-left md:items-start justify-around my-auto lg:w-3/5 md:2/5 h-3/6">
           <div className={``}>
             <div
-              className="mb-3 text-3xl md:text-4xl lg:text-6xl leading-102 millik"
+              className="mb-3 text-3xl md:text-4xl lg:text-6xl leading-102 big-shoulder"
               style={{ lineHeight: "100%" }}
             >
               Your #1 Football Prediction Site – Free Predictions with Real Data

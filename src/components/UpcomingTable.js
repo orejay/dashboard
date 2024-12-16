@@ -39,7 +39,7 @@ const UpcomingTable = ({ getUpcoming, results }) => {
   return (
     <div className="flex flex-wrap justify-around">
       <table>
-        <thead className="millik" style={{ color: "#4F4F4F" }}>
+        <thead className="big-shoulder" style={{ color: "#4F4F4F" }}>
           {results.length > 0 ? (
             <tr className="text-sm md:text-base">
               <th>Date</th>
@@ -50,7 +50,7 @@ const UpcomingTable = ({ getUpcoming, results }) => {
           ) : (
             <tr>
               <td colSpan="5">
-                <h1 className="text-center millik text-red-600 text-xl md:text-3xl mb-7">
+                <h1 className="text-center big-shoulder text-red-600 text-xl md:text-3xl mb-7">
                   Please Check Back Later!
                 </h1>
               </td>
@@ -97,7 +97,7 @@ const UpcomingTable = ({ getUpcoming, results }) => {
                     </div>
                   </td>
                   <td>
-                    <div className="flex flex-col items-center millik mt-1 md:text-lg">
+                    <div className="flex flex-col items-center big-shoulder mt-1 md:text-lg">
                       <p>{each.name}</p>
                       <div className="flex flex-col md:flex md:flex-row items-center justify-center lg:text-sm md:text-xs w-full">
                         <div className="flex flex-col md:flex md:flex-row items-center justify-between lg:text-sm md:text-xs w-full lg:w-6/12 mt-2 md:mt-1">
@@ -107,7 +107,7 @@ const UpcomingTable = ({ getUpcoming, results }) => {
                               target="_blank"
                               className="flex justify-center md:h-9 h-8 w-9/12 mb-2 md:mb-0 lg:w-7/12"
                             >
-                              <div className="flex justify-center w-1/2 millik items-center p-2 text-white bg-gradient-to-r from-teal-500 to-blue-600 rounded-l-md">
+                              <div className="flex justify-center w-1/2 big-shoulder items-center p-2 text-white bg-gradient-to-r from-teal-500 to-blue-600 rounded-l-md">
                                 Bet tip on
                               </div>
                               <div
@@ -171,7 +171,7 @@ const UpcomingTable = ({ getUpcoming, results }) => {
                                   color: "#13A0FF",
                                 }}
                               >
-                                <p className="millik">Odds</p>
+                                <p className="big-shoulder">Odds</p>
                               </div>
                               <div
                                 className="rounded-r-md w-1/2 flex justify-center items-center"
@@ -180,7 +180,7 @@ const UpcomingTable = ({ getUpcoming, results }) => {
                                   color: "#355E3B",
                                 }}
                               >
-                                <p className="millik">{each.ft_odds}</p>
+                                <p className="big-shoulder">{each.ft_odds}</p>
                               </div>
                             </div>
                           </div>
