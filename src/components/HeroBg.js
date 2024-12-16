@@ -24,12 +24,12 @@ const HeroBg = () => {
       className="w-full flex justify-center items-center"
       style={{
         height: isMobile ? "800px" : "100vh",
-        backgroundColor: "#f4f4f4",
+        backgroundColor: "#fff",
         // backgroundImage: isMobile ? `url(${heroBgm})` : `url(${heroBgd})`,
         // backgroundSize: "100% 100%",
       }}
     >
-      <div className="md:flex pt-5 md:px-0 items-center justify-between md:justify-between text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600 w-11/12">
+      <div className="md:flex pt-5 md:px-0 items-center justify-between md:justify-between text-black w-11/12">
         <div className="flex flex-col items-center w-full text-center md:text-left md:items-start justify-around my-auto lg:w-3/5 md:2/5 h-3/6">
           <div className={``}>
             <div
@@ -48,14 +48,14 @@ const HeroBg = () => {
           </div>
           <div className="flex text-base">
             <Link to="/auth/signup">
-              <button className="text-sm lg:text-base bg-gradient-to-r from-teal-400 to-blue-600 border-2 w-auto hover:shadow-lg hover:shadow-gray-400 cursor-pointer text-white px-2 py-2 rounded transition-all ease-in duration-100">
+              <div className="text-sm lg:text-base bg-gradient-to-r from-teal-400 to-blue-600 border-2 w-auto hover:shadow-lg hover:shadow-gray-400 cursor-pointer text-white px-2 py-2 rounded transition-all ease-in duration-100">
                 Create a Free Account
-              </button>
+              </div>
             </Link>
             <Link to="/contact-us">
-              <button className="px-2 py-2 hover:shadow-lg hover:shadow-gray-400 bg-none border-gray-400 border-2 ml-5 rounded cursor-pointer hover:bg-white text-stone-900 hover:transition-all ease-in duration-100 text-sm lg:text-base">
+              <div className="px-2 py-2 hover:shadow-lg hover:shadow-gray-400 bg-none border-gray-400 border-2 ml-5 rounded cursor-pointer hover:bg-white text-stone-900 hover:transition-all ease-in duration-100 text-sm lg:text-base">
                 Contact Us
-              </button>
+              </div>
             </Link>
           </div>
         </div>

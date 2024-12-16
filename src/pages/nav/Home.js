@@ -22,6 +22,7 @@ const WinUpcomingCards = lazy(() =>
 );
 
 function Home() {
+  const api = process.env.REACT_APP_BASE_API;
   const [isValid, setIsValid] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [visibleComponents, setVisibleComponents] = useState({});
@@ -44,7 +45,7 @@ function Home() {
 
   const IsUserAuthorized = async () => {
     try {
-      const res = await fetch("https://www.tips180.lol/getendpoints/auth", {
+      const res = await fetch(`${api}/getendpoints/auth`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -131,8 +132,8 @@ function Home() {
           </Suspense>
         )}
       </div>
-      <div ref={refs[7]}>
-        {visibleComponents[7] && (
+      <div ref={refs[1]}>
+        {visibleComponents[1] && (
           <Suspense fallback={<div className="h-screen">{Loader}</div>}>
             <div className="flex mx-auto w-11/12 px-4 mb-8 rounded">
               <Link to="/our-plans">
@@ -146,23 +147,10 @@ function Home() {
           </Suspense>
         )}
       </div>
-      <div ref={refs[1]}>
-        {visibleComponents[1] && (
-          <Suspense fallback={<div className="h-screen">Loading...</div>}>
-            <SmartBetLanding />
-          </Suspense>
-        )}
-      </div>
       <div ref={refs[2]}>
         {visibleComponents[2] && (
-          <Suspense
-            fallback={
-              <div className="h-screen flex justify-center items-center">
-                {Loader}
-              </div>
-            }
-          >
-            <LandingLeagues />
+          <Suspense fallback={<div className="h-screen">Loading...</div>}>
+            <SmartBetLanding />
           </Suspense>
         )}
       </div>
@@ -175,20 +163,7 @@ function Home() {
               </div>
             }
           >
-            <WinUpcomingCards />
-          </Suspense>
-        )}
-      </div>
-      <div ref={refs[10]}>
-        {visibleComponents[10] && (
-          <Suspense
-            fallback={
-              <div className="h-screen flex justify-center items-center">
-                {Loader}
-              </div>
-            }
-          >
-            <LandingStore />
+            <LandingLeagues />
           </Suspense>
         )}
       </div>
@@ -201,7 +176,7 @@ function Home() {
               </div>
             }
           >
-            <LandingPlans />
+            <WinUpcomingCards />
           </Suspense>
         )}
       </div>
@@ -214,7 +189,7 @@ function Home() {
               </div>
             }
           >
-            <SportsNews />
+            <LandingStore />
           </Suspense>
         )}
       </div>
@@ -227,7 +202,20 @@ function Home() {
               </div>
             }
           >
-            <Feedback />
+            <LandingPlans />
+          </Suspense>
+        )}
+      </div>
+      <div ref={refs[7]}>
+        {visibleComponents[7] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <SportsNews />
           </Suspense>
         )}
       </div>
@@ -240,12 +228,25 @@ function Home() {
               </div>
             }
           >
-            <FrequentlyAskedCard />
+            <Feedback />
           </Suspense>
         )}
       </div>
       <div ref={refs[9]}>
         {visibleComponents[9] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <FrequentlyAskedCard />
+          </Suspense>
+        )}
+      </div>
+      <div ref={refs[10]}>
+        {visibleComponents[10] && (
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktips180=self.webpackChunktips180||[]).push([[9615],{29615:function(s,r,e){e.r(r);e(47313);var i=e(51162),t=e(69938),n=e(46417);r.default=function(){return(0,n.jsx)(i.Z,{Prop:(0,n.jsx)(t.Z,{isFaq:!0,redirectUrl:"/predict-win",isDashboard:!1}),nav:4})}}}]);
