@@ -1,15 +1,14 @@
-import pwad from "./assets/pwad.png";
-import pwadmobile from "./assets/pwadmobile.png";
+import { Helmet } from "react-helmet";
 import { Routes, Route, useLocation, Link } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@mui/material";
-import Messages from "./pages/Messages";
-import PredictAndWin from "./pages/PredictAndWin";
-import PwTandC from "./pages/PwTandC";
-import PandW from "./pages/PandW";
+const Messages = lazy(() => import("./pages/Messages"));
+const PredictAndWin = lazy(() => import("./pages/PredictAndWin"));
+const PwTandC = lazy(() => import("./pages/PwTandC"));
+const PandW = lazy(() => import("./pages/PandW"));
 const Home = lazy(() => import("./pages/nav/Home"));
 const SlPayment = lazy(() => import("./components/SlPayment"));
 const Odds50 = lazy(() => import("./components/Odds50"));
@@ -65,6 +64,28 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: "https://www.tips180.com",
+    name: "Tips180",
+    description:
+      " Tips180 has over the years proven to be the best football prediction website that provides real football predictions on every marketavailable.",
+    publisher: {
+      "@type": "Organization",
+      name: "Tips180",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.tips180.com/logo.png",
+      },
+      sameAs: [
+        "https://www.facebook.com/tips180",
+        "https://twitter.com/tips180",
+        "https://www.instagram.com/tips180",
+      ],
+    },
+  };
 
   // useEffect(() => {
   //   if (isInitialLoad) {
@@ -126,6 +147,9 @@ function App() {
 
   return (
     <div>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      </Helmet>
       <Suspense
         fallback={
           <div className="h-screen w-screen flex justify-center items-center"></div>

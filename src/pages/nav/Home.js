@@ -2,13 +2,15 @@ import React, { useEffect, useState, lazy, Suspense, useRef } from "react";
 import { Link } from "react-router-dom";
 import Main from "../../Main";
 import Hero from "../../components/Hero";
-import FrequentlyAskedCard from "../../components/FrequentlyAskedCard";
 import { Helmet } from "react-helmet";
 import { useMediaQuery } from "@mui/material";
-import Writeup from "../../components/Writeup";
-import LandingStore from "../../components/LandingStore";
-import loyaltyMob from "../../assets/loyalty-mobile.png";
-import loyaltyPc from "../../assets/loyalty-pc.png";
+const Writeup = lazy(() => import("../../components/Writeup"));
+const LandingStore = lazy(() => import("../../components/LandingStore"));
+const loyaltyMob = lazy(() => import("../../assets/loyalty-mobile.png"));
+const FrequentlyAskedCard = lazy(() =>
+  import("../../components/FrequentlyAskedCard")
+);
+const loyaltyPc = lazy(() => import("../../assets/loyalty-pc.png"));
 const SmartBetLanding = lazy(() => import("../../components/SmartBetLanding"));
 const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
 const SportsNews = lazy(() => import("../../components/SportsNews"));
@@ -26,6 +28,7 @@ function Home() {
   const isMobile = useMediaQuery("(max-width:450px)");
   const token = localStorage.getItem("token");
   const refs = [
+    useRef(),
     useRef(),
     useRef(),
     useRef(),
@@ -102,7 +105,7 @@ function Home() {
     <div className="bg-white">
       <Helmet>
         <title>
-          "Tips180: Best Football Prediction Site | Win with Sure Odds"
+          Tips180: Best Football Prediction Site | Win with Sure Odds
         </title>
         <meta
           name="description"
@@ -128,17 +131,21 @@ function Home() {
           </Suspense>
         )}
       </div>
-      <Suspense fallback={<div className="h-screen">Loading...</div>}>
-        <div className="flex mx-auto w-11/12 px-4 mb-8 rounded">
-          <Link to="/our-plans">
-            <img
-              src={isMobile ? loyaltyMob : loyaltyPc}
-              alt="tips180-loyalty-ad-img"
-              className="rounded-md"
-            />
-          </Link>
-        </div>
-      </Suspense>
+      <div ref={refs[7]}>
+        {visibleComponents[7] && (
+          <Suspense fallback={<div className="h-screen">{Loader}</div>}>
+            <div className="flex mx-auto w-11/12 px-4 mb-8 rounded">
+              <Link to="/our-plans">
+                <img
+                  src={isMobile ? loyaltyMob : loyaltyPc}
+                  alt="tips180-loyalty-ad-img"
+                  className="rounded-md"
+                />
+              </Link>
+            </div>
+          </Suspense>
+        )}
+      </div>
       <div ref={refs[1]}>
         {visibleComponents[1] && (
           <Suspense fallback={<div className="h-screen">Loading...</div>}>
@@ -172,7 +179,19 @@ function Home() {
           </Suspense>
         )}
       </div>
-      <LandingStore />
+      <div ref={refs[10]}>
+        {visibleComponents[10] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <LandingStore />
+          </Suspense>
+        )}
+      </div>
       <div ref={refs[4]}>
         {visibleComponents[4] && (
           <Suspense
@@ -212,8 +231,32 @@ function Home() {
           </Suspense>
         )}
       </div>
-      <FrequentlyAskedCard />
-      <Writeup />
+      <div ref={refs[8]}>
+        {visibleComponents[8] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <FrequentlyAskedCard />
+          </Suspense>
+        )}
+      </div>
+      <div ref={refs[9]}>
+        {visibleComponents[9] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <Writeup />
+          </Suspense>
+        )}
+      </div>
     </div>
   );
 
