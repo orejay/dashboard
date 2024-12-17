@@ -42,20 +42,6 @@ function Home() {
     useRef(),
     useRef(),
   ];
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
-
-  useEffect(() => {
-    if (!isPageLoaded) {
-      const timer = setTimeout(
-        () => {
-          setIsPageLoaded(true);
-        },
-        isMobile ? 5500 : 0
-      );
-
-      return () => clearTimeout(timer);
-    }
-  }, [isPageLoaded]);
 
   const IsUserAuthorized = async () => {
     try {
@@ -278,7 +264,7 @@ function Home() {
     </div>
   );
 
-  return <Main Prop={Prop} logIn={isValid} isPageLoaded={isPageLoaded} />;
+  return <Main Prop={Prop} logIn={isValid} />;
 }
 
 export default Home;

@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import Footer from "./components/Footer";
+import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import HeaderComp from "./components/HeaderComp";
+import { useMediaQuery } from "@mui/material";
+const Footer = lazy(() => import("./components/Footer"));
 
-const Main = ({ Prop, logIn, nav, isPageLoaded = true }) => {
+const Main = ({ Prop, logIn, nav }) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.id = "clever-core";
@@ -67,12 +68,61 @@ const Main = ({ Prop, logIn, nav, isPageLoaded = true }) => {
     };
   }, []);
 
+  const isMobile = useMediaQuery("(max-width:450px)");
+  const [visibleComponents, setVisibleComponents] = useState({});
+  const refs = [useRef()];
+  const Loader = () => (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontSize: isMobile ? "24px" : "36px",
+        height: "150px",
+      }}
+    >
+      <div className="w-12 h-12 border-6 border-gray-200 border-t-4 border-t-blue-500 rounded-full animate-spin"></div>
+    </div>
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setVisibleComponents((prev) => ({ ...prev, [index]: true }));
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    refs.forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
+
+    return () => observer.disconnect();
+  });
+
   return (
     <div style={{ background: "#F2F2F2" }}>
       <HeaderComp logIn={logIn} nav={nav} />
       <div>{Prop}</div>
 
-      <Footer />
+      <div ref={refs[0]}>
+        {visibleComponents[0] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <Footer />
+          </Suspense>
+        )}
+      </div>
     </div>
   );
 };
