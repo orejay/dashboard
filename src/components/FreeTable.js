@@ -82,25 +82,34 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                     className="flex flex-col items-center justify-evenly h-full big-shoulder md:text-lg"
                     style={{ height: isMobile ? "120px" : "" }}
                   >
-                    <p>
-                      {isMobile
-                        ? `${each?.name?.split(" vs ")[0]?.split(" ")[0]} ${
-                            each?.name?.split(" vs ")[0]?.split(" ")?.length > 1
-                              ? `${
-                                  each.name.split(" vs ")[0]?.split(" ")[1][0]
-                                }.`
-                              : ""
-                          }  vs ${
-                            each?.name?.split(" vs ")[1]?.split(" ")[0]
-                          } ${
-                            each?.name?.split(" vs ")[1]?.split(" ")?.length > 1
-                              ? `${
-                                  each?.name?.split(" vs ")[1]?.split(" ")[1][0]
-                                }.`
-                              : ""
-                          }`
-                        : each?.name}
-                    </p>
+                    <div
+                      className="w-full flex justify-center
+                    "
+                    >
+                      <p>
+                        {isMobile
+                          ? `${each?.name?.split(" vs ")[0]?.split(" ")[0]} ${
+                              each?.name?.split(" vs ")[0]?.split(" ")?.length >
+                              1
+                                ? `${
+                                    each.name.split(" vs ")[0]?.split(" ")[1][0]
+                                  }.`
+                                : ""
+                            }  vs ${
+                              each?.name?.split(" vs ")[1]?.split(" ")[0]
+                            } ${
+                              each?.name?.split(" vs ")[1]?.split(" ")?.length >
+                              1
+                                ? `${
+                                    each?.name
+                                      ?.split(" vs ")[1]
+                                      ?.split(" ")[1][0]
+                                  }.`
+                                : ""
+                            }`
+                          : each?.name}
+                      </p>
+                    </div>
                     <div className="flex flex-col md:flex md:flex-row items-center justify-between lg:text-sm md:text-xs w-full lg:w-8/12">
                       <div className="flex justify-between items-center flex-col md:flex md:flex-row text-xs md:text-sm w-full text-stone-800">
                         <a
