@@ -179,7 +179,7 @@ function Footer() {
           />
           <div>
             <p className="ml-2">
-              © 2024. <Link to="/privacy-policy">Privacy Policy</Link> |{" "}
+              © 2025. <Link to="/privacy-policy">Privacy Policy</Link> |{" "}
               <Link to="disclaimer">Disclaimer</Link>
             </p>
           </div>

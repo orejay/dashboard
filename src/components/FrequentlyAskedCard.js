@@ -7,7 +7,7 @@ function FrequentlyAskedCard({ title, content }) {
   const [cardNo, setCardNo] = useState(0);
   return (
     <div
-      className="py-14 h-screen overflow-y-scroll"
+      className="py-14 min-h-screen overflow-y-scroll"
       id="faq"
       style={{ backgroundImage: `url(${faqBg})`, backgroundSize: "100% 100%" }}
     >
