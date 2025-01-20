@@ -1,7 +1,7 @@
 {
   "name": "tips180",
   "version": "0.1.0",
-  "proxy": "https://tips180.com/api",
+  "proxy": "https://www.tips180.com/api",
   "homepage": "/dashboard",
   "private": true,
   "dependencies": {

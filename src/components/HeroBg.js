@@ -29,12 +29,12 @@ const HeroBg = () => {
       <div className="md:flex pt-5 md:px-0 items-center justify-between md:justify-between w-11/12">
         <div className="flex flex-col items-center w-full text-center md:text-left md:items-start justify-around my-auto lg:w-3/5 h-1/2">
           <div className={``}>
-            <div
+            <h1
               className="mb-3 text-3xl lg:text-6xl big-shoulder"
               style={{ lineHeight: "100%" }}
             >
               Your #1 Football Prediction Site – Free Predictions with Real Data
-            </div>
+            </h1>
             <p
               className="mb-3 mx-auto md:mx-0 text-xs md:text-base lg:text-xl"
               style={{ maxWidth: "90%" }}

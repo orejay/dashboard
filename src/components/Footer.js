@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 import BulletPoint from "./BulletPoint";
 
 function Footer() {
+  const date = new Date();
+
+  const year = date.getFullYear();
+
   return (
     <div className="text-white py-4 px-2 lg:px-0 font-medium text-xs lg:text-base bg-gradient-to-r from-teal-600 to-blue-600 bottom-0 right-0 left-0">
       <div className="lg:w-11/12 mx-auto lg:flex items-center justify-between hidden">
@@ -179,7 +183,7 @@ function Footer() {
           />
           <div>
             <p className="ml-2">
-              © 2025. <Link to="/privacy-policy">Privacy Policy</Link> |{" "}
+              © {year}. <Link to="/privacy-policy">Privacy Policy</Link> |{" "}
               <Link to="disclaimer">Disclaimer</Link>
             </p>
           </div>

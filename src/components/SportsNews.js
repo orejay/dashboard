@@ -9,7 +9,6 @@ function SportsNews() {
       .then((response) => response.json())
       .then((result) => {
         setResults(result);
-        console.log("news >>>", result);
       });
   }, []);
   const isMobile = useMediaQuery("(max-width:450px)");
