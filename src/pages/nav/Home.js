@@ -6,13 +6,13 @@ import { Helmet } from "react-helmet";
 import { useMediaQuery } from "@mui/material";
 import loyaltyMob from "../../assets/loyalty-mobile.png";
 import loyaltyPc from "../../assets/loyalty-pc.png";
+import AllFreeExpert from "../../components/AllFreeExpert";
 const Writeup = lazy(() => import("../../components/Writeup"));
 const LandingStore = lazy(() => import("../../components/LandingStore"));
 const FrequentlyAskedCard = lazy(() =>
   import("../../components/FrequentlyAskedCard")
 );
 const SmartBetLanding = lazy(() => import("../../components/SmartBetLanding"));
-const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
 const SportsNews = lazy(() => import("../../components/SportsNews"));
 const Feedback = lazy(() => import("../../components/Feedback"));
 const LandingLeagues = lazy(() => import("../../components/LandingLeagues"));
@@ -122,21 +122,9 @@ function Home() {
         <meta name="author" content="tips180" />
       </Helmet>
       <Hero />
+      <AllFreeExpert />
       <div ref={refs[0]}>
         {visibleComponents[0] && (
-          <Suspense
-            fallback={
-              <div className="h-screen flex justify-center items-center">
-                {Loader}
-              </div>
-            }
-          >
-            <AllFreeExpert />
-          </Suspense>
-        )}
-      </div>
-      <div ref={refs[1]}>
-        {visibleComponents[1] && (
           <Suspense fallback={<div className="h-screen">{Loader}</div>}>
             <div className="flex mx-auto w-11/12 px-4 mb-8 rounded">
               <Link to="/our-plans">
@@ -150,10 +138,23 @@ function Home() {
           </Suspense>
         )}
       </div>
-      <div ref={refs[2]}>
-        {visibleComponents[2] && (
+      <div ref={refs[1]}>
+        {visibleComponents[1] && (
           <Suspense fallback={<div className="h-screen">Loading...</div>}>
             <SmartBetLanding />
+          </Suspense>
+        )}
+      </div>
+      <div ref={refs[2]}>
+        {visibleComponents[2] && (
+          <Suspense
+            fallback={
+              <div className="h-screen flex justify-center items-center">
+                {Loader}
+              </div>
+            }
+          >
+            <LandingLeagues />
           </Suspense>
         )}
       </div>
@@ -166,7 +167,7 @@ function Home() {
               </div>
             }
           >
-            <LandingLeagues />
+            <WinUpcomingCards />
           </Suspense>
         )}
       </div>
@@ -179,7 +180,7 @@ function Home() {
               </div>
             }
           >
-            <WinUpcomingCards />
+            <LandingStore />
           </Suspense>
         )}
       </div>
@@ -192,7 +193,7 @@ function Home() {
               </div>
             }
           >
-            <LandingStore />
+            <LandingPlans />
           </Suspense>
         )}
       </div>
@@ -205,7 +206,7 @@ function Home() {
               </div>
             }
           >
-            <LandingPlans />
+            <SportsNews />
           </Suspense>
         )}
       </div>
@@ -218,7 +219,7 @@ function Home() {
               </div>
             }
           >
-            <SportsNews />
+            <Feedback />
           </Suspense>
         )}
       </div>
@@ -231,25 +232,12 @@ function Home() {
               </div>
             }
           >
-            <Feedback />
+            <FrequentlyAskedCard />
           </Suspense>
         )}
       </div>
       <div ref={refs[9]}>
         {visibleComponents[9] && (
-          <Suspense
-            fallback={
-              <div className="h-screen flex justify-center items-center">
-                {Loader}
-              </div>
-            }
-          >
-            <FrequentlyAskedCard />
-          </Suspense>
-        )}
-      </div>
-      <div ref={refs[10]}>
-        {visibleComponents[10] && (
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
