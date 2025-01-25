@@ -42,7 +42,7 @@ const Hiring = () => {
   );
 
   const Content = (
-    <div>
+    <div className="p-5">
       <p className="font-semibold text-lg pb-3">
         We are hiring for the following positions...
       </p>

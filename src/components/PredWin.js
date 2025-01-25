@@ -7,6 +7,7 @@ import clock from "../assets/clock.svg";
 import Flag from "react-flagkit";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
+import pwEmpty from "../assets/pw-empty.png";
 // import Countdown from "./Countdown";
 import Countdown from "react-countdown";
 import { PaystackButton } from "react-paystack";
@@ -452,10 +453,16 @@ const PredWin = ({
   );
 
   const noMatches = (
-    <div className="w-full flex justify-center h-24 mt-8">
+    <div className="w-full flex flex-col items-center justify-center mt-8">
+      <img src={pwEmpty} alt="no-matches-img" className="mb-6" />
       <h2 className="big-shoulder text-red-500 lg:text-lg text-center">
         Sorry there are currently no matches available.
       </h2>
+      <button className="w-fit mt-4 py-2 px-16 bg-gradient-to-r from-teal-500 to-blue-600 text-white rounded">
+        <Link to="/" className="w-full h-full">
+          Back to Home
+        </Link>
+      </button>
     </div>
   );
 

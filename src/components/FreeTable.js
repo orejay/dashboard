@@ -23,12 +23,12 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
     <div className="flex flex-wrap justify-around">
       <table>
         <thead className="big-shoulder" style={{ color: "#4F4F4F" }}>
-          <tr className="text-sm md:text-base">
-            <th>Date</th>
-            <th>League</th>
-            <th>Match</th>
-            <th>Tip</th>
-            <th>Scores</th>
+          <tr className="text-sm md:text-base border-b">
+            <th className="bg-white text-black">Date</th>
+            <th className="bg-white text-black">League</th>
+            <th className="bg-white text-black">Match</th>
+            <th className="bg-white text-black">Tip</th>
+            <th className="bg-white text-black">Scores</th>
           </tr>
         </thead>
         <tbody>
@@ -36,10 +36,10 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
             results.map((each, index) => (
               <tr
                 key={index}
-                className={`text-center text-xs lg:text-base h-12`}
+                className={`text-center text-xs lg:text-base border-b`}
                 style={{
-                  backgroundColor: index % 2 === 0 ? "#F7F6FE" : "#fff",
-                  height: isMobile ? "130px" : "",
+                  backgroundColor: "#F7F6FE",
+                  height: "130px",
                 }}
               >
                 <td className="h-full relative">

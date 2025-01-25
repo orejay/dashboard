@@ -29,13 +29,20 @@ function SportsNews() {
           }}
           className="rounded-md mb-2"
         ></div>
-        <p className="font-medium w-10/12 text-sm lg:text-base mb-1">
-          {item.caption.slice(0, 50)}...
-        </p>
-        <p className="italic text-xs mb-2">{item.date}</p>
+        <div className="flex items-start justify-between">
+          <p className="font-medium w-9/12 text-sm lg:text-base align-top leading-none">
+            {item.caption.slice(0, 50)}...
+          </p>
+          <p
+            className="text-xs p-2 rounded font-semibold"
+            style={{ backgroundColor: "#E7E3FD", color: "#6D55F1" }}
+          >
+            {item.date}
+          </p>
+        </div>
         <a
           href={item.news_link}
-          className="flex items-center justify-center border-2 font-medium text-xs lg:text-sm w-2/5 p-2 rounded bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="flex items-center justify-center text-white hover:border font-medium text-xs lg:text-sm w-2/5 p-2 rounded bg-gradient-to-r from-teal-500 to-blue-600 hover:text-transparent hover:bg-clip-text"
         >
           Read More
         </a>

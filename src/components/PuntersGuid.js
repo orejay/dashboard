@@ -16,7 +16,7 @@ const PuntersGuide = () => {
   );
 
   const Content = (
-    <div>
+    <div className="p-5">
       <p className="mb-8 md:text-base text-sm">
         Anybody can win a bet. It could be through skill or it could just be
         through dumb luck on a bet with terrible odds. To consistently win more

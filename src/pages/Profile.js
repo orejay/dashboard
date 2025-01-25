@@ -10,20 +10,21 @@ const Profile = () => {
   const api = process.env.REACT_APP_BASE_API;
   const token = localStorage.getItem("token");
   const [tab, setTab] = useState(0);
+  console.log("user >>>>>>>>>>>>", user);
 
   const Top = (
     <div
-      className="flex rounded-lg w-full p-2 px-8"
-      style={{ background: "#F2F2F2", border: "1px solid #E0E0E0" }}
+      className="flex rounded w-fit p-1 text-sm"
+      style={{ background: "#EFECFD", border: "1px solid #E0E0E0" }}
     >
       {["My Information", "Change Password"].map((prop, i) => (
         <p
           style={{
-            color: `${tab === i ? "#222222" : "#828282"}`,
-            background: `${tab === i ? "#FFFFFF" : "transparent"}`,
+            color: `${tab === i ? "#fff" : "#828282"}`,
+            background: `${tab === i ? "#6D55F1" : "transparent"}`,
           }}
           key={i}
-          className="px-2 py-1 rounded-lg cursor-pointer"
+          className="p-2 rounded cursor-pointer"
           onClick={() => setTab(i)}
         >
           {prop}

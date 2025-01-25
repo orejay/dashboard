@@ -77,7 +77,7 @@ const Rollover = () => {
   const Content = loader ? (
     <Loader />
   ) : (
-    <>
+    <div className="p-5">
       <GamesTable
         data={data}
         type={"ro"}
@@ -85,7 +85,7 @@ const Rollover = () => {
         rollBook={bcode}
       />
       {/* <BCode data={bcode} /> */}
-    </>
+    </div>
   );
   return (
     <div>

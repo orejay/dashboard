@@ -127,7 +127,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
           className="text-center mx-auto shadow-md shadow-gray-300"
           style={style}
         >
-          <tr className="w-full my-2 bg-white big-shoulder text-xs lg:text-xl font-light">
+          <tr className="w-full my-2 text-white big-shoulder text-xs lg:text-xl font-light">
             <th>Time</th>
             <th>League</th>
             <th>Match</th>
@@ -142,7 +142,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
                 className="py-2 text-xs lg:text-base"
                 key={index}
                 style={{
-                  backgroundColor: index % 2 === 1 ? "#ffffff" : "f2f2f2",
+                  backgroundColor: index % 2 === 1 ? "#efecfd" : "#fff",
                 }}
               >
                 <td>{each.time}</td>

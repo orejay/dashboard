@@ -61,7 +61,19 @@ const LandingLeagueCard = ({
               <div className="flex w-full h-20 mb-4 justify-between items-center text-sm font-semibold text-stone-800">
                 <div className="flex">Date</div>
 
-                <div className="rounded p-2 min-w-fit w-fit flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white">
+                <div
+                  className="rounded py-2 px-4 min-w-fit w-fit flex justify-center items-center text-white"
+                  style={{
+                    backgroundColor:
+                      each.league === "EPL"
+                        ? "#38003C"
+                        : each.league === "LA LIGA"
+                        ? "#E00C1A"
+                        : each.league === "ITA"
+                        ? "#024494"
+                        : "#38003C",
+                  }}
+                >
                   {each.league}
                 </div>
                 <div className="flex justify-center">Tip</div>
@@ -254,7 +266,7 @@ const LandingLeagueCard = ({
   return (
     <div className={card === "" ? `hidden` : ``}>
       <div className="flex my-4">
-        <h2 className="big-shoulder text-xl text-center md:text-2xl mx-auto">
+        <h2 className="big-shoulder text-white text-xl text-center md:text-2xl mx-auto">
           Betting Tips for {title}
         </h2>
       </div>
@@ -264,7 +276,8 @@ const LandingLeagueCard = ({
       <div className="flex mb-4">
         <Link
           to={`/leagues/${link}`}
-          className="py-2 px-24 border-2 text-sm md:text-base mx-auto rounded bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="py-2 px-24 text-sm md:text-base font-semibold mx-auto rounded text-white hover:shadow-md"
+          style={{ backgroundColor: "#62C7A1" }}
         >
           View More...
         </Link>

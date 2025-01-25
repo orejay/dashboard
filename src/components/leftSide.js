@@ -39,11 +39,12 @@ const LeftSide = ({ active, msgs }) => {
   ];
   return (
     <div
-      className="h-full left-side pt-5 items-left hidden lg:block "
+      className="min-h-screen left-side pt-5 pl-5 items-left hidden lg:block rounded-l-xl"
       style={{
         height: "100vh",
         overflowY: "scroll",
         position: "relative",
+        backgroundColor: "#1B2232",
       }}
     >
       {data.map((taa, index) => (

@@ -96,7 +96,7 @@ const GamesTable = ({ data, dat, type, onClick, rollBook = false }) => {
         }}
       >
         <table className="w-full text-center my-10">
-          <tr className="w-full my-2 md:text-base text-sm">
+          <tr className="w-full my-2 md:text-base text-sm text-white">
             <th>Time</th>
             <th>League</th>
             <th>Match</th>

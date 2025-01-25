@@ -108,7 +108,7 @@ export default function ChangePassword({ user, tab, api, token }) {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full p-5">
       {tab === 0 ? (
         <div className="">
           <div className="lg:flex items-center my-5">
@@ -117,7 +117,7 @@ export default function ChangePassword({ user, tab, api, token }) {
               <div className="w-full">
                 <p
                   type="text"
-                  className="input-styles w-full"
+                  className="input-display w-full"
                   placeholder="Full Name"
                 >
                   {user?.name}
@@ -128,7 +128,7 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Email Address:</h1>
             <div className="lg:w-2/3">
-              <p type="text" className="input-styles w-full">
+              <p type="text" className="input-display w-full">
                 {user?.email}
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">User ID:</h1>
             <div className="lg:w-2/3">
-              <div type="text" className="input-styles w-full">
+              <div type="text" className="input-display w-full">
                 {user?.user_id}
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Wallet Balance:</h1>
             <div className="lg:w-2/3">
-              <div type="text" className="input-styles w-full">
+              <div type="text" className="input-display w-full">
                 {user?.balance}
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function ChangePassword({ user, tab, api, token }) {
             <div className="lg:w-2/3">
               <div
                 type="text"
-                className="input-styles flex items-center cursor-pointer justify-between w-full"
+                className="input-display flex items-center cursor-pointer justify-between w-full"
                 onClick={handleCopy}
               >
                 <p ref={refCodeRef}>{user?.ref_code}</p>
@@ -168,7 +168,7 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Total Ref Points:</h1>
             <div className="lg:w-2/3">
-              <div type="text" className="input-styles w-full">
+              <div type="text" className="input-display w-full">
                 {user?.ref_points}
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Total Loyalty Points:</h1>
             <div className="lg:w-2/3">
-              <div type="text" className="input-styles w-full">
+              <div type="text" className="input-display w-full">
                 {user?.loyalty_points}
               </div>
             </div>
@@ -184,7 +184,7 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Phone:</h1>
             <div className="lg:w-2/3">
-              <div type="text" className="input-styles w-full">
+              <div type="text" className="input-display w-full">
                 {user?.phone}
               </div>
             </div>
@@ -192,7 +192,7 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Country:</h1>
             <div className="lg:w-2/3">
-              <div type="text" className="input-styles w-full">
+              <div type="text" className="input-display w-full">
                 {user?.country}
               </div>
             </div>
@@ -200,25 +200,53 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Key/Premium:</h1>
             <div className="lg:w-2/3">
-              <p type="text" className="input-styles w-full">
+              <p
+                type="text"
+                className="input-display w-full"
+                style={{
+                  color: ["Key", "Premium"].includes(user?.accoutplan)
+                    ? ""
+                    : "#666666",
+                  backgroundColor: ["Key", "Premium"].includes(user?.accoutplan)
+                    ? ""
+                    : "#F5F5F5",
+                  border: ["Key", "Premium"].includes(user?.accoutplan)
+                    ? "1px solid #6D55F1"
+                    : "1px solid #CCCCCC",
+                }}
+              >
                 {user?.accoutplan}
               </p>
             </div>
           </div>
+
           {user?.acc_plan_exp && (
             <div className="lg:flex items-center my-5">
               <h1 className="lg:w-1/4">Key/Premium Expiry:</h1>
               <div className="lg:w-2/3">
-                <p type="text" className="input-styles w-full">
+                <p type="text" className="input-display w-full">
                   {user?.acc_plan_exp}
                 </p>
               </div>
             </div>
           )}
+
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Smart Bet:</h1>
             <div className="lg:w-2/3">
-              <p type="text" className="input-styles w-full">
+              <p
+                type="text"
+                className="input-display w-full"
+                style={{
+                  color: user?.isubscriptstatus === "Active" ? "" : "#666666",
+                  backgroundColor:
+                    user?.isubscriptstatus === "Active" ? "" : "#CCCCCC",
+                  border:
+                    user?.isubscriptstatus === "Active"
+                      ? "1px solid #6D55F1"
+                      : "1px solid #CCCCCC",
+                }}
+              >
                 {user?.isubscriptstatus}
               </p>
             </div>
@@ -227,7 +255,7 @@ export default function ChangePassword({ user, tab, api, token }) {
             <div className="lg:flex items-center my-5">
               <h1 className="lg:w-1/4">Smart Bet Expiry:</h1>
               <div className="lg:w-2/3">
-                <p type="text" className="input-styles w-full">
+                <p type="text" className="input-display w-full">
                   {user?.smart_exp}
                 </p>
               </div>
@@ -236,7 +264,20 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Rollover Bet:</h1>
             <div className="lg:w-2/3">
-              <p type="text" className="input-styles w-full">
+              <p
+                type="text"
+                className="input-display w-full"
+                style={{
+                  color:
+                    user?.rollsubscriptstatus === "Active" ? "" : "#666666",
+                  backgroundColor:
+                    user?.rollsubscriptstatus === "Active" ? "" : "#CCCCCC",
+                  border:
+                    user?.rollsubscriptstatus === "Active"
+                      ? "1px solid #6D55F1"
+                      : "1px solid #CCCCCC",
+                }}
+              >
                 {user?.rollsubscriptstatus
                   ? user.rollsubscriptstatus
                   : "Inactive"}
@@ -247,7 +288,7 @@ export default function ChangePassword({ user, tab, api, token }) {
             <div className="lg:flex items-center my-5">
               <h1 className="lg:w-1/4">Rollover Expiry:</h1>
               <div className="lg:w-2/3">
-                <p type="text" className="input-styles w-full">
+                <p type="text" className="input-display w-full">
                   {user?.roll_exp}
                 </p>
               </div>
@@ -256,7 +297,19 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">50 Odds:</h1>
             <div className="lg:w-2/3">
-              <p type="text" className="input-styles w-full">
+              <p
+                type="text"
+                className="input-display w-full"
+                style={{
+                  color: user?.odds50status === "Active" ? "" : "#666666",
+                  backgroundColor:
+                    user?.odds50status === "Active" ? "" : "#CCCCCC",
+                  border:
+                    user?.odds50status === "Active"
+                      ? "1px solid #6D55F1"
+                      : "1px solid #CCCCCC",
+                }}
+              >
                 {user?.odds50status}
               </p>
             </div>
@@ -265,7 +318,7 @@ export default function ChangePassword({ user, tab, api, token }) {
             <div className="lg:flex items-center my-5">
               <h1 className="lg:w-1/4">50 Odds Expiry:</h1>
               <div className="lg:w-2/3">
-                <p type="text" className="input-styles w-full">
+                <p type="text" className="input-display w-full">
                   {user?.odds50_exp}
                 </p>
               </div>
@@ -274,7 +327,19 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="lg:flex items-center my-5">
             <h1 className="lg:w-1/4">Weekend 10:</h1>
             <div className="lg:w-2/3">
-              <p type="text" className="input-styles w-full">
+              <p
+                type="text"
+                className="input-display w-full"
+                style={{
+                  color: user?.w10subscriptstatus === "Active" ? "" : "#666666",
+                  backgroundColor:
+                    user?.w10subscriptstatus === "Active" ? "" : "#CCCCCC",
+                  border:
+                    user?.w10subscriptstatus === "Active"
+                      ? "1px solid #6D55F1"
+                      : "1px solid #CCCCCC",
+                }}
+              >
                 {user?.w10subscriptstatus}
               </p>
             </div>
@@ -283,7 +348,7 @@ export default function ChangePassword({ user, tab, api, token }) {
             <div className="lg:flex items-center my-5">
               <h1 className="lg:w-1/4">Weekend 10 Expiry:</h1>
               <div className="lg:w-2/3">
-                <p type="text" className="input-styles w-full">
+                <p type="text" className="input-display w-full">
                   {user?.w10_exp}
                 </p>
               </div>
@@ -305,7 +370,7 @@ export default function ChangePassword({ user, tab, api, token }) {
             <div className="lg:w-2/3">
               <input
                 type="text"
-                className="input-styles w-full"
+                className="input-display w-full"
                 ref={currRef}
               />
             </div>
@@ -318,7 +383,7 @@ export default function ChangePassword({ user, tab, api, token }) {
                 id="mes"
                 name="mes"
                 type="text"
-                className="input-styles w-full"
+                className="input-display w-full"
               />
             </div>
           </div>
@@ -330,7 +395,7 @@ export default function ChangePassword({ user, tab, api, token }) {
                 type="text"
                 id="message"
                 name="message"
-                className="input-styles w-full"
+                className="input-display w-full"
               />
             </div>
           </div>
@@ -367,7 +432,7 @@ export default function ChangePassword({ user, tab, api, token }) {
 
                     <input
                       type="text"
-                      className="input-styles text-gray-300 w-full"
+                      className="input-display text-gray-300 w-full"
                       placeholder="FirstName LastName"
                       onChange={(e) =>
                         setSignupData({ ...signupData, fname: e.target.value })
@@ -380,7 +445,7 @@ export default function ChangePassword({ user, tab, api, token }) {
                     <div className="w-full  mt-3">
                       <PhoneInput
                         country={JSON.parse(selectedCountry).value}
-                        inputClass={"input-styles"}
+                        inputClass={"input-display"}
                         inputStyle={{ width: "100%" }}
                         onChange={(phone) =>
                           setSignupData({

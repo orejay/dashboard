@@ -61,7 +61,7 @@ const Subscribe = ({ type }) => {
   );
 
   const Content = (
-    <div>
+    <div className="p-5">
       <div className="mb-10">
         <Select
           options={CountryList}

@@ -5,10 +5,10 @@ import RecentWinTable from "./RecentWinTable";
 import UpcomingTable from "./UpcomingTable";
 
 const activeStyles = {
-  // borderBottom: "2px solid #999999",
   whiteSpace: "nowrap",
   borderSpacing: "3px",
-  // color: "black",
+  color: "#6D55F1",
+  backgroundColor: "#EFECFD",
 };
 
 const inactiveStyles = {
@@ -46,13 +46,13 @@ function WinUpcomingCards() {
 
   return (
     <div>
-      <div className="flex items-center md:justify-start w-11/12 mx-auto mt-7 md:mt-4 mobil">
+      <div className="flex items-center md:justify-start w-11/12 mx-auto mt-7 md:mt-4 mobil border-b">
         <h2
           onClick={() => setTab(0)}
           className={
             tab === 0
-              ? `md:text-2xl text-lg lg:text-3xl font-medium big-shoulder mr-4 cursor-pointer text-transparent bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text`
-              : `text-xs md:text-md lg:text-xl font-medium big-shoulder mr-4 cursor-pointer`
+              ? `p-2 md:text-xl text-lg lg:text-2xl font-medium mona mr-4 cursor-pointer`
+              : `p-2 text-xs md:text-md lg:text-base font-medium mona mr-4 cursor-pointer`
           }
           style={tab === 0 ? activeStyles : inactiveStyles}
         >
@@ -62,8 +62,8 @@ function WinUpcomingCards() {
           onClick={() => setTab(1)}
           className={
             tab === 1
-              ? `text-lg flex items-center md:text-2xl lg:text-3xl font-medium big-shoulder cursor-pointer text-transparent bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text`
-              : `text-xs md:text-md flex items-end lg:text-xl font-medium big-shoulder cursor-pointer`
+              ? `p-2 text-lg flex items-center md:text-xl lg:text-2xl font-medium mona cursor-pointer`
+              : `p-2 text-xs md:text-md flex items-end lg:text-base font-medium mona cursor-pointer`
           }
           style={tab === 1 ? activeStyles : inactiveStyles}
         >

@@ -96,7 +96,7 @@ const ACCA = () => {
   );
 
   const Content = !loader ? (
-    <>
+    <div className="p-5">
       <GamesTable
         data={set}
         type={ea === 1 ? "ea1" : "ea2"}
@@ -121,7 +121,7 @@ const ACCA = () => {
           {ea == 1 ? "View Second Set" : "View First Set"}
         </button>
       </div>
-    </>
+    </div>
   ) : (
     <Loader />
   );

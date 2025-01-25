@@ -97,12 +97,13 @@ const Dashboard = ({ Content, Top, active }) => {
       <>
         <div className="w-full db-bg py-10" style={{ height: "100%" }}>
           <div className="w-full py-10 hidden lg:block">
-            <div className="w-5/6 pl-5 rounded-xl mx-auto flex bg-white">
+            <div className="w-5/6 rounded-xl mx-auto flex bg-white">
               <div
-                className="w-1/4"
+                className="w-1/4 rounded-l-xl"
                 style={{
                   borderRight: "1px solid #E0E0E0",
                   minHeight: "100vh",
+                  backgroundColor: "#1B2232",
                   overflowY: "scroll",
                   zIndex: 200,
                 }}
@@ -135,7 +136,7 @@ const Dashboard = ({ Content, Top, active }) => {
                   RedirectToPayments(active)
                 ) : (
                   <div
-                    className="px-10 py-10"
+                    className=""
                     style={{ height: "100vh", overflowY: "scroll" }}
                   >
                     {Content}

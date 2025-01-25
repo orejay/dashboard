@@ -71,7 +71,7 @@ const PandW = () => {
   );
 
   const Content = (
-    <div>
+    <div className="p-5">
       <div>
         {rounds?.length > 0 ? (
           <select

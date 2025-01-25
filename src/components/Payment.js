@@ -377,7 +377,7 @@ const Payment = () => {
 
   const Content = (
     <div
-      className=" "
+      className="p-5"
       style={{
         zIndex: 10,
       }}

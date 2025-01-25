@@ -126,7 +126,7 @@ const Odds50 = () => {
         <Loader />
       ) : (
         <>
-          <div className="flex justify-end items-center py-2">
+          <div className="flex justify-end items-center py-2 px-5">
             <div
               className="cursor-pointer bg-gradient-to-r from-teal-500 to-blue-600 rounded p-2 text-white font-semibold"
               onClick={() => {
@@ -149,10 +149,14 @@ const Odds50 = () => {
               scrollBehavior: "smooth",
               whiteSpace: "nowrap",
             }}
+            className="p-5"
           >
             {/* <GamesTable data={data}/> */}
             <table className="w-full text-center text-sm md:text-base my-10">
-              <tr className="w-full my-2">
+              <tr
+                className="w-full my-2"
+                style={{ backgroundColor: "#62C7A1", color: "#FFF" }}
+              >
                 <th>Date</th>
                 <th>Time</th>
                 <th>League</th>
@@ -167,7 +171,7 @@ const Odds50 = () => {
                   <td>{`${dat?.date.slice(8)}/${dat?.date.slice(5, 7)}`}</td>
                   <td>{dat?.time}</td>
                   <td>{dat?.league}</td>
-                  <td>{dat?.name}</td>
+                  <td style={{ color: "#6D55F1" }}>{dat?.name}</td>
                   <td>
                     {dataSet === 1 ? dat?.sure50_1st_tip : dat?.sure50_2nd_tip}
                   </td>
@@ -185,8 +189,8 @@ const Odds50 = () => {
           {bcode != null && <BCode data={bcode} />}
         </>
       )}
-      <div className="md:w-5/6 mx-auto">
-        <div className="mx-auto items-center text-center">
+      <div className="mx-auto">
+        <div className="md:w-5/6 mx-auto items-center text-center">
           <p
             className="md:w-5/6 flex text-sm md:text-base justify-even mx-auto text-left font-bold my-16 big-shoulder"
             style={{ color: "#4F4F4F" }}
@@ -199,8 +203,8 @@ const Odds50 = () => {
           </p>
         </div>
 
-        <div>
-          <h1 className="text-xl  big-shoulder">The 50 Odds Plan</h1>
+        <div style={{ backgroundColor: "#EFECFD" }} className="p-5">
+          <h1 className="text-xl mona">The 50 Odds Plan</h1>
           <div name="target" className="my-8">
             {faq.map((each, index) => (
               <div key={index}>
@@ -243,10 +247,10 @@ const Odds50 = () => {
             ))}
           </div>
           <div className="my-10">
-            <h2 className="big-shoulder text-xl" style={{ color: "#4f4f4f" }}>
+            <h2 className="mona text-xl" style={{ color: "#4f4f4f" }}>
               50 ODDS WINNING TACTICS
             </h2>
-            <p className="my-5 text-sm md:text-base">
+            <p className="my-5 text-sm">
               Although, odds were strategically and carefully selected by our
               experts, we’d strongly recommend you understand your staking
               power, stake responsibly and do not stake what you cannot afford
@@ -254,7 +258,7 @@ const Odds50 = () => {
               usually provided. We’d suggest you split your staking budget
               across the sets of tips provided. We’d suggest the 4-3-3 formula.
             </p>
-            <p className="my-10 text-sm md:text-base">
+            <p className="my-10 text-sm">
               For example, if you have a staking budget of $10, you may stake $4
               on the first set, stake $3 on the second set, stake the remaining
               $3 on a selected set crafted by you. Made on your gut feelings or

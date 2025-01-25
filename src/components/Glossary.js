@@ -16,7 +16,7 @@ const Glossary = () => {
   );
 
   const Content = (
-    <div>
+    <div className="p-5">
       <p className="mb-8 md:text-base text-sm" style={{ lineHeight: "2" }}>
         When you first enter the world of football betting, it can be
         overwhelming. There are a lot of betting terms to master, and

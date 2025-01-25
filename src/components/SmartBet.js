@@ -45,7 +45,7 @@ const SmartBet = () => {
     <Loader />
   ) : (
     <>
-      <div>
+      <div className="p-5">
         {smartBet ? (
           <GamesTable
             data={data}

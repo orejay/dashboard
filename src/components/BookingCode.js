@@ -62,7 +62,7 @@ export default function ({ data = {}, sbBook, CD, odd = 1, smartBet = false }) {
   const pageList = ["50odds", "bankertips", "weekend10"];
 
   return (
-    <div className="">
+    <div className="p-5">
       {Object?.values(data)[ind] ? (
         <div className="md:flex flex-wrap justify-between my-10 mt-20 w-full lg:w-6/6 mx-auto ">
           <a

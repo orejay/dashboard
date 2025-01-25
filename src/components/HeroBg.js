@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import heroBg from "../assets/heroBg1.png";
 import Slider from "./Slider";
 
 const HeroBg = () => {
@@ -24,6 +25,10 @@ const HeroBg = () => {
         backgroundColor: "#f4f4f4",
         justifyContent: "center",
         alignItems: "center",
+        backgroundImage: `url(${heroBg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "bottom right",
+        backgroundSize: "contain",
       }}
     >
       <div className="md:flex pt-5 md:px-0 items-center justify-between md:justify-between w-11/12">

@@ -27,29 +27,23 @@ function LandingStore() {
       >
         <div className="md:w-4/5 pt-4">
           <div
-            className="rounded w-fit big-shoulder p-2 text-sm mb-4"
-            style={{ backgroundColor: "#D3D3F8", fontSize: "16px" }}
+            className="rounded w-fit mona text-sm mb-4"
+            style={{ fontSize: "24px", color: "#6D55F1" }}
           >
             Experts ACCA
           </div>
-          <h2
-            className="text-xl font-medium mb-4 mt-4 big-shoulder"
-            style={{ maxWidth: "90%", fontSize: "22px" }}
-          >
-            Are you confused with making
-            <br /> the right selections?
-          </h2>
           <p
             className="text-xs md:text-sm mb-6"
             style={{ maxWidth: "70%", fontSize: "16px" }}
           >
-            Let our experts guide you to victory with their best football tips
-            selection of the day!
+            Are you confused with making the right selections? Let our experts
+            guide you to victory with their best football tips selection of the
+            day!
           </p>
           <Link to={!token ? `/auth/login` : `/dashboard/acca`}>
             <div
-              className="rounded w-fit p-3 text-sm lg:text-base font-medium text-white bg-gradient-to-r from-teal-500 to-blue-600"
-              style={{ fontSize: "16px" }}
+              className="rounded w-fit p-3 text-sm lg:text-base font-medium text-white "
+              style={{ fontSize: "16px", backgroundColor: "#6D55F1" }}
             >
               Get the best 5-10 odds of Experts Tips
             </div>

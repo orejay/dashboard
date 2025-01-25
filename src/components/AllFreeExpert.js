@@ -101,11 +101,13 @@ const AllFreeExpert = () => {
         />
         <div className="md:flex hidden">
           <div
-            className={`w-fit px-2 py-1 cursor-pointer greybgh ease-in-out duration-300 border-2 rounded-md border-gray-200 mr-3 ${
-              tab === 0
-                ? "bg-gradient-to-r from-teal-500 to-blue-600 text-white"
-                : ""
-            }`}
+            className={`w-fit px-2 py-1 cursor-pointer greybgh ease-in-out duration-300 rounded-md border-gray-200 mr-3 ${
+              tab === 0 ? "text-white" : "border"
+            } `}
+            style={{
+              backgroundColor: tab === 0 ? "#EFECFD" : "",
+              color: tab === 0 ? "#6D55F1" : "#828282",
+            }}
             onClick={() => {
               setDate(yesterdayDate);
               setSelectedOption({ label: "Yesterday", value: "yesterday" });
@@ -117,11 +119,13 @@ const AllFreeExpert = () => {
             Yesterday
           </div>
           <div
-            className={`w-fit px-2 py-1 cursor-pointer greybgh ease-in-out duration-300 border-2 rounded-md border-gray-200 mr-3 ${
-              tab === 1
-                ? "bg-gradient-to-r from-teal-500 to-blue-600 text-white"
-                : ""
+            className={`w-fit px-2 py-1 cursor-pointer greybgh ease-in-out duration-300 rounded-md border-gray-200 mr-3 ${
+              tab === 1 ? "text-white" : "border"
             } `}
+            style={{
+              backgroundColor: tab === 1 ? "#EFECFD" : "",
+              color: tab === 1 ? "#6D55F1" : "#828282",
+            }}
             onClick={() => {
               setDate(today);
               setSelectedOption({ label: "Today", value: "today" });
@@ -133,11 +137,13 @@ const AllFreeExpert = () => {
             Today
           </div>
           <div
-            className={`w-fit px-2 py-1 cursor-pointer greybgh ease-in-out duration-300 border-2 rounded-md border-gray-200 mr-1 ${
-              tab === 2
-                ? "bg-gradient-to-r from-teal-500 to-blue-600 text-white"
-                : ""
-            }`}
+            className={`w-fit px-2 py-1 cursor-pointer greybgh ease-in-out duration-300 rounded-md border-gray-200 mr-3 ${
+              tab === 2 ? "text-white" : "border"
+            } `}
+            style={{
+              backgroundColor: tab === 2 ? "#EFECFD" : "",
+              color: tab === 2 ? "#6D55F1" : "#828282",
+            }}
             onClick={() => {
               setDate(tomorrowDate);
               setSelectedOption({ label: "Tomorrow", value: "tomorrow" });
@@ -172,7 +178,12 @@ const AllFreeExpert = () => {
               <div className="text-xs md:text-base font-light big-shoulder text-white bg-gradient-to-r from-teal-500 to-blue-600 h-full rounded-l-md flex items-center justify-center w-1/2">
                 <p>Bet tips on</p>
               </div>
-              <a href={data?.link} target="_blank" className="w-1/2 h-full">
+              <a
+                href={data?.link}
+                target="_blank"
+                rel="noreferrer"
+                className="w-1/2 h-full"
+              >
                 <div
                   className={`${
                     data?.bookie?.toUpperCase() === "BET9JA"

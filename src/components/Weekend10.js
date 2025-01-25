@@ -72,12 +72,12 @@ const Weekend10 = () => {
   );
 
   const Content = (
-    <div className="w-full" style={{ overflow: "hidden" }}>
+    <div className="w-full p-5" style={{ overflow: "hidden" }}>
       {/* <GamesTable data={data} type={"W10"} /> */}
       {loader ? (
         <Loader />
       ) : (
-        <>
+        <div>
           <div className="flex justify-end items-center py-2">
             <div
               className="cursor-pointer bg-gradient-to-r from-teal-500 to-blue-600 rounded p-2 text-white font-semibold"
@@ -104,7 +104,7 @@ const Weekend10 = () => {
           >
             <table className="text-center my-10">
               <tbody>
-                <tr className="w-full my-2 md:text-base text-sm">
+                <tr className="w-full my-2 md:text-base text-sm text-white">
                   <th>Date</th>
                   <th>Time</th>
                   <th>League</th>
@@ -138,7 +138,7 @@ const Weekend10 = () => {
             </table>
           </div>
           <BCode data={bcode} />
-        </>
+        </div>
       )}
       <div className="md:w-5/6 mx-auto">
         <div className="">

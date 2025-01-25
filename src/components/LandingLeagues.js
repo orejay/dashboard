@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LandingLeagueCard from "./LandingLeagueCard";
 import { Link } from "react-router-dom";
-import leagueBg from "../assets/leagueBg.PNG";
+import leagueBg from "../assets/leaguebg1.png";
 
 const leagues = [
   {

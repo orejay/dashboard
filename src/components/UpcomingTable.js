@@ -42,10 +42,10 @@ const UpcomingTable = ({ getUpcoming, results }) => {
         <thead className="big-shoulder" style={{ color: "#4F4F4F" }}>
           {results.length > 0 ? (
             <tr className="text-sm md:text-base">
-              <th>Date</th>
-              <th>League</th>
-              <th>Match</th>
-              <th>Tip</th>
+              <th className="bg-white text-black">Date</th>
+              <th className="bg-white text-black">League</th>
+              <th className="bg-white text-black">Match</th>
+              <th className="bg-white text-black">Tip</th>
             </tr>
           ) : (
             <tr>
