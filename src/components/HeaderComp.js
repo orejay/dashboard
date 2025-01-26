@@ -3,10 +3,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import {
-  AccountCircleRounded,
   LogoutRounded,
-  MessageRounded,
   NotificationsRounded,
+  Person,
 } from "@mui/icons-material";
 
 const styles = {
@@ -22,6 +21,11 @@ const HeaderComp = ({ logIn, nav }) => {
   const token = localStorage.getItem("token");
   const [messages, setMessages] = useState(null);
   const [loggedIn, setloggedIn] = useState(true);
+  const [logOutColor, setLogOutColor] = useState("#EB5757");
+  const [logOutIcon, setLogOutIcon] = useState({
+    bgcolor: "#EB5757",
+    color: "#FFF",
+  });
 
   const getMessages = async () => {
     try {
@@ -198,12 +202,12 @@ const HeaderComp = ({ logIn, nav }) => {
               onMouseEnter={() => setShowMenu(true)}
               onMouseLeave={() => setShowMenu(false)}
             >
-              <p className="text-lg font-thin cursor-pointer mr-5 underline  text-teal-400 lg:mb-0 mb-2 text-center big-shoulder">
+              <p className="text-lg font-thin cursor-pointer mr-5 underline  text-teal-400 lg:mb-0 mb-2 text-center mona-head">
                 <span
                   className="hidden lg:flex justify-center items-center bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
                   style={{ fontSize: "16px" }}
                 >
-                  <AccountCircleRounded sx={{ color: "#2563EB", mr: "4px" }} />
+                  <Person sx={{ color: "#2563EB", mr: "4px" }} />
                   {user?.name}
                   {messages && messages !== 0 ? (
                     <div
@@ -221,19 +225,19 @@ const HeaderComp = ({ logIn, nav }) => {
                   )}
                 </span>
                 <Link
-                  className="lg:hidden flex justify-center items-center bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
+                  className="lg:hidden flex justify-center items-center"
                   to="/dashboard/profile"
-                  style={{ fontSize: "16px" }}
+                  style={{ fontSize: "16px", color: "#828282" }}
                 >
-                  <AccountCircleRounded sx={{ color: "#2563EB", mr: "2px" }} />
+                  <Person sx={{ color: "#828282", mr: "5px" }} />
                   {user?.name}
                 </Link>
                 <Link
-                  className="lg:hidden flex justify-center items-center bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent"
+                  className="lg:hidden flex justify-center items-center"
                   to="/dashboard/messages"
-                  style={{ fontSize: "16px" }}
+                  style={{ fontSize: "16px", color: "#828282" }}
                 >
-                  <NotificationsRounded sx={{ color: "#2563EB", mr: "2px" }} />
+                  <NotificationsRounded sx={{ color: "#828282", mr: "5px" }} />
                   Messages
                   {messages && messages !== 0 ? (
                     <div
@@ -255,33 +259,31 @@ const HeaderComp = ({ logIn, nav }) => {
                 <div
                   className={`lg:absolute ${
                     user.name.split(" ").length < 2 ? "right-2" : ""
-                  } shadow rounded-b-md rounded-tr-md hidden cursor-pointer lg:block bg-white w-2/12 text-lg`}
+                  } shadow-lg rounded-xl hidden cursor-pointer lg:block bg-white w-2/12 text-lg`}
                 >
-                  <div className="p-3 hover:bg-gradient-to-r hover:text-white rounded-tr-md from-teal-600 to-blue-600">
+                  <div className="p-3 hover:bg-gradient-to-r hover:text-white rounded-tr-xl mona hover:bg-lhover">
                     <Link
                       to="/dashboard/profile"
                       className="w-full flex items-center"
-                      style={{ fontSize: "16px" }}
+                      style={{ fontSize: "16px", color: "#828282" }}
                     >
-                      <AccountCircleRounded
-                        sx={{ color: "#2563EB", mr: "2px" }}
-                      />
+                      <Person sx={{ color: "#828282", mr: "10px" }} />
                       My Profile
                     </Link>
                   </div>
-                  <div className="p-3 hover:bg-gradient-to-r hover:text-white rounded-tr-md from-teal-600 to-blue-600">
+                  <div className="p-3 hover:bg-gradient-to-r hover:text-white rounded-tr-md mona hover:bg-lhover">
                     <Link
                       to="/dashboard/messages"
                       className="w-full flex items-center"
-                      style={{ fontSize: "16px" }}
+                      style={{ fontSize: "16px", color: "#828282" }}
                     >
                       <NotificationsRounded
                         sx={{
-                          color: "#2563EB",
-                          mr: "2px",
+                          color: "#828282",
+                          mr: "10px",
                         }}
                       />
-                      Messages{" "}
+                      Notifications{" "}
                       {messages && messages !== 0 ? (
                         <div
                           className=" flex items-center justify-center ml-1 text-center bg-blue-600 text-white text-sm"
@@ -300,12 +302,29 @@ const HeaderComp = ({ logIn, nav }) => {
                   </div>
                   <div
                     onClick={() => LogOut()}
-                    className="w-full rounded-b-md hover:bg-red-600 p-3 text-red-600 hover:text-white"
-                    style={{ fontSize: "16px" }}
+                    className="w-full rounded-b-xl hover:text-white hover:bg-red-600 p-3 mona"
+                    onMouseEnter={() => {
+                      setLogOutColor("#FFF");
+                      setLogOutIcon({
+                        color: "#EB5757",
+                        bgcolor: "#FFF",
+                      });
+                    }}
+                    onMouseLeave={() => {
+                      setLogOutColor("#EB5757");
+                      setLogOutIcon({
+                        bgcolor: "#EB5757",
+                        color: "#FFF",
+                      });
+                    }}
+                    style={{ fontSize: "16px", color: logOutColor }}
                   >
                     <LogoutRounded
                       sx={{
-                        mr: "2px",
+                        mr: "10px",
+                        color: logOutIcon.color,
+                        bgcolor: logOutIcon.bgcolor,
+                        borderRadius: "50%",
                       }}
                     />
                     Log Out
@@ -314,13 +333,18 @@ const HeaderComp = ({ logIn, nav }) => {
               )}
             </div>
             <p
-              style={{ color: "white", cursor: "pointer", fontSize: "16px" }}
-              className="rounded-md text-center lg:hidden py-1 px-2 bg-gradient-to-r from-red-500 to-red-600"
+              style={{
+                color: "white",
+                cursor: "pointer",
+                fontSize: "16px",
+                backgroundColor: "#EB5757",
+              }}
+              className="rounded-md text-center lg:hidden py-1 px-2"
               onClick={() => LogOut()}
             >
               <LogoutRounded
                 sx={{
-                  mr: "2px",
+                  mr: "5px",
                 }}
               />
               Log Out

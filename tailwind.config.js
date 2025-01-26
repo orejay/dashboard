@@ -21,6 +21,8 @@ module.exports = {
         spain: "#E00C1A",
         ita: "#024494",
         fra: "#DAE025",
+        dhover: "#354464",
+        lhover: "#EFEFEF",
       },
       fontSize: {
         xxs: "8px",

@@ -22,7 +22,7 @@ const Leagues = () => {
       <div className="lg:py-20 py-14 mb-5 md:mb-16 text-white mx-auto text-center bg-gradient-to-r from-teal-500 to-blue-600">
         <h1 className="lg:text-4xl text-xl big-shoulder mx-auto">Leagues</h1>
       </div>
-      <div className="py-5 lg:py-10  px-5 lg:px-14 mx-auto rounded-lg md:shadow-md shadow-slate-300 md:bg-white w-full h-screen overflow-y-scroll lg:w-5/6">
+      <div className="py-5 lg:py-10  px-5 lg:px-14 mx-auto rounded-lg md:shadow-md shadow-slate-300 md:bg-white md:bg-gradient-to-b md:from-white md:via-orange-100 md:to-white w-full h-screen overflow-y-scroll lg:w-5/6">
         {Object.entries(leaguesData)
           .filter(([key, value]) => key.toLowerCase() === "europe")
           .map(([name, val], index) => (

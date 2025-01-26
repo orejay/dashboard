@@ -12,6 +12,11 @@
   font-weight: 500;
 }
 
+.mona-head {
+  font-family: "Mona Sans", serif;
+  font-weight: 700;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

@@ -29,7 +29,7 @@ function SportsNews() {
           }}
           className="rounded-md mb-2"
         ></div>
-        <div className="flex items-start justify-between">
+        <div className="flex items-start justify-between py-2">
           <p className="font-medium w-9/12 text-sm lg:text-base align-top leading-none">
             {item.caption.slice(0, 50)}...
           </p>
