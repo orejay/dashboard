@@ -32,10 +32,7 @@ function LandingStore() {
           >
             Experts ACCA
           </div>
-          <p
-            className="text-xs md:text-sm mb-6"
-            style={{ maxWidth: "70%", fontSize: "16px" }}
-          >
+          <p className="text-xs md:text-sm mb-6" style={{ maxWidth: "70%" }}>
             Are you confused with making the right selections? Let our experts
             guide you to victory with their best football tips selection of the
             day!

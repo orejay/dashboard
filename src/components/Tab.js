@@ -1,6 +1,9 @@
+import { useMediaQuery } from "@mui/material";
 import React from "react";
 
 const Tab = ({ tab, active, index, onClick }) => {
+  const isMobile = useMediaQuery("(max-width:500px)");
+
   const activeStyles = {
     color: "#FFFFFF",
     backgroundColor: "#8672F3",
@@ -9,6 +12,7 @@ const Tab = ({ tab, active, index, onClick }) => {
   };
   const inActiveStyles = {
     color: "#FFFFFF",
+    backgroundColor: isMobile ? "#354464" : "",
     fontSize: "14px",
     borderRadius: "5px",
   };

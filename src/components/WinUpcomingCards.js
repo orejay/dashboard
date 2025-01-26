@@ -46,7 +46,7 @@ function WinUpcomingCards() {
 
   return (
     <div>
-      <div className="flex items-center md:justify-start w-11/12 mx-auto mt-7 md:mt-4 mobil border-b">
+      <div className="flex items-center md:justify-start w-11/12 mx-auto mt-7 md:mt-4 mobil border-b mb-2">
         <h2
           onClick={() => setTab(0)}
           className={
