@@ -12,7 +12,7 @@ function FrequentlyAskedCard({ title, content }) {
       style={{ backgroundImage: `url(${faqBg})`, backgroundSize: "100% 100%" }}
     >
       <div className="mx-auto text-white text-center">
-        <h2 className="big-shoulder text-xl md:text-2xl lg:text-4xl">
+        <h2 className="mona-head text-xl md:text-2xl lg:text-4xl">
           Frequently Asked Questions
         </h2>
         <p className="text-xs lg:text-base mx-auto w-9/12 lg:w-1/3">

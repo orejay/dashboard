@@ -63,7 +63,7 @@ const PandW = () => {
     <div className=" flex  w-full">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
-        className="font-bold big-shoulder "
+        className="font-bold mona-head "
       >
         Predict and Win History
       </h1>
@@ -109,12 +109,12 @@ const PandW = () => {
         {entries ? (
           <div className="flex justify-between mb-4">
             <div className="ml-4">
-              <h3 className="big-shoulder mr-1">
+              <h3 className="mona-head mr-1">
                 Round {entries ? entries[0]?.set : ""}
               </h3>
             </div>
             <div className="flex items-center mr-4">
-              <h3 className="big-shoulder mr-1">Status:</h3>
+              <h3 className="mona-head mr-1">Status:</h3>
               <p
                 className={` font-semibold italic ${
                   status === "Won"
@@ -211,7 +211,7 @@ const PandW = () => {
       </div>
 
       {!entries ? (
-        <p className="big-shoulder text-red-500 text-center mt-3">
+        <p className="mona-head text-red-500 text-center mt-3">
           You have no Predict and Win Entries
         </p>
       ) : (

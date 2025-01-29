@@ -362,7 +362,7 @@ const Payment = () => {
     <div className="flex w-full mb-4">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
-        className="font-bold big-shoulder"
+        className="font-bold mona-head"
       >
         Make Payment
       </h1>
@@ -396,7 +396,7 @@ const Payment = () => {
             backgroundSize: "200% 200%",
           }}
         >
-          <h4 className="pr-4 big-shoulder font-bold">
+          <h4 className="pr-4 mona-head font-bold">
             {points
               ? "Return to payment methods"
               : "Make payments using your earned points!"}

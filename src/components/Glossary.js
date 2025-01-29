@@ -8,7 +8,7 @@ const Glossary = () => {
     <div className="flex w-full">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
-        className="font-bold big-shoulder"
+        className="font-bold mona-head"
       >
         Glossary
       </h1>
@@ -38,7 +38,7 @@ const Glossary = () => {
         return (
           <div className="flex  my-7 w-full" key={index}>
             <h3
-              className="font-bold w-1/5 big-shoulder break-all"
+              className="font-bold w-1/5 mona-head break-all"
               style={{ fontSize: "16px" }}
             >
               {dataa.title}

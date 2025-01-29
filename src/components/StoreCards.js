@@ -272,7 +272,7 @@ const StoreCards = ({ style, bStyle, dashboard }) => {
       </div>
       <Link
         to={`/tipsstore`}
-        className={`big-shoulder text-blue-500 underline hover:bg-gradient-to-r hover:from-teal-500 hover:to-blue-600 hover:text-transparent hover:bg-clip-text ml-6 ${
+        className={`mona-head text-blue-500 underline hover:bg-gradient-to-r hover:from-teal-500 hover:to-blue-600 hover:text-transparent hover:bg-clip-text ml-6 ${
           bStyle === "hidden" ? "" : "hidden"
         }`}
       >

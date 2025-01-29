@@ -35,7 +35,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               BANK APP TRANSFER/ USSD CODE/DEPOSIT
             </h2>
             <p
@@ -48,7 +48,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="my-10">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               <p>TIPS 180 CONCEPTS,</p>
               <p>1021742465,</p>
               <p>UBA.</p>
@@ -66,7 +66,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="my-10">
-            <h2 className="big-shoulder md:text-xl text-base">DISCLAIMER</h2>
+            <h2 className="mona-head md:text-xl text-base">DISCLAIMER</h2>
             <p
               style={{ color: "#828282" }}
               className="my-1 md:text-base text-sm"
@@ -82,7 +82,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               <p>PAYMENT ONLINE WITH YOUR DEBIT/CREDIT CARD.</p>
             </h2>
             <Link to="/our-plans">
@@ -100,7 +100,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="my-10">
-            <h2 className="big-shoulder md:text-xl text-base">DISCLAIMER</h2>
+            <h2 className="mona-head md:text-xl text-base">DISCLAIMER</h2>
             <p
               style={{ color: "#828282" }}
               className="my-1 md:text-base text-sm"
@@ -116,9 +116,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
-              Pay via PAYPAL
-            </h2>
+            <h2 className="mona-head md:text-xl text-base">Pay via PAYPAL</h2>
             <p className="text-sm md:text-base">
               Kindly click on the PAYPAL button below to view the PayPaldetails.
             </p>
@@ -143,7 +141,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -154,7 +152,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -167,9 +165,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
-              Pay via CRYPTO
-            </h2>
+            <h2 className="mona-head md:text-xl text-base">Pay via CRYPTO</h2>
             <p className="text-sm md:text-base">
               Kindly contact us via Whatsapp on{" "}
               <span className="font-semibold">+234 814 600 0171</span> or send a
@@ -191,7 +187,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -202,7 +198,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -215,7 +211,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">Pay via MPESA</h2>
+            <h2 className="mona-head md:text-xl text-base">Pay via MPESA</h2>
             <p className="text-sm md:text-base">
               Your Tips180 account will be upgraded once payment has been
               confirmed
@@ -244,7 +240,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -255,7 +251,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -268,7 +264,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via MTN MOBILE MONEY (GHANA)
             </h2>
             <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
@@ -295,7 +291,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -307,7 +303,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -320,7 +316,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via MTN MOBILE MONEY (UGANDA)
             </h2>
             <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
@@ -347,7 +343,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -359,7 +355,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -372,7 +368,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via MTN MOBILE MONEY (CAMEROON)
             </h2>
             <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
@@ -399,7 +395,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -411,7 +407,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -424,7 +420,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via MTN MOBILE MONEY (BENIN REPUBLIC)
             </h2>
             <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
@@ -451,7 +447,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -463,7 +459,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -476,7 +472,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via ORANGE MONEY (Sierra Leone)
             </h2>
             <p className="text-sm md:text-base">
@@ -507,7 +503,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -518,7 +514,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -531,7 +527,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via ORANGE MONEY (Ivory Coast)
             </h2>
             <p className="text-sm md:text-base">
@@ -562,7 +558,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -573,7 +569,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -586,7 +582,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via ORANGE MONEY (Senegal)
             </h2>
             <p className="text-sm md:text-base">
@@ -617,7 +613,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -628,7 +624,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -650,7 +646,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               BANK APP TRANSFER/ USSD CODE/DEPOSIT
             </h2>
             <p
@@ -663,7 +659,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="my-10">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               <p>TIPS 180 CONCEPTS,</p>
               <p>1021742465,</p>
               <p>UBA.</p>
@@ -681,7 +677,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="my-10">
-            <h2 className="big-shoulder md:text-xl text-base">DISCLAIMER</h2>
+            <h2 className="mona-head md:text-xl text-base">DISCLAIMER</h2>
             <p
               style={{ color: "#828282" }}
               className="my-1 md:text-base text-sm"
@@ -697,7 +693,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               <p>PAYMENT ONLINE WITH YOUR DEBIT/CREDIT CARD.</p>
             </h2>
             <Link to="/our-plans">
@@ -715,7 +711,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="my-10">
-            <h2 className="big-shoulder md:text-xl text-base">DISCLAIMER</h2>
+            <h2 className="mona-head md:text-xl text-base">DISCLAIMER</h2>
             <p
               style={{ color: "#828282" }}
               className="my-1 md:text-base text-sm"
@@ -731,7 +727,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               PAYMENT VIA POS/PALMPAY/OPAY
             </h2>
 
@@ -748,7 +744,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="my-10">
-            <h2 className="big-shoulder md:text-xl text-base">DISCLAIMER</h2>
+            <h2 className="mona-head md:text-xl text-base">DISCLAIMER</h2>
             <p
               style={{ color: "#828282" }}
               className="my-1 md:text-base text-sm"
@@ -768,7 +764,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via MTN MOBILE MONEY
             </h2>
             <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
@@ -795,7 +791,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -807,7 +803,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -824,7 +820,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via MTN MOBILE MONEY
             </h2>
             <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
@@ -851,7 +847,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -863,7 +859,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -880,7 +876,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via MTN MOBILE MONEY
             </h2>
             <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
@@ -907,7 +903,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -919,7 +915,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -936,7 +932,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">Pay via MPESA</h2>
+            <h2 className="mona-head md:text-xl text-base">Pay via MPESA</h2>
             <p className="text-sm md:text-base">
               Your Tips180 account will be upgraded once payment has been
               confirmed
@@ -965,7 +961,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -976,7 +972,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -993,7 +989,7 @@ const PaymentTypes = ({ country }) => {
     //   info: [
     //     <div className="my-10">
     //       <div className="my-5">
-    //         <h2 className="big-shoulder md:text-xl text-base">
+    //         <h2 className="mona-head md:text-xl text-base">
     //           Pay via MPESA (SAFARICOM MOBILE MONEY)
     //         </h2>
 
@@ -1033,7 +1029,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via MTN MOBILE MONEY
             </h2>
             <button className="w-full lg:w-1/3 rounded h-9 flex justify-center items-center bg-gradient-to-r from-teal-500 to-blue-600 text-white mx-auto lg:mx-0 mt-2">
@@ -1060,7 +1056,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -1072,7 +1068,7 @@ const PaymentTypes = ({ country }) => {
           </div>
 
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -1089,7 +1085,7 @@ const PaymentTypes = ({ country }) => {
     //   info: [
     //     <div className="my-10">
     //       <div className="my-5">
-    //         <h2 className="big-shoulder md:text-xl text-base">Pay via MPESA</h2>
+    //         <h2 className="mona-head md:text-xl text-base">Pay via MPESA</h2>
     //         <p className="text-sm md:text-base">
     //           Your Tips180 account will be upgraded once payment has been
     //           confirmed
@@ -1118,7 +1114,7 @@ const PaymentTypes = ({ country }) => {
     //         </p>
     //       </div>
     //       <div className="py-7 lg:py-0 lg:my-10">
-    //         <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+    //         <h2 className="mona-head text-red-600">REFUND POLICY</h2>
     //         <p className="text-sm md:text-base">
     //           Refund Policy: Please note that once you have paid for a plan, and
     //           your account has been upgraded, then the service is deemed to have
@@ -1129,7 +1125,7 @@ const PaymentTypes = ({ country }) => {
     //         </p>
     //       </div>
     //       <div className="py-7 lg:py-0 lg:my-10">
-    //         <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+    //         <h2 className="mona-head text-red-600">DISCLAIMER</h2>
     //         <p className="text-sm md:text-base">
     //           Information transmitted is intended only for the persons or entity
     //           above the age of 18. Tips180 do NOT refund money paid for
@@ -1146,7 +1142,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">Pay via MPESA</h2>
+            <h2 className="mona-head md:text-xl text-base">Pay via MPESA</h2>
             <p className="text-sm md:text-base">
               Your Tips180 account will be upgraded once payment has been
               confirmed
@@ -1175,7 +1171,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -1186,7 +1182,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -1203,7 +1199,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via ORANGE MONEY
             </h2>
             <p className="text-sm md:text-base">
@@ -1234,7 +1230,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -1245,7 +1241,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -1262,7 +1258,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via ORANGE MONEY
             </h2>
             <p className="text-sm md:text-base">
@@ -1293,7 +1289,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -1304,7 +1300,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -1321,7 +1317,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via ORANGE MONEY
             </h2>
             <p className="text-sm md:text-base">
@@ -1352,7 +1348,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -1363,7 +1359,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -1380,7 +1376,7 @@ const PaymentTypes = ({ country }) => {
       info: [
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
+            <h2 className="mona-head md:text-xl text-base">
               Pay via ORANGE MONEY
             </h2>
             <p className="text-sm md:text-base">
@@ -1411,7 +1407,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -1422,7 +1418,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -1458,9 +1454,7 @@ const PaymentTypes = ({ country }) => {
         // </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
-              Pay via PAYPAL
-            </h2>
+            <h2 className="mona-head md:text-xl text-base">Pay via PAYPAL</h2>
             <p className="text-sm md:text-base">
               Kindly click on the PAYPAL button below to view the PayPaldetails.
             </p>
@@ -1485,7 +1479,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -1496,7 +1490,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for
@@ -1509,9 +1503,7 @@ const PaymentTypes = ({ country }) => {
         </div>,
         <div className="my-10">
           <div className="my-5">
-            <h2 className="big-shoulder md:text-xl text-base">
-              Pay via CRYPTO
-            </h2>
+            <h2 className="mona-head md:text-xl text-base">Pay via CRYPTO</h2>
             <p className="text-sm md:text-base">
               Kindly contact us via Whatsapp on{" "}
               <span className="font-semibold">+234 814 600 0171</span> or send a
@@ -1533,7 +1525,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+            <h2 className="mona-head text-red-600">REFUND POLICY</h2>
             <p className="text-sm md:text-base">
               Refund Policy: Please note that once you have paid for a plan, and
               your account has been upgraded, then the service is deemed to have
@@ -1544,7 +1536,7 @@ const PaymentTypes = ({ country }) => {
             </p>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+            <h2 className="mona-head text-red-600">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for

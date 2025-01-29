@@ -337,7 +337,7 @@ const App = () => {
 
   return (
     <div className="w-full py-10 px-8 h-full">
-      <h2 className="font-bold mb-10 big-shoulder" style={{ fontSize: "30px" }}>
+      <h2 className="font-bold mb-10 mona-head" style={{ fontSize: "30px" }}>
         Sign Up
       </h2>
       <form onSubmit={signUp}>

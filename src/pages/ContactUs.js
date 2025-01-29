@@ -48,9 +48,7 @@ const ContactUs = () => {
     <div className="w-full lg:pb-10" style={{ background: "#F2F2F2" }}>
       <div className="w-full mx-auto text-center">
         <div className="lg:py-20 py-14 lg:mb-16 text-white mx-auto text-center bg-gradient-to-r from-teal-500 to-blue-600">
-          <h1 className="lg:text-4xl text-xl big-shoulder mx-auto">
-            Contact Us
-          </h1>
+          <h1 className="lg:text-4xl text-xl mona-head mx-auto">Contact Us</h1>
           <p className="w-11/12 mx-auto">
             Send us a message by using the form below and a team member will get
             back to you as soon as possible.

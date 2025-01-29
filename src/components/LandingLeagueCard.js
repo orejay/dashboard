@@ -123,7 +123,7 @@ const LandingLeagueCard = ({
                   target="_blank"
                   className="flex justify-center h-9 w-7/12"
                 >
-                  <div className="flex justify-center w-1/2 big-shoulder items-center p-2 text-white bg-gradient-to-r from-teal-500 to-blue-600 rounded-l-md">
+                  <div className="flex justify-center w-1/2 mona-head items-center p-2 text-white bg-gradient-to-r from-teal-500 to-blue-600 rounded-l-md">
                     Bet tip on
                   </div>
                   <div
@@ -196,13 +196,13 @@ const LandingLeagueCard = ({
                     className="rounded-l-md w-1/2 flex justify-center items-center"
                     style={{ backgroundColor: "#E5F5FF", color: "#13A0FF" }}
                   >
-                    <p className="big-shoulder">Odds</p>
+                    <p className="mona-head">Odds</p>
                   </div>
                   <div
                     className="rounded-r-md w-1/2 flex justify-center items-center"
                     style={{ backgroundColor: "#DEEDE0", color: "#355E3B" }}
                   >
-                    <p className="big-shoulder">{each.ft_odds}</p>
+                    <p className="mona-head">{each.ft_odds}</p>
                   </div>
                 </div>
               </div>
@@ -266,7 +266,7 @@ const LandingLeagueCard = ({
   return (
     <div className={card === "" ? `hidden` : ``}>
       <div className="flex my-4">
-        <h2 className="big-shoulder text-white text-xl text-center md:text-2xl mx-auto">
+        <h2 className="mona-head text-white text-xl text-center md:text-2xl mx-auto">
           Betting Tips for {title}
         </h2>
       </div>

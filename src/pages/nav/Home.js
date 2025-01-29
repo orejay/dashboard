@@ -122,7 +122,21 @@ function Home() {
         <meta name="author" content="tips180" />
       </Helmet>
       <Hero />
+      <div
+        className="flex flex-col mx-auto w-11/12 p-4 mb-8 rounded shadow mt-6"
+        style={{ backgroundColor: "#F2F2F2" }}
+      >
+        <p className="mona-head text-red-500 font-bold text-3xl mb-2">
+          IMPORTANT NOTICE!
+        </p>
+        <p>
+          There will be an increment in some of our pricing plans (NIGERIA ONLY)
+          effective from the 10th of February, 2025 as this would help us serve
+          you better. We appreciate your understanding.
+        </p>
+      </div>
       <AllFreeExpert />
+
       <div ref={refs[0]}>
         {visibleComponents[0] && (
           <Suspense fallback={<div className="h-screen">{Loader}</div>}>

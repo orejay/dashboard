@@ -9,7 +9,7 @@ function RecentWinTable({ getWinningTips, results }) {
   return (
     <div className="flex flex-wrap justify-around">
       <table>
-        <thead className="big-shoulder" style={{ color: "#4F4F4F" }}>
+        <thead className="mona-head" style={{ color: "#4F4F4F" }}>
           {results.length > 0 ? (
             <tr className="text-sm md:text-base">
               <th className="bg-white text-black">League</th>
@@ -21,7 +21,7 @@ function RecentWinTable({ getWinningTips, results }) {
           ) : (
             <tr>
               <td colSpan="5">
-                <h1 className="text-center big-shoulder text-red-600 text-xl md:text-3xl mb-7">
+                <h1 className="text-center mona-head text-red-600 text-xl md:text-3xl mb-7">
                   Please Check Back Later!
                 </h1>
               </td>
@@ -64,7 +64,7 @@ function RecentWinTable({ getWinningTips, results }) {
                       {each.league}
                     </p>
                   </td>
-                  <td className="big-shoulder mt-1 md:text-lg">{each.name}</td>
+                  <td className="mona-head mt-1 md:text-lg">{each.name}</td>
                   <td className="flex justify-center">
                     <p
                       className="rounded md:p-2 p-1 md:min-w-fit w-fit text-white"

@@ -7,13 +7,13 @@ const PwTandC = () => {
     <div className="w-full py-5 lg:py-10 " style={{ background: "#F2F2F2" }}>
       <div className="py-5 lg:py-10  px-5 lg:px-14  mx-auto rounded-lg bg-white w-full lg:w-5/6">
         <h2
-          className="big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "24px" }}
         >
           Predict and Win Terms and Conditions
         </h2>
         <h3
-          className="mt-4 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="mt-4 mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "18px" }}
         >
           INTRODUCTION TO THE GENERAL TERMS AND CONDITIONS

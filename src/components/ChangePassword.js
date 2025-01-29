@@ -415,7 +415,7 @@ export default function ChangePassword({ user, tab, api, token }) {
           <div className="w-full relative my-6 mx-auto">
             <div className="lg:w-2/4 opacity-100 mx-auto border-0 rounded-lg shadow-lg relative flex flex-col  bg-white outline-none focus:outline-none">
               <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
-                <h3 className="text-2xl big-shoulder">Edit Profile</h3>
+                <h3 className="text-2xl mona-head">Edit Profile</h3>
                 <button
                   className="bg-transparent border-0 text-black float-right"
                   onClick={() => setEditInfo(false)}

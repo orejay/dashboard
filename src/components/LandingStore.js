@@ -12,7 +12,7 @@ function LandingStore() {
         className="lg:w-1/2 pt-4  md:p-6"
         style={{ backgroundColor: "#E6F5F1" }}
       >
-        <h2 className="text-xl md:text-2xl font-medium ml-6 big-shoulder">
+        <h2 className="text-xl md:text-2xl font-medium ml-6 mona-head">
           Tips Store
         </h2>
         <StoreCards style={`lg:m-1 m-2`} bStyle={`hidden`} />

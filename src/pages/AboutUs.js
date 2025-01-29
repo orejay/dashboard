@@ -7,7 +7,7 @@ const AboutUs = () => {
     <div className="w-full py-5 lg:py-10 " style={{ background: "#F2F2F2" }}>
       <div className="py-5 lg:py-10 md:min-h-screen  px-5 lg:px-14  mx-auto rounded-lg bg-white w-full lg:w-5/6">
         <h2
-          className="mb-3 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="mb-3 mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "24px" }}
         >
           ABOUT TIPS180 SERVICES
@@ -17,13 +17,13 @@ const AboutUs = () => {
           win more than they lose eventually.
         </p>
         <h3
-          className="my-3 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="my-3 mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "18px" }}
         >
           WHAT IS OUR OBJECTIVE? HOW DO YOU BENEFIT?
         </h3>
         <h4
-          className="my-3 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="my-3 mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "18px" }}
         >
           We?
@@ -45,7 +45,7 @@ const AboutUs = () => {
           </li>
         </ul>
         <h4
-          className="my-3 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="my-3 mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "18px" }}
         >
           You?
@@ -61,7 +61,7 @@ const AboutUs = () => {
           <li>WIN!</li>
         </ul>
         <h3
-          className="my-3 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="my-3 mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "18px" }}
         >
           HOW DO WE OPERATE?
@@ -83,7 +83,7 @@ const AboutUs = () => {
           choice whether to place a bet on recommended result.
         </p>
         <h3
-          className="my-3 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="my-3 mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "18px" }}
         >
           WE PREDICT TOP LEAGUES

@@ -377,7 +377,7 @@ const LandingPlans = () => {
           style={{ backgroundColor: "#E6F5F1" }}
           className="py-9 flex flex-col items-center h-screen overflow-y-scroll"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl md:mb-1 font-extrabold bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text big-shoulder">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl md:mb-1 font-extrabold bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mona-head">
             Our Plans
           </h2>
           <div className="w-9/12 flex">

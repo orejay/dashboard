@@ -462,7 +462,7 @@ const PredictAndWinComp = ({ isFaq, redirectUrl, isDashboard }) => {
               CHANCE TO WIN
             </h2>
             <p
-              className="text-center big-shoulder font-bold"
+              className="text-center mona-head font-bold"
               style={{ fontSize: "75px" }}
             >
               {country === "Nigeria"
@@ -523,7 +523,7 @@ const PredictAndWinComp = ({ isFaq, redirectUrl, isDashboard }) => {
           }}
           className="w-full h-fit py-8 mt-8 flex flex-col items-center justify-center"
         >
-          <h3 className="big-shoulder lg:text-4xl text-lg text-white">
+          <h3 className="mona-head lg:text-4xl text-lg text-white">
             Frequently Asked Questions
           </h3>
           <p className="lg:text-lg text-xs text-center text-white w-10/12">

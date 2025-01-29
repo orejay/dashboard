@@ -7,7 +7,7 @@ const UgandaPayment = () => {
 
   const Checkout = (
     <div className="lg:h-screen lg:my-16 lg:rounded-xl mx-auto lg:overflow-y-scroll bg-white lg:w-9/12">
-      <h1 className="big-shoulder text-2xl text-center border-b pt-7 pb-3 mb-10">
+      <h1 className="mona-head text-2xl text-center border-b pt-7 pb-3 mb-10">
         Payment Method
       </h1>
       <div className="px-6 lg:px-16">
@@ -60,7 +60,7 @@ const UgandaPayment = () => {
           </div>
         </div>
         <div className="py-7 lg:py-0 lg:my-10">
-          <h2 className="big-shoulder text-red-600">REFUND POLICY</h2>
+          <h2 className="mona-head text-red-600">REFUND POLICY</h2>
           <p className="text-sm md:text-base">
             Refund Policy: Please note that once you have paid for a plan, and
             your account has been upgraded, then the service is deemed to have
@@ -72,7 +72,7 @@ const UgandaPayment = () => {
         </div>
 
         <div className="py-7 lg:py-0 lg:my-10">
-          <h2 className="big-shoulder text-red-600">DISCLAIMER</h2>
+          <h2 className="mona-head text-red-600">DISCLAIMER</h2>
           <p className="text-sm md:text-base">
             Information transmitted is intended only for the persons or entity
             above the age of 18. Tips180 do NOT refund money paid for

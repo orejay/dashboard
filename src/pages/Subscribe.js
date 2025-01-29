@@ -52,7 +52,7 @@ const Subscribe = ({ type }) => {
   const Top = (
     <div>
       <h1
-        className="font-bold flex iteems-center big-shoulder"
+        className="font-bold flex iteems-center mona-head"
         style={{ fontSize: "24px" }}
       >
         How to Subscribe

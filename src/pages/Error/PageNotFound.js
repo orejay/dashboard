@@ -12,7 +12,7 @@ const PageNotFound = () => {
           alt="tips180-not-found-image"
           className="md:mt-5 md:w-2/3 lg:w-auto"
         />
-        <h1 className="big-shoulder text-red-600 md:text-2xl lg:text-4xl mt-4">
+        <h1 className="mona-head text-red-600 md:text-2xl lg:text-4xl mt-4">
           Ooops...Page not found!
         </h1>
         <p className="md:mt-3 mt-2 lg:text-base text-sm text-center">

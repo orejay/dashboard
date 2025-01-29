@@ -51,7 +51,7 @@ function Feedback() {
         <div className="flex flex-col justify-between h-full">
           <div className="">
             <div
-              className="flex justify-start text-2xl lg:text-4xl font-medium mx-auto big-shoulder"
+              className="flex justify-start text-2xl lg:text-4xl font-medium mx-auto mona-head"
               style={{ maxWidth: "95%" }}
             >
               "
@@ -64,7 +64,7 @@ function Feedback() {
               </p>
             </div>
             <div
-              className="flex justify-end text-2xl lg:text-4xl font-medium mx-auto big-shoulder"
+              className="flex justify-end text-2xl lg:text-4xl font-medium mx-auto mona-head"
               style={{ maxWidth: "95%" }}
             >
               "
@@ -83,7 +83,7 @@ function Feedback() {
       style={{ backgroundColor: "#F2F2F2" }}
       className="flex flex-col items-center py-9"
     >
-      <h2 className="text-xl md:text-2xl lg:text-4xl font-medium big-shoulder mb-5 lg:mb-8">
+      <h2 className="text-xl md:text-2xl lg:text-4xl font-medium mona-head mb-5 lg:mb-8">
         Punters Feedback
       </h2>
       <div className="w-10/12">

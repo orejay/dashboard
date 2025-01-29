@@ -5,7 +5,7 @@ function Writeup() {
   return (
     <div className="md:w-10/12 mx-auto bg-white py-14" id="writeup">
       <div className="mb-5">
-        <h2 className="text-md lg:text-3xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
+        <h2 className="text-md lg:text-3xl font-medium mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-3">
           Your Go-To Football Prediction Site
         </h2>
         <p className="text-xs lg:text-base md:text-justify">
@@ -14,7 +14,7 @@ function Writeup() {
         </p>
       </div>
       <div className="mb-5">
-        <h3 className="text-md lg:text-xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-2">
+        <h3 className="text-md lg:text-xl font-medium mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-2">
           Win Smart, Bet Smarter with Tips180
         </h3>
         <p className="text-xs lg:text-sm md:text-justify">
@@ -34,7 +34,7 @@ function Writeup() {
         </p>
       </div>
       <div className="mb-5">
-        <h3 className="text-md lg:text-xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-2">
+        <h3 className="text-md lg:text-xl font-medium mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-2">
           Why Bet With Us?
         </h3>
         <p className="text-xs lg:text-sm md:text-justify">
@@ -52,10 +52,10 @@ function Writeup() {
         </p>
       </div>
       <div className="mb-5">
-        <h3 className="text-md lg:text-xl font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-2">
+        <h3 className="text-md lg:text-xl font-medium mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-2">
           What We Offer at Tips180
         </h3>
-        <h4 className="text-md lg:text-base font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text">
+        <h4 className="text-md lg:text-base font-medium mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text">
           Over 85% Prediction Accuracy
         </h4>
 
@@ -67,7 +67,7 @@ function Writeup() {
           higher. When you bet with Tips180, you bet with confidence. We're a
           football prediction site built on trust and results.
         </p>
-        <h4 className="mt-2 text-md lg:text-base font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text">
+        <h4 className="mt-2 text-md lg:text-base font-medium mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text">
           Free Betting Tips
         </h4>
 
@@ -85,7 +85,7 @@ function Writeup() {
           insights.
         </p>
 
-        <h4 className="mt-2 text-md lg:text-base font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text">
+        <h4 className="mt-2 text-md lg:text-base font-medium mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text">
           Match Previews, Reports, and Blog
         </h4>
 
@@ -99,7 +99,7 @@ function Writeup() {
           matches and tips that could influence your betting strategy.
         </p>
 
-        <h4 className="mt-2 text-md lg:text-base font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text">
+        <h4 className="mt-2 text-md lg:text-base font-medium mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text">
           Betting Guidance for Smarter Betting
         </h4>
 
@@ -144,7 +144,7 @@ function Writeup() {
       </div>
       <div className="mb-5">
         <Link to="/auth/signup">
-          <h3 className="text-md lg:text-xl underline font-medium big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent hover:from-blue-500 bg-clip-text mb-2">
+          <h3 className="text-md lg:text-xl underline font-medium mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent hover:from-blue-500 bg-clip-text mb-2">
             Sign Up Now with Tips180 and Start Winning
           </h3>
         </Link>

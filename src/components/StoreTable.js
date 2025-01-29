@@ -127,7 +127,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
           className="text-center mx-auto shadow-md shadow-gray-300"
           style={style}
         >
-          <tr className="w-full my-2 text-white big-shoulder text-xs lg:text-xl font-light">
+          <tr className="w-full my-2 text-white mona-head text-xs lg:text-xl font-light">
             <th>Time</th>
             <th>League</th>
             <th>Match</th>
@@ -145,10 +145,16 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
                   backgroundColor: index % 2 === 1 ? "#efecfd" : "#fff",
                 }}
               >
-                <td>{each.time}</td>
-                <td>{each.league}</td>
-                <td>{each.name}</td>
-                <td>
+                <td style={{ borderRight: "1px solid #828282" }}>
+                  {each.time}
+                </td>
+                <td style={{ borderRight: "1px solid #828282" }}>
+                  {each.league}
+                </td>
+                <td style={{ borderRight: "1px solid #828282" }}>
+                  {each.name}
+                </td>
+                <td style={{ borderRight: "1px solid #828282" }}>
                   {endpoint === "over-1"
                     ? `OVER 1.5`
                     : endpoint === "over-2"
@@ -161,9 +167,17 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
                     ? `BTS`
                     : each[`${tip}`]}
                 </td>
-                {tip === "singlebettip" ? <td>{each["singlebetodds"]}</td> : ""}
+                {tip === "singlebettip" ? (
+                  <td style={{ borderRight: "1px solid #828282" }}>
+                    {each["singlebetodds"]}
+                  </td>
+                ) : (
+                  ""
+                )}
                 {["halftimetip", "htfttip"].includes(tip) ? (
-                  <td>{each.htscore}</td>
+                  <td style={{ borderRight: "1px solid #828282" }}>
+                    {each.htscore}
+                  </td>
                 ) : (
                   ""
                 )}
@@ -174,7 +188,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
         </table>
       ) : (
         <div className="w-full flex justify-center py-5">
-          <h1 className="big-shoulder text-lg md:text-2xl text-red-500 mx-auto w-9/12 md:w-full text-center">
+          <h1 className="mona-head text-lg md:text-2xl text-red-500 mx-auto w-9/12 md:w-full text-center">
             Sorry, tips are not available for now. Please check back later.
           </h1>
         </div>

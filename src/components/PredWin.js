@@ -299,7 +299,7 @@ const PredWin = ({
 
   const heading = (
     <div className="flex flex-col items-center bg-white p-8 lg:px-16 lg:rounded-t-xl">
-      <h2 className="big-shoulder lg:text-xl">How To Play Predict & Win</h2>
+      <h2 className="mona-head lg:text-xl">How To Play Predict & Win</h2>
       <div className="lg:flex w-full justify-between mt-4">
         <div className="flex justify-start items-center py-4 lg:py-0 border-b lg:border-b-0 lg:w-1/3">
           <img src={subscribe} alt="tips180-subscrice-icon" style={styl} />
@@ -409,7 +409,7 @@ const PredWin = ({
   const subHead = (
     <div className="flex justify-center p-6">
       <div className="flex flex-col items-center">
-        <h3 className="big-shoulder text-sm lg:text-base mb-1">
+        <h3 className="mona-head text-sm lg:text-base mb-1">
           P & W {round} (This week’s fixtures)
         </h3>
         {expiry && (
@@ -446,7 +446,7 @@ const PredWin = ({
 
   const invalidLocation = (
     <div className="w-full flex justify-center h-24 mt-8">
-      <h2 className="big-shoulder text-red-500 lg:text-lg text-center">
+      <h2 className="mona-head text-red-500 lg:text-lg text-center">
         Predict and win is currently not available in your location.
       </h2>
     </div>
@@ -455,7 +455,7 @@ const PredWin = ({
   const noMatches = (
     <div className="w-full flex flex-col items-center justify-center mt-8">
       <img src={pwEmpty} alt="no-matches-img" className="mb-6" />
-      <h2 className="big-shoulder text-red-500 lg:text-lg text-center">
+      <h2 className="mona-head text-red-500 lg:text-lg text-center">
         Sorry there are currently no matches available.
       </h2>
       <button className="w-fit mt-4 py-2 px-16 bg-gradient-to-r from-teal-500 to-blue-600 text-white rounded">

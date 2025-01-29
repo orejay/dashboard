@@ -22,7 +22,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
   return (
     <div className="flex flex-wrap justify-around">
       <table>
-        <thead className="big-shoulder" style={{ color: "#4F4F4F" }}>
+        <thead className="mona-head" style={{ color: "#4F4F4F" }}>
           <tr className="text-sm md:text-base border-b">
             <th className="bg-white text-black">Date</th>
             <th className="bg-white text-black">League</th>
@@ -44,7 +44,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
               >
                 <td className="h-full relative">
                   <div className="absolute inset-0 flex items-start justify-center mt-3">
-                    <p className="rounded p-2 px-3 text-center">{`${each.date.slice(
+                    <p className="rounded p-2 px-3 text-center text-sm">{`${each.date.slice(
                       8
                     )}/${each.date.slice(5, 7)}`}</p>
                   </div>
@@ -52,7 +52,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                 <td className="h-full relative">
                   <div className="absolute inset-0 flex items-start justify-center mt-3">
                     <div
-                      className="rounded p-2 px-3 text-white text-center"
+                      className="rounded p-2 px-3 text-white text-center text-sm"
                       style={{
                         backgroundColor:
                           each.league === "EPL"
@@ -75,18 +75,16 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                   style={{
                     padding: isMobile ? "0" : "",
                     margin: isMobile ? 0 : "",
+                    verticalAlign: "top",
                   }}
                   className="h-full relative"
                 >
                   <div
-                    className="flex flex-col items-center justify-evenly h-full big-shoulder md:text-lg"
+                    className="flex flex-col items-center h-full mona-head md:text-md"
                     style={{ height: isMobile ? "120px" : "" }}
                   >
-                    <div
-                      className="w-full flex justify-center
-                    "
-                    >
-                      <p>
+                    <div className="w-full flex justify-center mb-6">
+                      <p className="py-2">
                         {isMobile
                           ? `${each?.name?.split(" vs ")[0]?.split(" ")[0]} ${
                               each?.name?.split(" vs ")[0]?.split(" ")?.length >
@@ -119,7 +117,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                           className="flex justify-center md:h-9 h-8 w-full lg:w-7/12 md:mb-0"
                         >
                           <div
-                            className="flex justify-center w-1/2 big-shoulder items-center p-2 text-white bg-gradient-to-r from-teal-500 to-blue-600 rounded-l-md"
+                            className="flex justify-center w-1/2 mona-head items-center p-2 text-white bg-gradient-to-r from-teal-500 to-blue-600 rounded-l-md"
                             style={{ fontSize: isMobile ? "10px" : "" }}
                           >
                             Bet tip on
@@ -181,7 +179,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                               color: "#13A0FF",
                             }}
                           >
-                            <p className="big-shoulder">Odds</p>
+                            <p className="mona-head">Odds</p>
                           </div>
                           <div
                             className="rounded-r-md w-1/2 flex justify-center items-center"
@@ -190,7 +188,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                               color: "#355E3B",
                             }}
                           >
-                            <p className="big-shoulder">{each?.ft_odds}</p>
+                            <p className="mona-head">{each?.ft_odds}</p>
                           </div>
                         </div>
                       </div>
@@ -200,7 +198,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
                 <td className="h-full relative">
                   <div className="absolute inset-0 flex items-start mt-3 justify-center">
                     <div
-                      className="rounded px-2 text-center md:p-2 p-1 md:min-w-fit w-fit text-white"
+                      className="rounded px-2 text-center md:p-2 p-1 md:min-w-fit w-fit text-white text-sm"
                       style={{ backgroundColor: "#6D55F1" }}
                     >
                       <p>{each.fttip}</p>
@@ -214,7 +212,7 @@ function FreeTable({ date, data, getFreeExpert, results, selectedOption }) {
           ) : (
             <tr>
               <td colSpan="5">
-                <h2 className="md:text-xl text-center w-full lg:text-3xl text-red-500 big-shoulder">
+                <h2 className="md:text-xl text-center w-full lg:text-3xl text-red-500 mona-head">
                   Sorry! No Free Expert Tips Available{" "}
                   {selectedOption.value === "today"
                     ? "Today"

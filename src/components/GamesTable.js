@@ -107,10 +107,12 @@ const GamesTable = ({ data, dat, type, onClick, rollBook = false }) => {
           </tr>
           {data[activeState]?.map((dat, i) => (
             <tr className="py-2 md:text-base text-xs" key={i}>
-              <td>{dat?.time}</td>
-              <td>{dat?.league}</td>
-              <td>{dat?.name}</td>
-              <td>
+              <td style={{ borderRight: "1px solid #828282" }}>{dat?.time}</td>
+              <td style={{ borderRight: "1px solid #828282" }}>
+                {dat?.league}
+              </td>
+              <td style={{ borderRight: "1px solid #828282" }}>{dat?.name}</td>
+              <td style={{ borderRight: "1px solid #828282" }}>
                 {type === "5o"
                   ? dat?.sure50tip
                   : type === "sb"
@@ -127,7 +129,7 @@ const GamesTable = ({ data, dat, type, onClick, rollBook = false }) => {
                 ""
               )}
               {!rollBook && (
-                <td>
+                <td style={{ borderRight: "1px solid #828282" }}>
                   {type === "5o"
                     ? dat?.sure50odds
                     : type === "sb"
@@ -162,7 +164,7 @@ const GamesTable = ({ data, dat, type, onClick, rollBook = false }) => {
       {rollBook && Number(rollBook[`${activeState}_odds`]) !== 1 ? (
         <div className="my-5 lg:my-0">
           <p className="text-sm">Total Odds:</p>
-          <p className="text-xl font-bold big-shoulder">
+          <p className="text-xl font-bold mona-head">
             {rollBook[`${activeState}_odds`]}
           </p>
         </div>

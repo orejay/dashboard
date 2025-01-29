@@ -272,7 +272,7 @@ export default function Payments() {
   const App = (
     <div>
       <div className="lg:py-20 py-14 text-white mx-auto text-center bg-gradient-to-r from-teal-500 to-blue-600">
-        <h1 className="lg:text-4xl text-xl big-shoulder mx-auto">How to Pay</h1>
+        <h1 className="lg:text-4xl text-xl mona-head mx-auto">How to Pay</h1>
         <p className="text-xs lg:text-base"></p>
       </div>
       {country ? (

@@ -64,7 +64,7 @@ const PredictAndWin = () => {
     <div className=" flex  w-full">
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
-        className="font-bold big-shoulder "
+        className="font-bold mona-head "
       >
         Predict and Win
       </h1>

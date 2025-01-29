@@ -100,7 +100,7 @@ const Odds50 = () => {
     <div className="lg:px-5 flex flex-wrap items-center justify-between w-full">
       <h1
         style={{ fontSize: "" }}
-        className="text-md lg:text-3xl font-bold w-1/2 lg:w-2/4 big-shoulder"
+        className="text-md lg:text-3xl font-bold w-1/2 lg:w-2/4 mona-head"
       >
         Buy 50 Odds!
       </h1>
@@ -168,15 +168,30 @@ const Odds50 = () => {
               </tr>
               {data?.map((dat, i) => (
                 <tr className="py-2 text-xs md:text-base" key={i}>
-                  <td>{`${dat?.date.slice(8)}/${dat?.date.slice(5, 7)}`}</td>
-                  <td>{dat?.time}</td>
-                  <td>{dat?.league}</td>
-                  <td style={{ color: "#6D55F1" }}>{dat?.name}</td>
-                  <td>
+                  <td
+                    style={{ borderRight: "1px solid #828282" }}
+                  >{`${dat?.date.slice(8)}/${dat?.date.slice(5, 7)}`}</td>
+                  <td style={{ borderRight: "1px solid #828282" }}>
+                    {dat?.time}
+                  </td>
+                  <td style={{ borderRight: "1px solid #828282" }}>
+                    {dat?.league}
+                  </td>
+                  <td
+                    style={{
+                      color: "#6D55F1",
+                      borderRight: "1px solid #828282",
+                    }}
+                  >
+                    {dat?.name}
+                  </td>
+                  <td style={{ borderRight: "1px solid #828282" }}>
                     {dataSet === 1 ? dat?.sure50_1st_tip : dat?.sure50_2nd_tip}
                   </td>
-                  <td>{dat?.confidence}</td>
-                  <td>
+                  <td style={{ borderRight: "1px solid #828282" }}>
+                    {dat?.confidence}
+                  </td>
+                  <td style={{ borderRight: "1px solid #828282" }}>
                     {dataSet === 1
                       ? dat?.sure50_1st_odds
                       : dat?.sure50_2nd_odds}
@@ -192,13 +207,13 @@ const Odds50 = () => {
       <div className="mx-auto">
         <div className="md:w-5/6 mx-auto items-center text-center">
           <p
-            className="md:w-5/6 flex text-sm md:text-base justify-even mx-auto text-left font-bold my-16 big-shoulder"
+            className="md:w-5/6 flex text-sm md:text-base justify-even mx-auto text-left font-bold my-16 mona-head"
             style={{ color: "#4F4F4F" }}
           >
             NOTE: Although matches were carefully selected by our experts, we
             strongly recommend you stake responsibly!
           </p>
-          <p className="my-20 text-left text-red-600 md:text-base text-sm big-shoulder">
+          <p className="my-20 text-left text-red-600 md:text-base text-sm mona-head">
             STAKE WHAT YOU CAN AFFORD TO LOSE!!!
           </p>
         </div>

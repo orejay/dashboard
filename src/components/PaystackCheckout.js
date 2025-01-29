@@ -151,7 +151,7 @@ const PaystackCheckout = () => {
       <div
         className={`lg:h-screen lg:my-16 lg:rounded-xl mx-auto lg:overflow-y-scroll bg-white lg:w-9/12`}
       >
-        <h1 className="big-shoulder text-2xl text-center border-b pt-7 pb-3 mb-10">
+        <h1 className="mona-head text-2xl text-center border-b pt-7 pb-3 mb-10">
           Payment Method
         </h1>
         <div className="px-6 lg:px-16">
@@ -217,7 +217,7 @@ const PaystackCheckout = () => {
               </div>
             </div>
             <div className={!openBank ? `hidden` : `mt-10`}>
-              <h2 className="big-shoulder mb-2">
+              <h2 className="mona-head mb-2">
                 BANK APP TRANSFER/ USSD CODE/DEPOSIT
               </h2>
               <p className="text-sm md:text-base">
@@ -296,7 +296,7 @@ const PaystackCheckout = () => {
             </div>
           </div>
           <div className="py-7 lg:py-0 lg:my-10">
-            <h2 className="big-shoulder">DISCLAIMER</h2>
+            <h2 className="mona-head">DISCLAIMER</h2>
             <p className="text-sm md:text-base">
               Information transmitted is intended only for the persons or entity
               above the age of 18. Tips180 do NOT refund money paid for

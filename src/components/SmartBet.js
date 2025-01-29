@@ -26,7 +26,7 @@ const SmartBet = () => {
     <div className="flex flex-wrap justify-end lg:justify-between w-full items-center">
       <h1
         style={{ fontSize: "", color: "#22222" }}
-        className="hidden lg:flex font-bold text-md lg:text-3xl big-shoulder w-1/2"
+        className="hidden lg:flex font-bold text-md lg:text-3xl mona-head w-1/2"
       >
         {smartBet ? "Smart Bet Plan" : "Smart Bet Plus Plan"}
       </h1>

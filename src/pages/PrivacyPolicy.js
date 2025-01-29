@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
     <div className="w-full py-5 lg:py-10 " style={{ background: "#F2F2F2" }}>
       <div className="py-5 lg:py-10 md:min-h-screen  px-5 lg:px-14  mx-auto rounded-lg bg-white w-full lg:w-5/6">
         <h2
-          className="mb-3 big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+          className="mb-3 mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
           style={{ fontSize: "24px" }}
         >
           Privacy Policy
@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
         </p>
         <p className="mb-2">
           <span
-            className="big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             What we collect?
@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
           </p>
           <br />
           <span
-            className="big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             What do we do with the information we gather?
@@ -78,7 +78,7 @@ const PrivacyPolicy = () => {
         </ol>
         <p className="mb-2 pt-5">
           <span
-            className="big-shoulder bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
+            className="mona-head bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text"
             style={{ fontSize: "18px" }}
           >
             Security

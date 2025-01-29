@@ -35,7 +35,7 @@ function SmartBetLanding() {
           id="smart-card"
         >
           <div>
-            <h2 className="text-4xl font-medium bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-1 big-shoulder">
+            <h2 className="text-4xl font-medium bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-1 mona-head">
               Smart Bet Plan!
             </h2>
             <p
@@ -74,7 +74,7 @@ function SmartBetLanding() {
           id="smart-card"
         >
           <div>
-            <h2 className="text-4xl font-medium bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-1 big-shoulder">
+            <h2 className="text-4xl font-medium bg-gradient-to-r from-teal-500 to-blue-600 text-transparent bg-clip-text mb-1 mona-head">
               Smart Bet Plus!
             </h2>
             <p

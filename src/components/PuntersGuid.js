@@ -8,7 +8,7 @@ const PuntersGuide = () => {
     <div className="flex w-full" style={{ lineHeight: "2" }}>
       <h1
         style={{ fontSize: "24px", color: "#22222" }}
-        className="font-bold big-shoulder "
+        className="font-bold mona-head "
       >
         Punter's Guide
       </h1>
@@ -38,7 +38,7 @@ const PuntersGuide = () => {
       {Data.map((data, index) => {
         return (
           <div key={index}>
-            <h3 className="font-bold big-shoulder">{data?.title}</h3>
+            <h3 className="font-bold mona-head">{data?.title}</h3>
 
             <div>
               {data.content.map((dat, i) => (

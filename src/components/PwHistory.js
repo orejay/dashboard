@@ -150,7 +150,7 @@ const PwHistory = () => {
       </div>
 
       {!entries ? (
-        <p className="big-shoulder text-red-500 text-center mt-3">
+        <p className="mona-head text-red-500 text-center mt-3">
           You have no Predict and Win Entries
         </p>
       ) : (

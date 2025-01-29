@@ -297,7 +297,7 @@ function PlansCard({ bg, styl, data, country }) {
             backgroundSize: "100% 100%",
           }}
         >
-          <h3 className="text-base text-white lg:text-2xl font-medium big-shoulder">
+          <h3 className="text-base text-white lg:text-2xl font-medium mona-head">
             {plan.name}
           </h3>
           <p className="text-sm text-white lg:text-base font-medium">
@@ -323,7 +323,7 @@ function PlansCard({ bg, styl, data, country }) {
       </div>
       <div>
         <div className="flex flex-col px-4">
-          <p className="text-base lg:text-xl mb-1 font-medium big-shoulder">
+          <p className="text-base lg:text-xl mb-1 font-medium mona-head">
             Select Duration
           </p>
           <select

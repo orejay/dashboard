@@ -98,7 +98,7 @@ export default function ({ data = {}, sbBook, CD, odd = 1, smartBet = false }) {
           >
             <div>
               <h1 className="text-sm mb-2">Booking Code:</h1>
-              <div className="flex items-center lg:font-bold big-shoulder">
+              <div className="flex items-center lg:font-bold mona-head">
                 <h1 className="text-xs lg:text-lg">
                   {data && page === "50odds" ? data?.odds50?.bookie : ""}
                   {data && page === "bankertips" ? data?.banker?.bookie : ""}
@@ -463,7 +463,7 @@ export default function ({ data = {}, sbBook, CD, odd = 1, smartBet = false }) {
           ) : (
             <div className="my-5 lg:my-0">
               <p className="text-sm">Total Odds:</p>
-              <p className="text-xl font-bold big-shoulder">
+              <p className="text-xl font-bold mona-head">
                 {data
                   ? data?.odds
                     ? data?.odds

@@ -64,7 +64,7 @@ const Weekend10 = () => {
     <div className=" flex  w-full">
       <h1
         style={{ color: "#22222" }}
-        className="font-bold big-shoulder md:text-2xl text-xl"
+        className="font-bold mona-head md:text-2xl text-xl"
       >
         Weekend 10 Odds!
       </h1>
@@ -116,17 +116,27 @@ const Weekend10 = () => {
                 </tr>
                 {data?.map((dat, i) => (
                   <tr className="py-2 md:text-base text-xs" key={i}>
-                    <td>{`${dat?.date.slice(8)}/${dat?.date.slice(5, 7)}`}</td>
-                    <td>{dat?.time}</td>
-                    <td>{dat?.league}</td>
-                    <td>{dat?.name}</td>
-                    <td>
+                    <td
+                      style={{ borderRight: "1px solid #828282" }}
+                    >{`${dat?.date.slice(8)}/${dat?.date.slice(5, 7)}`}</td>
+                    <td style={{ borderRight: "1px solid #828282" }}>
+                      {dat?.time}
+                    </td>
+                    <td style={{ borderRight: "1px solid #828282" }}>
+                      {dat?.league}
+                    </td>
+                    <td style={{ borderRight: "1px solid #828282" }}>
+                      {dat?.name}
+                    </td>
+                    <td style={{ borderRight: "1px solid #828282" }}>
                       {dataSet === 1
                         ? dat?.weekend10_1st_tip
                         : dat?.weekend10_2nd_tip}
                     </td>
-                    <td>{dat?.confidence}</td>
-                    <td>
+                    <td style={{ borderRight: "1px solid #828282" }}>
+                      {dat?.confidence}
+                    </td>
+                    <td style={{ borderRight: "1px solid #828282" }}>
                       {dataSet === 1
                         ? dat?.weekend10_1st_odds
                         : dat?.weekend10_2nd_odds}
@@ -142,7 +152,7 @@ const Weekend10 = () => {
       )}
       <div className="md:w-5/6 mx-auto">
         <div className="">
-          <h2 className="big-shoulder text-md" style={{ color: "#4f4f4f" }}>
+          <h2 className="mona-head text-md" style={{ color: "#4f4f4f" }}>
             Notes :
           </h2>
           <p>
@@ -150,7 +160,7 @@ const Weekend10 = () => {
             recommend you stake responsibly!
           </p>
         </div>
-        <h2 className="big-shoulder text-md my-8 text-red-600">
+        <h2 className="mona-head text-md my-8 text-red-600">
           STAKE WHAT YOU CAN AFFORD TO LOSE!!!
         </h2>
       </div>

@@ -20,7 +20,7 @@ const Leagues = () => {
   const leagues = (
     <div className="w-full pb-5 lg:pb-16 " style={{ background: "#F2F2F2" }}>
       <div className="lg:py-20 py-14 mb-5 md:mb-16 text-white mx-auto text-center bg-gradient-to-r from-teal-500 to-blue-600">
-        <h1 className="lg:text-4xl text-xl big-shoulder mx-auto">Leagues</h1>
+        <h1 className="lg:text-4xl text-xl mona-head mx-auto">Leagues</h1>
       </div>
       <div className="py-5 lg:py-10  px-5 lg:px-14 mx-auto rounded-lg md:shadow-md shadow-slate-300 md:bg-white md:bg-gradient-to-b md:from-white md:via-orange-100 md:to-white w-full h-screen overflow-y-scroll lg:w-5/6">
         {Object.entries(leaguesData)
@@ -28,7 +28,7 @@ const Leagues = () => {
           .map(([name, val], index) => (
             <div key={index}>
               <h1
-                className="my-5 font-bold big-shoulder hover:text-transparent cursor-pointer hover:bg-clip-text hover:bg-gradient-to-r hover:from-teal-500 hover:to-blue-600 w-fit"
+                className="my-5 font-bold mona-head hover:text-transparent cursor-pointer hover:bg-clip-text hover:bg-gradient-to-r hover:from-teal-500 hover:to-blue-600 w-fit"
                 style={{ fontSize: "20px" }}
               >
                 {name}
@@ -61,7 +61,7 @@ const Leagues = () => {
           .map(([name, val], index) => (
             <div key={index}>
               <h1
-                className="my-5 font-bold big-shoulder hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-teal-500 hover:to-blue-600 w-fit cursor-pointer"
+                className="my-5 font-bold mona-head hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-teal-500 hover:to-blue-600 w-fit cursor-pointer"
                 style={{ fontSize: "20px" }}
               >
                 {name}
