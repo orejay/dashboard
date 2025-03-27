@@ -3,11 +3,11 @@ export const plansData = [
     name: "Key",
     title: "key",
     prices: [
-      { title: "₦1,500", value: 1500 },
-      { title: "₦3,200", value: 3200 },
-      { title: "₦7,000", value: 7000 },
-      { title: "₦13,000", value: 13000 },
-      { title: "₦18,000", value: 18000 },
+      { title: "₦2,500", value: 2500 },
+      { title: "₦5,000", value: 5000 },
+      { title: "₦10,000", value: 10000 },
+      { title: "₦15,000", value: 15000 },
+      { title: "₦20,000", value: 20000 },
     ],
     details: [
       "Access to one set of Experts ACCA",
@@ -20,11 +20,11 @@ export const plansData = [
     name: "Premium",
     title: "premium",
     prices: [
-      { title: "₦2,000", value: 2000 },
-      { title: "₦5,000", value: 5000 },
-      { title: "₦10,000", value: 10000 },
-      { title: "₦18,500", value: 18500 },
-      { title: "₦30,000", value: 30000 },
+      { title: "₦3,400", value: 3400 },
+      { title: "₦7,500", value: 7500 },
+      { title: "₦15,000", value: 15000 },
+      { title: "₦22,500", value: 22500 },
+      { title: "₦35,000", value: 35000 },
     ],
     details: [
       "Access to over 40 Leagues Tips",
@@ -56,7 +56,7 @@ export const plansData = [
   {
     name: "Rollover",
     title: "rollover",
-    prices: [{ title: "₦3,500", value: 3500 }],
+    prices: [{ title: "₦4,000", value: 4000 }],
     details: [
       "Rollover Betting Strategy",
       "Access to 1.3 odds Daily",
@@ -68,8 +68,8 @@ export const plansData = [
     name: "50 0dds",
     title: "odds50",
     prices: [
-      { title: "₦2,500", value: 2500 },
-      { title: "₦5,200", value: 5200 },
+      { title: "₦3,500", value: 3500 },
+      { title: "₦7,000", value: 7000 },
     ],
     details: [
       "Access to Winning Tactics",
@@ -83,7 +83,7 @@ export const plansData = [
   {
     name: "Weekend 10 odds",
     title: "weekend10",
-    prices: [{ title: "₦3,600", value: 3600 }],
+    prices: [{ title: "₦5,200", value: 5200 }],
     details: [
       "Access to Best Accumulated Tips",
       "Access to 10 odds twice a week",

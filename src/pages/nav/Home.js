@@ -122,7 +122,7 @@ function Home() {
         <meta name="author" content="tips180" />
       </Helmet>
       <Hero />
-      <div
+      {/* <div
         className="flex flex-col mx-auto w-11/12 p-4 mb-8 rounded shadow mt-6"
         style={{ backgroundColor: "#F2F2F2" }}
       >
@@ -134,7 +134,7 @@ function Home() {
           effective from the 10th of February, 2025 as this would help us serve
           you better. We appreciate your understanding.
         </p>
-      </div>
+      </div> */}
       <AllFreeExpert />
 
       <div ref={refs[0]}>
