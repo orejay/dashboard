@@ -38,7 +38,7 @@ const HeroBg = () => {
               className="mb-3 text-3xl lg:text-6xl mona-head"
               style={{ lineHeight: "100%" }}
             >
-              Your #1 Football Prediction Site – Free Predictions with Real Data
+              Best Football Prediction Site - Free Predictions with Real Data
             </h1>
             <p
               className="mb-3 mx-auto md:mx-0 text-xs md:text-base lg:text-xl"

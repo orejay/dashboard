@@ -109,11 +109,11 @@ function Home() {
     <div className="bg-white">
       <Helmet>
         <title>
-          Tips180: Best Football Prediction Site | Win with Sure Odds
+          Best Football Prediction Site in the World | Free Daily Tips – Tips180
         </title>
         <meta
           name="description"
-          content="Tips180.com is the best football prediction site for accurate betting tips. Join us for daily expert predictions and sure odds to win big in football betting!"
+          content="Get accurate football predictions today! Tips180 is the best prediction site in the world for daily football tips, odds, and match analysis."
         />
         <meta
           name="google-site-verification"
