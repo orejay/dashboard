@@ -149,6 +149,18 @@ function App() {
     <div>
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17670030360"
+        ></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17670030360');
+          `}
+        </script>
       </Helmet>
       <Suspense
         fallback={
