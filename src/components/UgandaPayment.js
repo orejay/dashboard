@@ -44,11 +44,8 @@ const UgandaPayment = () => {
           </div>
           <div className={!openMtn ? `hidden` : `mt-10`}>
             <p className="mt-2 text-sm md:text-base">
-              All payments should be made only to{" "}
-              <span className="font-semibold">+256 787 166 125</span>
-              <br /> After making payment, please send the details below as a
-              Whatsapp message to{" "}
-              <span className="font-semibold">+254 796 118 357</span>. <br />
+              All payments should be made only to <br /> After making payment,
+              please send the details below as a Whatsapp message to <br />
               <ol className="pl-2">
                 <li>1. YOUR MTN MOBILE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>

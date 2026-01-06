@@ -68,8 +68,7 @@ export const footerLinks = [
       { name: "hello@tips180.com", link: "" },
       { name: "advert@tips180.com", link: "" },
       { name: "phone", image: [phoneSVG, wSVG], link: "" },
-      { name: "+234 813 1149 662 (Nigeria)", link: "+23481131149662" },
-      { name: "+254 796 118 357 (Kenya)", link: "+254796118357" },
+      { name: "+234 813 1149 662", link: "+23481131149662" },
     ],
   },
 ];
