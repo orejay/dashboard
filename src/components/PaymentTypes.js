@@ -226,10 +226,10 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made ONLY to{" "}
-              <span className="font-semibold">+254 796 118 357</span> <br />
+              {/* <span className="font-semibold">+254 796 118 357</span> <br /> */}
               After making payment, please send the details below as a Whatsapp
               message to
-              <span className="font-semibold">+254 796 118 357</span>
+              {/* <span className="font-semibold">+254 796 118 357</span> */}
               <ol className="pl-2">
                 <li>1. YOUR MTN MOBILE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -277,10 +277,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made only to{" "}
-              <span className="font-semibold">+233 249 447 682</span>
+              {/* <span className="font-semibold">+233 249 447 682</span> */}
               <br /> After making payment, please send the details below as a
               Whatsapp message to{" "}
-              <span className="font-semibold">+234 814 600 0171</span>. <br />
+              {/* <span className="font-semibold">+234 814 600 0171</span>. */}
+              <br />
               <ol className="pl-2">
                 <li>1. YOUR MTN MOBILE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -329,10 +330,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made only to{" "}
-              <span className="font-semibold">+256 787 166 125</span>
+              {/* <span className="font-semibold">+256 787 166 125</span> */}
               <br /> After making payment, please send the details below as a
               Whatsapp message to{" "}
-              <span className="font-semibold">+254 796 118 357</span>. <br />
+              {/* <span className="font-semibold">+254 796 118 357</span>.  */}
+              <br />
               <ol className="pl-2">
                 <li>1. YOUR MTN MOBILE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -381,10 +383,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made only to{" "}
-              <span className="font-semibold">+237 676 988 731</span>
+              {/* <span className="font-semibold">+237 676 988 731</span> */}
               <br /> After making payment, please send the details below as a
               Whatsapp message to{" "}
-              <span className="font-semibold">+234 814 600 0171</span>. <br />
+              {/* <span className="font-semibold">+234 814 600 0171</span>. */}
+              <br />
               <ol className="pl-2">
                 <li>1. YOUR MTN MOBILE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -433,10 +436,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made only to{" "}
-              <span className="font-semibold">+229 466 199 56</span>
+              {/* <span className="font-semibold">+229 466 199 56</span> */}
               <br /> After making payment, please send the details below as a
               Whatsapp message to{" "}
-              <span className="font-semibold">+234 814 600 0171</span>. <br />
+              {/* <span className="font-semibold">+234 814 600 0171</span>.  */}
+              <br />
               <ol className="pl-2">
                 <li>1. YOUR MTN MOBILE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -489,10 +493,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made ONLY to{" "}
-              <span className="font-semibold">+232 781 093 88</span> <br />
+              {/* <span className="font-semibold">+232 781 093 88</span> */}
+              <br />
               After making payment, please send the details below as a Whatsapp
               message to
-              <span className="font-semibold">+232 760 600 00</span>
+              {/* <span className="font-semibold">+232 760 600 00</span> */}
               <ol className="pl-2">
                 <li>1. YOUR ORANGE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -544,10 +549,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made ONLY to{" "}
-              <span className="font-semibold">+232 781 093 88</span> <br />
+              {/* <span className="font-semibold">+232 781 093 88</span>  */}
+              <br />
               After making payment, please send the details below as a Whatsapp
               message to
-              <span className="font-semibold">+232 760 600 00</span>
+              {/* <span className="font-semibold">+232 760 600 00</span> */}
               <ol className="pl-2">
                 <li>1. YOUR ORANGE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -599,10 +605,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made ONLY to{" "}
-              <span className="font-semibold">+232 781 093 88</span> <br />
+              {/* <span className="font-semibold">+232 781 093 88</span> */}
+              <br />
               After making payment, please send the details below as a Whatsapp
               message to
-              <span className="font-semibold">+232 760 600 00</span>
+              {/* <span className="font-semibold">+232 760 600 00</span> */}
               <ol className="pl-2">
                 <li>1. YOUR ORANGE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -947,10 +954,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made ONLY to{" "}
-              <span className="font-semibold">+254 796 118 357</span> <br />
+              {/* <span className="font-semibold">+254 796 118 357</span>  */}
+              <br />
               After making payment, please send the details below as a Whatsapp
               message to
-              <span className="font-semibold">+254 796 118 357</span>
+              {/* <span className="font-semibold">+254 796 118 357</span> */}
               <ol className="pl-2">
                 <li>1. YOUR MPESA NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -1042,10 +1050,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made only to{" "}
-              <span className="font-semibold">+256 787 166 125</span>
+              {/* <span className="font-semibold">+256 787 166 125</span> */}
               <br /> After making payment, please send the details below as a
               Whatsapp message to{" "}
-              <span className="font-semibold">+254 796 118 357</span>. <br />
+              {/* <span className="font-semibold">+254 796 118 357</span> */}
+              . <br />
               <ol className="pl-2">
                 <li>1. YOUR MTN MOBILE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>
@@ -1157,10 +1166,11 @@ const PaymentTypes = ({ country }) => {
             </button>
             <p className="mt-2 text-sm md:text-base">
               All payments should be made ONLY to{" "}
-              <span className="font-semibold">+254 796 118 357</span> <br />
+              {/* <span className="font-semibold">+254 796 118 357</span> */}
+              <br />
               After making payment, please send the details below as a Whatsapp
               message to
-              <span className="font-semibold">+254 796 118 357</span>
+              {/* <span className="font-semibold">+254 796 118 357</span> */}
               <ol className="pl-2">
                 <li>1. YOUR MPESA NAME</li>
                 <li>2. DATE OF PAYMENT</li>
