@@ -72,7 +72,7 @@ const LandingLeagues = () => {
               key={index}
               id="league"
               className={
-                results[each.endpoint] === []
+                results[each.endpoint]?.length === 0
                   ? `hidden`
                   : `lg:w-6/12 w-full mx-auto md:mx-0 md:my-6 pb-0`
               }
