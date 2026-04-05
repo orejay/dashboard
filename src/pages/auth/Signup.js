@@ -24,7 +24,7 @@ const App = () => {
   const [hideCPass, setHideCPass] = useState(true);
   const [isCheckbox, setIsCheckbox] = useState(false);
   const [loadText, setLoadText] = useState("Sign Up");
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const [passwords, setPasswords] = useState({
     password1: "",
     password2: "",

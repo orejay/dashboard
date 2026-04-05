@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const navigate = useNavigate();
 
   const nameRef = useRef(null);

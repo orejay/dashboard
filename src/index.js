@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
-if (process.env.NODE_ENV === "production") {
+if (import.meta.env.PROD) {
   console.log = () => {};
   console.warn = () => {};
 }

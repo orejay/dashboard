@@ -122,7 +122,7 @@ const PwTandC = () => {
               2. Rules & Regulations Application
             </span>
             The following are the Terms and Conditions governing the use of this
-            Website and the Services . <br className="my-1" className="my-1" />
+            Website and the Services . <br className="my-1" />
             2.1 By using any of our Services (including any free play), and/or
             checking the box to accept the Terms and Conditions and/ or
             otherwise by opening an account with the Company or making an Entry
@@ -134,7 +134,7 @@ const PwTandC = () => {
             more fully set out in the Privacy Policy. If there is any
             inconsistency between these Terms and Conditions and any document
             incorporated by reference, these Terms and Conditions shall prevail.
-            <br className="my-1" className="my-1" />
+            <br className="my-1" />
             2.2 The Company reserves the right to amend the Rules and
             Regulations, as we see fit from time to time. Amendments to the
             Rules and Regulations will be notified to you by way of an
@@ -215,7 +215,7 @@ const PwTandC = () => {
               party (including but without limitation to, any minor) to use the
               Company's services, use your Account or accept any Winnings on
               your behalf; and/or <br className="my-1" />
-              >3.1.15 You are not currently or (have not been within the last
+              {">"}3.1.15 You are not currently or (have not been within the last
               six months) an employee or contractor of the Company or immediate
               family member of each, whereby immediate family members shall
               include, but not limited to, spouse, children, parents, siblings,

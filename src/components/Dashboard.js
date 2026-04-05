@@ -12,7 +12,7 @@ const Dashboard = ({ Content, Top, active }) => {
   const token = localStorage.getItem("token");
   const [isValid, setIsValid] = useState(true);
   const navigate = useNavigate();
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const styles = {
     opened: { color: "#62C7A1" },
     closed: { color: "red" },

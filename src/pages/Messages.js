@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import Loader from "../components/Loader";
 
 const Messages = ({ type }) => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const token = localStorage.getItem("token");
   const [messages, setMessages] = useState(null);
   const [active, setActive] = useState(0);

@@ -6,7 +6,7 @@ import Loader from "./Loader";
 import { Helmet } from "react-helmet";
 
 const Weekend10 = () => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const token = localStorage.getItem("token");
 
   const [data, setData] = useState(null);

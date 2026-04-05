@@ -18,7 +18,7 @@ const UserTable = ({ style, results, tabNo, getUsers }) => {
   });
 
   const authHeader = localStorage.getItem("admintoken");
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
 
   const downgrade = async (planNo, email) => {
     try {

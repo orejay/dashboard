@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 const App = () => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const [hidePass, setHidePass] = useState(true);
   const [loginDetails, setLoginDetails] = useState({
     email: "",

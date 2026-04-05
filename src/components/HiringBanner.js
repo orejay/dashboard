@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HiringBanner = () => {
   const token = localStorage.getItem("token");
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const [jobs, setJobs] = useState([]);
 
   const getJobs = async () => {

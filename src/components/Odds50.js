@@ -18,7 +18,7 @@ const Odds50 = () => {
     // { q: "How does it work?", a: "a" },
     // { q: "How many times do I get the 50 Odds?", a: "b" },
   ];
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const token = localStorage.getItem("token");
   const faqRefs = useRef(faq.map(() => React.createRef()));
   const targetRef = useRef(null);

@@ -12,7 +12,7 @@ const PwUpgradeUser = () => {
 
   const GetUsers = async () => {
     const token = localStorage.getItem("admintoken");
-    const api = process.env.REACT_APP_BASE_API;
+    const api = import.meta.env.VITE_BASE_API;
 
     try {
       const res = await fetch(`${api}/postendpoints/search-users?page=1`, {

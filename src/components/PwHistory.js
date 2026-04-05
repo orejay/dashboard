@@ -4,7 +4,7 @@ import Flag from "react-flagkit";
 import { CancelRounded, CheckRounded } from "@mui/icons-material";
 
 const PwHistory = () => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const token = localStorage.getItem("admintoken");
   const [entries, setEntries] = useState(null);
   const [rounds, setRounds] = useState([]);

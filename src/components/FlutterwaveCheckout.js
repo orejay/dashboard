@@ -10,10 +10,10 @@ import crypto from "../assets/crypto.jpeg";
 import paypal from "../assets/paypal.png";
 import Main from "../Main";
 
-const fwPublicKey = process.env.REACT_APP_FLUTTERWAVE_PUBLIC_KEY;
+const fwPublicKey = import.meta.env.VITE_FLUTTERWAVE_PUBLIC_KEY;
 
 const FlutterwaveCheckout = () => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const authHeader = localStorage.getItem("token");
   const navigate = useNavigate();
   const [openCrypto, setOpenCrypto] = useState(false);

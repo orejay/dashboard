@@ -17,7 +17,7 @@ const PredWinResults = () => {
   const [expiry, setExpiry] = useState("");
   const playerRef = useRef(null);
   const roundRef = useRef(null);
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const [predictions, setPredictions] = useState({});
   const formatDateTime = (dt) => {
     const date = new Date(dt);

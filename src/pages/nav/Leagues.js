@@ -4,7 +4,7 @@ import Main from "../../Main";
 import { Helmet } from "react-helmet";
 
 const Leagues = () => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
 
   const [leaguesData, setLeaguesData] = useState({});
   const [isHovered, setIsHovered] = useState(false);

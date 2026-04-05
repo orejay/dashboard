@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function SmartBetLanding() {
   const [next, setNext] = useState([]);
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
 
   useEffect(() => {
     fetch(`${api}/getendpoints/next-sb`)

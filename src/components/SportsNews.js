@@ -3,7 +3,7 @@ import { useMediaQuery } from "@mui/material";
 
 function SportsNews() {
   const [results, setResults] = useState([]);
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   useEffect(() => {
     fetch(`${api}/postendpoints/news`)
       .then((response) => response.json())

@@ -249,7 +249,7 @@ function PlansCard({ bg, styl, data, country }) {
   const [price, setPrice] = useState(0);
   const [box, setBox] = useState(0);
   const [isValid, setIsValid] = useState(true);
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
 
   const navigate = useNavigate();
   const token = localStorage.getItem("token");

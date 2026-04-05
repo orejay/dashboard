@@ -10,7 +10,7 @@ import starbet from "../assets/starbet1.png";
 import bet22 from "../assets/22bet1.png";
 
 const UpcomingTable = ({ getUpcoming, results }) => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const [data, setData] = useState({});
 
   const getBooking = async () => {

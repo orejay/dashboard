@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 function PointsCard({ bg, styl, data, country }) {
   const [price, setPrice] = useState(0);
   const [box, setBox] = useState(0);
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const [dataa, setDataa] = useState(null);
 
   const navigate = useNavigate();

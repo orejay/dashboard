@@ -1,4 +1,3 @@
-import React from "react";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
@@ -6,9 +5,9 @@ const properties = {
   arrows: false,
 };
 const fadeImages = [
-  `${process.env.PUBLIC_URL}/slide1.webp`,
-  `${process.env.PUBLIC_URL}/slide2.webp`,
-  `${process.env.PUBLIC_URL}/slide3.webp`,
+  "/slide1.webp",
+  "/slide2.webp",
+  "/slide3.webp",
 ];
 
 const Slider = () => {

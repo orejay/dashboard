@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 
 const ACCA = () => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const token = localStorage.getItem("token");
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();

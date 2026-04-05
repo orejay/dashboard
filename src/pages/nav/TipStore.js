@@ -4,7 +4,7 @@ import Main from "../../Main";
 import { Helmet } from "react-helmet";
 
 function TipStore() {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const token = localStorage.getItem("token");
 
   const IsUserAuthorized = async () => {

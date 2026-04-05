@@ -5,7 +5,7 @@ import BCode from "./BookingCode";
 import Loader from "./Loader";
 
 const Hiring = () => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const token = localStorage.getItem("token");
   const [jobs, setJobs] = useState([]);
 

@@ -8,7 +8,7 @@ const PredWinFees = () => {
   const countryRef = useRef(null);
   const navigate = useNavigate();
   const token = localStorage.getItem("admintoken");
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
 
   const getFee = async (cntry) => {
     const res = await fetch(`${api}/getendpoints/fees/${cntry}`, {

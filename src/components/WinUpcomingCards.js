@@ -27,7 +27,7 @@ function WinUpcomingCards() {
   const [tab, setTab] = useState(0);
   const [results, setResults] = useState([]);
   const [winResults, setWinResults] = useState([]);
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const getUpcoming = () => {
     fetch(`${api}/getendpoints/upcoming-matches`)
       .then((response) => response.json())

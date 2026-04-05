@@ -16,7 +16,7 @@ const StoreTable = ({ style, endpoint, tip, index, link, profile }) => {
   const [matches, setMatches] = useState([]);
   const [active, setActive] = useState(2);
   const navigate = useNavigate();
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const [data, setData] = useState({});
 
   function formatDate(date) {

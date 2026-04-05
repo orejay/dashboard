@@ -262,12 +262,12 @@ const Payment = () => {
   const [points, setPoints] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [country, setCountry] = useState(null);
-  const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
-  const geoKey = process.env.REACT_APP_GEOAPIKEY1;
-  const geoKey2 = process.env.REACT_APP_GEOAPIKEY2;
-  const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
-  const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
-  const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
+  const geoURL = import.meta.env.VITE_GEOLOCATIONURL;
+  const geoKey = import.meta.env.VITE_GEOAPIKEY1;
+  const geoKey2 = import.meta.env.VITE_GEOAPIKEY2;
+  const geoKey3 = import.meta.env.VITE_GEOAPIKEY3;
+  const geoKey4 = import.meta.env.VITE_GEOAPIKEY4;
+  const geoKey5 = import.meta.env.VITE_GEOAPIKEY5;
   const geoKeys = [geoKey, geoKey2, geoKey3, geoKey4, geoKey5];
   const [userCountryCode, setUserCountryCode] = useState(null);
 

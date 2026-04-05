@@ -14,7 +14,7 @@ import FreeTable from "./FreeTable";
 const AllFreeExpert = () => {
   const [data, setData] = useState({});
   const [bookings, setBookings] = useState({});
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const today = new Date().toJSON().slice(0, 10);
   const newDate = new Date();
   const yesterday = new Date();

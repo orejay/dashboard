@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import tipLogo from "../assets/tip-logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import {
@@ -19,7 +19,7 @@ const HeaderComp = ({ logIn, nav }) => {
   const [open, setOpen] = useState(true);
   const [tab, setTab] = useState(nav);
   const [showMenu, setShowMenu] = useState(false);
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const token = localStorage.getItem("token");
   const [messages, setMessages] = useState(null);
   const [logOutColor, setLogOutColor] = useState("#EB5757");
@@ -71,7 +71,7 @@ const HeaderComp = ({ logIn, nav }) => {
       <div className="lg:ml-4">
         <Link to="/">
           <img
-            src={require("../assets/tip-logo.png")}
+            src={tipLogo}
             alt="tips180-logo"
             width="3494"
             height="894"

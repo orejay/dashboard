@@ -257,15 +257,15 @@ const LandingPlans = () => {
   const [data, setData] = useState(plansData);
   const [selectedOption, setSelectedOption] = useState(null);
   const [country, setCountry] = useState(null);
-  const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
-  const geoKey = process.env.REACT_APP_GEOAPIKEY1;
-  const geoKey2 = process.env.REACT_APP_GEOAPIKEY2;
-  const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
-  const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
-  const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
-  const geoKey6 = process.env.REACT_APP_GEOAPIKEY6;
-  const geoKey7 = process.env.REACT_APP_GEOAPIKEY7;
-  const geoKey8 = process.env.REACT_APP_GEOAPIKEY8;
+  const geoURL = import.meta.env.VITE_GEOLOCATIONURL;
+  const geoKey = import.meta.env.VITE_GEOAPIKEY1;
+  const geoKey2 = import.meta.env.VITE_GEOAPIKEY2;
+  const geoKey3 = import.meta.env.VITE_GEOAPIKEY3;
+  const geoKey4 = import.meta.env.VITE_GEOAPIKEY4;
+  const geoKey5 = import.meta.env.VITE_GEOAPIKEY5;
+  const geoKey6 = import.meta.env.VITE_GEOAPIKEY6;
+  const geoKey7 = import.meta.env.VITE_GEOAPIKEY7;
+  const geoKey8 = import.meta.env.VITE_GEOAPIKEY8;
   const geoKeys = [
     geoKey,
     geoKey2,

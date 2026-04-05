@@ -18,7 +18,7 @@ const LandingLeagueCard = ({
   results,
   title,
 }) => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const [data, setData] = useState({});
 
   const dateString = (dateValue) => {

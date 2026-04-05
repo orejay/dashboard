@@ -255,15 +255,15 @@ const PredictAndWinComp = ({ isFaq, redirectUrl, isDashboard }) => {
   const [cardNo, setCardNo] = useState(0);
   const [country, setCountry] = useState(null);
   const [manualLocation, setManualLocation] = useState(false);
-  const geoURL = process.env.REACT_APP_GEOLOCATIONURL;
-  const geoKey = process.env.REACT_APP_GEOAPIKEY1;
-  const geoKey2 = process.env.REACT_APP_GEOAPIKEY2;
-  const geoKey3 = process.env.REACT_APP_GEOAPIKEY3;
-  const geoKey4 = process.env.REACT_APP_GEOAPIKEY4;
-  const geoKey5 = process.env.REACT_APP_GEOAPIKEY5;
-  const geoKey6 = process.env.REACT_APP_GEOAPIKEY6;
-  const geoKey7 = process.env.REACT_APP_GEOAPIKEY7;
-  const geoKey8 = process.env.REACT_APP_GEOAPIKEY8;
+  const geoURL = import.meta.env.VITE_GEOLOCATIONURL;
+  const geoKey = import.meta.env.VITE_GEOAPIKEY1;
+  const geoKey2 = import.meta.env.VITE_GEOAPIKEY2;
+  const geoKey3 = import.meta.env.VITE_GEOAPIKEY3;
+  const geoKey4 = import.meta.env.VITE_GEOAPIKEY4;
+  const geoKey5 = import.meta.env.VITE_GEOAPIKEY5;
+  const geoKey6 = import.meta.env.VITE_GEOAPIKEY6;
+  const geoKey7 = import.meta.env.VITE_GEOAPIKEY7;
+  const geoKey8 = import.meta.env.VITE_GEOAPIKEY8;
   const geoKeys = [
     geoKey,
     geoKey2,
@@ -274,7 +274,7 @@ const PredictAndWinComp = ({ isFaq, redirectUrl, isDashboard }) => {
     geoKey7,
     geoKey8,
   ];
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const [userCountryCode, setUserCountryCode] = useState(null);
 
   const getLocation = async (num) => {

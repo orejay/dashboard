@@ -12,7 +12,7 @@ const SmartBet = () => {
   const [loader, setLoader] = useState(true);
   const [smartBet, setSmartBet] = useState(true);
   const [bcode, setBCode] = useState(null);
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const token = localStorage.getItem("token");
   const [currentDay, setCuurentDay] = useState("today");
 

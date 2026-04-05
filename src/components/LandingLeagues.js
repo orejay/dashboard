@@ -35,7 +35,7 @@ const leagueBox = document.getElementById("league");
 const LandingLeagues = () => {
   const [data, setData] = useState({});
   const [results, setResults] = useState({});
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
 
   const getLeagueTips = () => {
     fetch(`${api}/getendpoints/league-tips`)

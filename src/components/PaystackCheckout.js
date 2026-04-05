@@ -9,12 +9,12 @@ import bank from "../assets/bank.png";
 import opay from "../assets/opay.png";
 
 const PaystackCheckout = () => {
-  const publicKey = process.env.REACT_APP_PAYSTACK_PUBLIC_KEY;
+  const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
   const user = JSON.parse(localStorage.getItem("user"));
   const amount = sessionStorage.getItem("amount") * 100;
   const email = user.email;
   const name = user.name;
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const authHeader = localStorage.getItem("token");
   const navigate = useNavigate();
   const [openBank, setOpenBank] = useState(false);

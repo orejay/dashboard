@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet";
 
 const App = () => {
-  const api = process.env.REACT_APP_BASE_API;
+  const api = import.meta.env.VITE_BASE_API;
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [loadText, setLoadText] = useState("Submit");
