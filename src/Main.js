@@ -103,7 +103,7 @@ const Main = ({ Prop, logIn, nav }) => {
     });
 
     return () => observer.disconnect();
-  });
+  }, []);
 
   return (
     <div style={{ background: "#F2F2F2" }}>

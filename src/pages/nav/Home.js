@@ -4,27 +4,26 @@ import Main from "../../Main";
 import Hero from "../../components/Hero";
 import { Helmet } from "react-helmet";
 import { useMediaQuery } from "@mui/material";
-import loyaltyMob from "../../assets/loyalty-mobile.png";
-import loyaltyPc from "../../assets/loyalty-pc.png";
-import AllFreeExpert from "../../components/AllFreeExpert";
+import loyaltyMob from "../../assets/loyalty-mobile.webp";
+import loyaltyPc from "../../assets/loyalty-pc.webp";
+const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
 const Writeup = lazy(() => import("../../components/Writeup"));
 const LandingStore = lazy(() => import("../../components/LandingStore"));
-const FrequentlyAskedCard = lazy(() =>
-  import("../../components/FrequentlyAskedCard")
+const FrequentlyAskedCard = lazy(
+  () => import("../../components/FrequentlyAskedCard"),
 );
 const SmartBetLanding = lazy(() => import("../../components/SmartBetLanding"));
 const SportsNews = lazy(() => import("../../components/SportsNews"));
 const Feedback = lazy(() => import("../../components/Feedback"));
 const LandingLeagues = lazy(() => import("../../components/LandingLeagues"));
 const LandingPlans = lazy(() => import("../../components/LandingPlans"));
-const WinUpcomingCards = lazy(() =>
-  import("../../components/WinUpcomingCards")
+const WinUpcomingCards = lazy(
+  () => import("../../components/WinUpcomingCards"),
 );
 
 function Home() {
   const api = process.env.REACT_APP_BASE_API;
   const [isValid, setIsValid] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [visibleComponents, setVisibleComponents] = useState({});
   const isMobile = useMediaQuery("(max-width:450px)");
   const token = localStorage.getItem("token");
@@ -77,7 +76,7 @@ function Home() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     refs.forEach((ref) => {
@@ -85,7 +84,7 @@ function Home() {
     });
 
     return () => observer.disconnect();
-  });
+  }, []);
 
   useEffect(() => {
     if (token) IsUserAuthorized();
@@ -135,7 +134,9 @@ function Home() {
           you better. We appreciate your understanding.
         </p>
       </div> */}
-      <AllFreeExpert />
+      <Suspense fallback={<div style={{ minHeight: "600px" }} />}>
+        <AllFreeExpert />
+      </Suspense>
 
       <div ref={refs[0]}>
         {visibleComponents[0] && (
@@ -145,7 +146,10 @@ function Home() {
                 <img
                   src={isMobile ? loyaltyMob : loyaltyPc}
                   alt="tips180-loyalty-ad-img"
-                  className="rounded-md"
+                  width={isMobile ? 2463 : 8256}
+                  height={isMobile ? 568 : 750}
+                  className="rounded-md w-full h-auto"
+                  loading="lazy"
                 />
               </Link>
             </div>

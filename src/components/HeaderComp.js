@@ -6,6 +6,8 @@ import {
   LogoutRounded,
   NotificationsRounded,
   Person,
+  Menu,
+  Close,
 } from "@mui/icons-material";
 
 const styles = {
@@ -73,7 +75,10 @@ const HeaderComp = ({ logIn, nav }) => {
           <img
             src={require("../assets/tip-logo.png")}
             alt="tips180-logo"
-            className="w-32 aspect-auto"
+            width="3494"
+            height="894"
+            fetchpriority="high"
+            className="w-32 h-auto"
           />
         </Link>
       </div>
@@ -81,10 +86,11 @@ const HeaderComp = ({ logIn, nav }) => {
         className="text-3xl absolute right-6 top-4 cursor-pointer lg:hidden"
         onClick={() => setOpen(!open)}
       >
-        <ion-icon
-          name={open ? "menu-outline" : "close-outline"}
-          style={open ? styles.opened : styles.closed}
-        ></ion-icon>
+        {open ? (
+          <Menu style={{ ...styles.opened, fontSize: "2rem" }} />
+        ) : (
+          <Close style={{ ...styles.closed, fontSize: "2rem" }} />
+        )}
       </div>
       <div
         className={`lg:flex transition-all ease-in bg-white h-screen lg:h-fit duration-1000 items-center justify-between lg:w-10/12 w-full pb-3 lg:pl-0 lg:pb-0 lg:px-5  ${

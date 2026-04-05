@@ -1,21 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import heroBg from "../assets/heroBg1.png";
 import Slider from "./Slider";
 
 const HeroBg = () => {
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
-
-  useEffect(() => {
-    if (!isPageLoaded) {
-      const timer = setTimeout(() => {
-        setIsPageLoaded(true);
-      }, 8000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [isPageLoaded]);
-
   return (
     <div
       style={{
@@ -38,7 +26,7 @@ const HeroBg = () => {
               className="mb-3 text-3xl lg:text-6xl mona-head"
               style={{ lineHeight: "100%" }}
             >
-              Best Football Prediction Site - Free Predictions with Real Data
+              Best Football Prediction Site - Free Predictions with Real Data
             </h1>
             <p
               className="mb-3 mx-auto md:mx-0 text-xs md:text-base lg:text-xl"
@@ -62,7 +50,7 @@ const HeroBg = () => {
           </div>
         </div>
         <div className="flex mt-3 md:mt-0 justify-end h-4/6 md:w-3/5 aspect-auto lg:w-2/5">
-          {isPageLoaded && <Slider />}
+          <Slider />
         </div>
       </div>
     </div>

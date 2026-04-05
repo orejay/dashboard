@@ -5,11 +5,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@mui/material";
+import Home from "./pages/nav/Home";
 const Messages = lazy(() => import("./pages/Messages"));
 const PredictAndWin = lazy(() => import("./pages/PredictAndWin"));
 const PwTandC = lazy(() => import("./pages/PwTandC"));
 const PandW = lazy(() => import("./pages/PandW"));
-const Home = lazy(() => import("./pages/nav/Home"));
 const SlPayment = lazy(() => import("./components/SlPayment"));
 const Odds50 = lazy(() => import("./components/Odds50"));
 const Profile = lazy(() => import("./pages/Profile"));
@@ -55,7 +55,6 @@ const PredictWin = lazy(() => import("./pages/nav/PredictWin"));
 const StorePage = lazy(() => import("./pages/StorePage"));
 const PageNotFound = lazy(() => import("./pages/Error/PageNotFound"));
 const Hiring = lazy(() => import("./components/Hiring"));
-// const logo = lazy(() => import("./assets/tip-logo.png"));
 
 function App() {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -87,64 +86,6 @@ function App() {
     },
   };
 
-  // useEffect(() => {
-  //   if (isInitialLoad) {
-  //     const timer = setTimeout(() => {
-  //       setIsInitialLoad(false);
-  //     }, 4000);
-
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [isInitialLoad]);
-
-  // useEffect(() => {
-  //   const script = document.createElement("script");
-  //   script.innerHTML = `(function(w,d,o,g,r,a,m){
-  //       var cid='zone_2005518892';
-  //       w[r]=w[r]||function(){(w[r+'l']=w[r+'l']||[]).push(arguments)};
-  //       function e(b,w,r){if((w[r+'h']=b.pop())&&!w.ABN){
-  //           var a=d.createElement(o),p=d.getElementsByTagName(o)[0];a.async=1;
-  //           a.src='https://cdn.'+w[r+'h']+'/libs/e.js';a.onerror=function(){e(g,w,r)};
-  //           p.parentNode.insertBefore(a,p)}}e(g,w,r);
-  //       w[r](cid,{id:2005518892,domain:w[r+'h']});
-  //   })(window,document,'script',['ftd.agency'],'ABNS');`;
-
-  //   document.body.appendChild(script);
-
-  //   return () => {
-  //     // Clean up function to remove the script when the component unmounts
-  //     document.body.removeChild(script);
-  //   };
-  // }, []);
-
-  // const Loader = () => (
-  //   <div
-  //     style={{
-  //       display: "flex",
-  //       justifyContent: "center",
-  //       alignItems: "center",
-  //       fontSize: isMobile ? "24px" : "36px",
-  //       height: "100vh",
-  //     }}
-  //   >
-  //     <h1>Site Is Loading...</h1>
-  //   </div>
-  // );
-
-  // const Loader = () => (
-  //   <div
-  //     style={{
-  //       display: "flex",
-  //       justifyContent: "center",
-  //       alignItems: "center",
-  //       fontSize: isMobile ? "24px" : "36px",
-  //       height: "100vh",
-  //     }}
-  //   >
-  //     <div className="w-12 h-12 border-6 border-gray-200 border-t-4 border-t-blue-500 rounded-full animate-spin"></div>
-  //   </div>
-  // );
-
   return (
     <div>
       <Helmet>
@@ -167,18 +108,6 @@ function App() {
           <div className="h-screen w-screen flex justify-center items-center"></div>
         }
       >
-        {/* <div
-          className="fixed flex justify-center items-center bottom-0 left-0 w-full cursor-pointer"
-          style={{ zIndex: 300 }}
-        >
-          <Link to="/predict-win">
-            <img
-              src={isMobile ? pwadmobile : pwad}
-              alt="tips-logo"
-              className="w-full"
-            />
-          </Link>
-        </div> */}
         <div
           id="zone_2005518892"
           className="fixed flex justify-center items-center -bottom-3 left-0 w-full cursor-pointer"

@@ -21,7 +21,10 @@ const Slider = () => {
               <img
                 src={each}
                 alt={`tips180-slide${index + 1}`}
-                className="w-full"
+                width="700"
+                height="577"
+                fetchpriority={index === 0 ? "high" : "auto"}
+                className="w-full h-auto"
               />
             </div>
           );
