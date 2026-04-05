@@ -49,7 +49,10 @@ const HeroBg = () => {
             </Link>
           </div>
         </div>
-        <div className="flex mt-3 md:mt-0 justify-end h-4/6 md:w-3/5 aspect-auto lg:w-2/5">
+        <div
+          className="flex mt-3 md:mt-0 justify-end md:w-3/5 lg:w-2/5"
+          style={{ aspectRatio: "700/577" }}
+        >
           <Slider />
         </div>
       </div>

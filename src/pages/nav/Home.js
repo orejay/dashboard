@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import useIsMobile from "../../hooks/useIsMobile";
 import loyaltyMob from "../../assets/loyalty-mobile.webp";
 import loyaltyPc from "../../assets/loyalty-pc.webp";
-import AllFreeExpert from "../../components/AllFreeExpert";
+const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
 const Writeup = lazy(() => import("../../components/Writeup"));
 const LandingStore = lazy(() => import("../../components/LandingStore"));
 const FrequentlyAskedCard = lazy(
@@ -137,7 +137,9 @@ function Home() {
           you better. We appreciate your understanding.
         </p>
       </div> */}
-      <AllFreeExpert />
+      <Suspense fallback={<div style={{ height: "calc(100vh + 160px)" }} />}>
+        <AllFreeExpert />
+      </Suspense>
 
       <div ref={refs[0]}>
         {visibleComponents[0] && (

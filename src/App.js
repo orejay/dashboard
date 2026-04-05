@@ -64,6 +64,35 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  useEffect(() => {
+    const loadGtag = () => {
+      if (window._gtagLoaded) return;
+      window._gtagLoaded = true;
+      const s = document.createElement("script");
+      s.src = "https://www.googletagmanager.com/gtag/js?id=AW-17670030360";
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", "AW-17670030360");
+    };
+
+    // Load after user interaction or 4s — whichever comes first
+    const events = ["mouseover", "keydown", "touchstart", "scroll"];
+    const onInteraction = () => {
+      loadGtag();
+      events.forEach((e) => window.removeEventListener(e, onInteraction));
+    };
+    events.forEach((e) => window.addEventListener(e, onInteraction, { once: true, passive: true }));
+    const timer = setTimeout(loadGtag, 4000);
+    return () => {
+      clearTimeout(timer);
+      events.forEach((e) => window.removeEventListener(e, onInteraction));
+    };
+  }, []);
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -90,18 +119,6 @@ function App() {
     <div>
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17670030360"
-        ></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17670030360');
-          `}
-        </script>
       </Helmet>
       <Suspense
         fallback={
