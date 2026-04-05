@@ -10,7 +10,6 @@ import telegram from "../assets/telegram.png";
 import Select from "react-select";
 import { Link } from "react-router-dom";
 import FreeTable from "./FreeTable";
-import { useMediaQuery } from "@mui/material";
 
 const AllFreeExpert = () => {
   const [data, setData] = useState({});
@@ -42,7 +41,6 @@ const AllFreeExpert = () => {
     today: today,
     tomorrow: tomorrowDate,
   };
-  const isSmall = useMediaQuery("(max-width:450px)");
 
   const getFreeExpert = (date) => {
     fetch(`${api}/getendpoints/free-experts/${date}`)

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import HeaderComp from "./components/HeaderComp";
-import { useMediaQuery } from "@mui/material";
+import useIsMobile from "./hooks/useIsMobile";
 const Footer = lazy(() => import("./components/Footer"));
 
 const Main = ({ Prop, logIn, nav }) => {
@@ -68,7 +68,7 @@ const Main = ({ Prop, logIn, nav }) => {
     };
   }, []);
 
-  const isMobile = useMediaQuery("(max-width:450px)");
+  const isMobile = useIsMobile();
   const [visibleComponents, setVisibleComponents] = useState({});
   const refs = [useRef()];
   const Loader = () => (
@@ -88,9 +88,12 @@ const Main = ({ Prop, logIn, nav }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisibleComponents((prev) => ({ ...prev, [index]: true }));
+            const index = refs.findIndex((ref) => ref.current === entry.target);
+            if (index !== -1) {
+              setVisibleComponents((prev) => ({ ...prev, [index]: true }));
+            }
             observer.unobserve(entry.target);
           }
         });
@@ -115,7 +118,7 @@ const Main = ({ Prop, logIn, nav }) => {
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
-                {Loader}
+                <Loader />
               </div>
             }
           >

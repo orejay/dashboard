@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Main from "../../Main";
 import Hero from "../../components/Hero";
 import { Helmet } from "react-helmet";
-import { useMediaQuery } from "@mui/material";
+import useIsMobile from "../../hooks/useIsMobile";
 import loyaltyMob from "../../assets/loyalty-mobile.webp";
 import loyaltyPc from "../../assets/loyalty-pc.webp";
-const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
+import AllFreeExpert from "../../components/AllFreeExpert";
 const Writeup = lazy(() => import("../../components/Writeup"));
 const LandingStore = lazy(() => import("../../components/LandingStore"));
 const FrequentlyAskedCard = lazy(
@@ -25,7 +25,7 @@ function Home() {
   const api = process.env.REACT_APP_BASE_API;
   const [isValid, setIsValid] = useState(false);
   const [visibleComponents, setVisibleComponents] = useState({});
-  const isMobile = useMediaQuery("(max-width:450px)");
+  const isMobile = useIsMobile();
   const token = localStorage.getItem("token");
   const refs = [
     useRef(),
@@ -69,9 +69,12 @@ function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisibleComponents((prev) => ({ ...prev, [index]: true }));
+            const index = refs.findIndex((ref) => ref.current === entry.target);
+            if (index !== -1) {
+              setVisibleComponents((prev) => ({ ...prev, [index]: true }));
+            }
             observer.unobserve(entry.target);
           }
         });
@@ -134,13 +137,11 @@ function Home() {
           you better. We appreciate your understanding.
         </p>
       </div> */}
-      <Suspense fallback={<div style={{ minHeight: "600px" }} />}>
-        <AllFreeExpert />
-      </Suspense>
+      <AllFreeExpert />
 
       <div ref={refs[0]}>
         {visibleComponents[0] && (
-          <Suspense fallback={<div className="h-screen">{Loader}</div>}>
+          <Suspense fallback={<div className="h-screen"><Loader /></div>}>
             <div className="flex mx-auto w-11/12 px-4 mb-8 rounded">
               <Link to="/our-plans">
                 <img
@@ -168,7 +169,7 @@ function Home() {
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
-                {Loader}
+                <Loader />
               </div>
             }
           >
@@ -181,7 +182,7 @@ function Home() {
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
-                {Loader}
+                <Loader />
               </div>
             }
           >
@@ -194,7 +195,7 @@ function Home() {
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
-                {Loader}
+                <Loader />
               </div>
             }
           >
@@ -207,7 +208,7 @@ function Home() {
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
-                {Loader}
+                <Loader />
               </div>
             }
           >
@@ -220,7 +221,7 @@ function Home() {
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
-                {Loader}
+                <Loader />
               </div>
             }
           >
@@ -233,7 +234,7 @@ function Home() {
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
-                {Loader}
+                <Loader />
               </div>
             }
           >
@@ -246,7 +247,7 @@ function Home() {
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
-                {Loader}
+                <Loader />
               </div>
             }
           >
@@ -259,7 +260,7 @@ function Home() {
           <Suspense
             fallback={
               <div className="h-screen flex justify-center items-center">
-                {Loader}
+                <Loader />
               </div>
             }
           >

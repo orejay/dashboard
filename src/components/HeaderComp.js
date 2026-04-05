@@ -22,7 +22,6 @@ const HeaderComp = ({ logIn, nav }) => {
   const api = process.env.REACT_APP_BASE_API;
   const token = localStorage.getItem("token");
   const [messages, setMessages] = useState(null);
-  const [loggedIn, setloggedIn] = useState(true);
   const [logOutColor, setLogOutColor] = useState("#EB5757");
   const [logOutIcon, setLogOutIcon] = useState({
     bgcolor: "#EB5757",
@@ -55,7 +54,6 @@ const HeaderComp = ({ logIn, nav }) => {
   const LogOut = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    setloggedIn(false);
     navigate("/auth/login");
   };
 
