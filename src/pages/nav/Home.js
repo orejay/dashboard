@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import useIsMobile from "../../hooks/useIsMobile";
 import loyaltyMob from "../../assets/loyalty-mobile.webp";
 import loyaltyPc from "../../assets/loyalty-pc.webp";
+import AnnouncementBanner from "../../components/AnnouncementBanner";
 const AllFreeExpert = lazy(() => import("../../components/AllFreeExpert"));
 const Writeup = lazy(() => import("../../components/Writeup"));
 const LandingStore = lazy(() => import("../../components/LandingStore"));
@@ -124,6 +125,7 @@ function Home() {
         <meta name="author" content="tips180" />
       </Helmet>
       <Hero />
+      <AnnouncementBanner api={api} />
       {/* <div
         className="flex flex-col mx-auto w-11/12 p-4 mb-8 rounded shadow mt-6"
         style={{ backgroundColor: "#F2F2F2" }}
