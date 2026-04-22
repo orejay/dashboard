@@ -215,11 +215,11 @@ const PwTandC = () => {
               party (including but without limitation to, any minor) to use the
               Company's services, use your Account or accept any Winnings on
               your behalf; and/or <br className="my-1" />
-              {">"}3.1.15 You are not currently or (have not been within the last
-              six months) an employee or contractor of the Company or immediate
-              family member of each, whereby immediate family members shall
-              include, but not limited to, spouse, children, parents, siblings,
-              grandparents and grandchildren.
+              {">"}3.1.15 You are not currently or (have not been within the
+              last six months) an employee or contractor of the Company or
+              immediate family member of each, whereby immediate family members
+              shall include, but not limited to, spouse, children, parents,
+              siblings, grandparents and grandchildren.
               <br className="my-1" />
               3.1.16 Any each of any of your representations and warranties will
               be deemed a each of these Terms and Conditions which may result in
@@ -400,7 +400,7 @@ const PwTandC = () => {
             </span>
             6.1 The Company will only accept Tokens from Registered Customers
             made online via the Website. <br className="my-1" />
-            >6.2 You are only deemed to have entered a P&W round if you are a
+            6.2 You are only deemed to have entered a P&W round if you are a
             Registered Customer at the Website, and your prediction is deemed to
             be placed from the jurisdiction of the Internet Protocol Address
             recorded by the Company from where you are accessing the Website. An
@@ -451,7 +451,7 @@ const PwTandC = () => {
             sole and absolute discretion. When a market is suspended or access
             to it prohibited, any attempted Entries entered thereafter will be
             rejected. <br className="my-1" />
-            >6.10 The Company reserves the right, at its sole and absolute
+            6.10 The Company reserves the right, at its sole and absolute
             discretion and without explanation to you, to refuse any Entry,
             and/or to suspend or close an Account at any time for any reason, if
             we have reasonable belief that continued use of the Account would
@@ -543,7 +543,7 @@ const PwTandC = () => {
             of error, the Company reserves the right, at its sole discretion, to
             either void any affected Entries at any time or to correct the
             error. <br className="my-1" />
-            >9.2 The Company shall use reasonable endeavours to ensure there are
+            9.2 The Company shall use reasonable endeavours to ensure there are
             no errors, inaccuracies or ambiguity on the Website and Contents,
             and we will not, under any circumstances, be held liable in equity,
             contract, tort, negligence, or otherwise (or any theory of law) for
@@ -586,7 +586,7 @@ const PwTandC = () => {
             systems, failure or incapacity of the system caused by hacking,
             phishing or similar attack or failure of any telecommunications
             system. <br className="my-1" />
-            >9.5 The Company reserves the right to withdraw the Website or
+            9.5 The Company reserves the right to withdraw the Website or
             elements of the Website at any time. The Company will not be liable
             to you in any other way as a result of any such action.{" "}
             <br className="my-1" />
@@ -652,7 +652,7 @@ const PwTandC = () => {
             other steps to make the Software available via any form of bulletin
             board, online service or remote dial-in, or network to any other
             person; <br className="my-1" />
-            >10.1.2 sub-license, assign, rent, lease, loan or transfer), the
+            10.1.2 sub-license, assign, rent, lease, loan or transfer), the
             license to use the Software or make a copy (except for the purposes
             of back-up) or distribute copies of the Software;{" "}
             <br className="my-1" />

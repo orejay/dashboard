@@ -8,7 +8,7 @@ const AnnouncementBanner = ({ api }) => {
     fetch(`${api}/getendpoints/announcements`)
       .then((res) => res.json())
       .then((data) => {
-        if (data && data.active) setAnnouncement(data);
+        if (data && data.id && data.active !== false) setAnnouncement(data);
       })
       .catch(() => {});
   }, [api]);
@@ -21,11 +21,13 @@ const AnnouncementBanner = ({ api }) => {
       style={{ backgroundColor: "#EFECFD", borderLeft: "4px solid #6D55F1" }}
     >
       <div className="flex-1 min-w-0 pr-4">
-        <p className="mona-head font-bold text-base" style={{ color: "#6D55F1" }}>
+        <p
+          className="mona-head font-bold text-base"
+          style={{ color: "#6D55F1" }}
+        >
           {announcement.caption}
         </p>
         <p className="text-sm mt-1 text-stone-700">{announcement.body}</p>
-        <p className="text-xs mt-1 text-stone-400">{announcement.date}</p>
       </div>
       <button
         onClick={() => setDismissed(true)}

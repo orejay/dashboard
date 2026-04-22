@@ -44,9 +44,9 @@ const TanzaniaPayment = () => {
           </div>
           <div className={!openMpesa ? `hidden` : `mt-10`}>
             <p className="mt-2 text-sm md:text-base">
-              All payments should be made ONLY to <br />
+              All payments should be made ONLY to +254 1409 365 21 <br />
               After making payment, please send the details below as a Whatsapp
-              message to
+              message to +234 814 600 0171
               <ol className="pl-2">
                 <li>1. YOUR MTN MOBILE MONEY NAME</li>
                 <li>2. DATE OF PAYMENT</li>

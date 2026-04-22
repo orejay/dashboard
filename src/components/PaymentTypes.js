@@ -953,11 +953,11 @@ const PaymentTypes = ({ country }) => {
               </Link>
             </button>
             <p className="mt-2 text-sm md:text-base">
-              All payments should be made ONLY to{" "}
+              All payments should be made ONLY to +254 1409 365 21
               {/* <span className="font-semibold">+254 796 118 357</span>  */}
               <br />
               After making payment, please send the details below as a Whatsapp
-              message to
+              message to +234 814 600 0171
               {/* <span className="font-semibold">+254 796 118 357</span> */}
               <ol className="pl-2">
                 <li>1. YOUR MPESA NAME</li>
@@ -1165,12 +1165,12 @@ const PaymentTypes = ({ country }) => {
               </Link>
             </button>
             <p className="mt-2 text-sm md:text-base">
-              All payments should be made ONLY to{" "}
-              {/* <span className="font-semibold">+254 796 118 357</span> */}
+              All payments should be made ONLY to
+              <span className="font-semibold"> +254 1409 365 21</span>
               <br />
               After making payment, please send the details below as a Whatsapp
               message to
-              {/* <span className="font-semibold">+254 796 118 357</span> */}
+              <span className="font-semibold"> +234 814 600 0171</span>
               <ol className="pl-2">
                 <li>1. YOUR MPESA NAME</li>
                 <li>2. DATE OF PAYMENT</li>
